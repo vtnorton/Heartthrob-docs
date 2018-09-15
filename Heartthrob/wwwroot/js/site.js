@@ -10,15 +10,17 @@
         });
         return this;
     };
-    
+
+    /* Menu event */
+    $(document).click(function () {
+        $('.menu').slideUp("fast");
+    });
+    openMenu = function (env, menu) {
+        env.stopPropagation();
+        $(menu).next(".menu").slideToggle("fast");
+    };
 });
 
-
-function openMenu(menu) {
-    //TODO: Colocar o menu para fechar quando clica fora
-    //TODO: colocar o menu para abrir numa posição conveniente caso o dev coloque no canto superior direito
-    $(menu).slideToggle("fast");
-}
 //function openMenu(menuparaabrir, mensageiro) {
 //    $(menuparaabrir).slideToggle("normal", function () {
 //        if ($(mensageiro).css("font-weight") == "600") {

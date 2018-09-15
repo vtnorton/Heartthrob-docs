@@ -55,7 +55,7 @@ small { font-size: 12px; line-height: 14px; }
 .space-long { height: 48px }
 
 /* Buttons */
-.btn, button { border: 1px solid #ccc; background: #ccc; color: #000; min-height: 40px; min-width: 140px; padding-top: 10px; cursor: pointer; display: inline-block; text-align: center; }
+.btn, button { border: 1px solid #ccc; background: #ccc; color: #000; min-height: 40px; min-width: 140px; padding: 8px 15px 0; cursor: pointer; display: inline-block; text-align: center; }
 .btn:hover, button:hover { border-color: #1d5bbc; background: #1d5bbc; color: #fff; -moz-transition: all .29s; -o-transition: all .29s; -webkit-transition: all .29s; transition: all .29s; }
 .btn:disabled, button:disabled { background: GrayText; border-color: GrayText; -moz-transition: all .3s; -o-transition: all .3s; -webkit-transition: all .3s; transition: all .3s; cursor: not-allowed }
 .btn i { font-size: 16px }
@@ -82,9 +82,9 @@ option, .ui-menu-item-wrapper { font-size: 15px; height: 40px; padding-left: 12p
 .ui-helper-hidden-accessible { display: none }
 
 /* Menu */
-.menu, .menu ul { list-style: none; margin: 0; padding: 2px 0; width: 240px; height: auto; background: rgba(255,255,255,0.8); display: none }
+.menu, .menu ul, .menu li:hover ul li ul { list-style: none; margin: 0; padding: 2px 0; width: 240px; height: auto; background: rgba(255,255,255,0.75); -webkit-backdrop-filter: blur(15px) saturate(125%); backdrop-filter: blur(20px) saturate(125%); display: none }
 .menu ul { position: absolute; z-index: 500; top: auto; display: none; }
-.menu li:hover ul { display: block; position: relative; left: 240px; margin-top: -32px }
+.menu li ul li:hover ul, .menu li:hover ul { display: block; position: relative; left: 240px; margin-top: -32px }
 .menu li a:hover { background: rgba(255,255,255,0.4) }
 .menu li { height: 32px; }
 .menu a { color: #000; font-size: 15px; height: 32px; width: 100%; display: block; line-height: 32px }
@@ -92,16 +92,16 @@ option, .ui-menu-item-wrapper { font-size: 15px; height: 40px; padding-left: 12p
 .menu i { width: 40px; font-size: 16px; padding-left: 14px }
 .menu .line { width: 216px; margin: 0 auto; border-bottom: 1px solid #ccc; height: 2px }
 .menu .more:after { content: ' '; width: 10px; height: 10px; display: inline-grid; top: 10px; position: relative; margin-top: 2px; float: right; border: solid #999; border-width: 0 2px 2px 0; transform: rotate(-45deg); -webkit-transform: rotate(-45deg); margin-right: 13px }
-.menu-open{display:block}
+.menu-open { display: block }
+.menu ul.right { float: none }
+.menu li ul.right li:hover ul, .menu li:hover ul.right { left: -235px }
+
 
 /* Fluent Design Stuff */
 .acrylic { -webkit-backdrop-filter: blur(20px) saturate(125%); backdrop-filter: blur(20px) saturate(125%); background-color: rgba(255,255,255,.3); }
 
 .shadow, .ui-autocomplete, .menu ul { box-shadow: 0 4px 30px rgba(0, 0, 0, 0.25); }
-
-
 /* Compatible mode */
-
 .table { border-collapse: collapse; border-spacing: 0; width: 100%; margin-top: 10px; border-top: 1px solid #ccc }
 .table tr { border-bottom: 1px solid #ccc }
 .table thead { border-top: none !important; font-weight: 600; border-bottom-width: 2px }
@@ -365,7 +365,6 @@ option, .ui-menu-item-wrapper { font-size: 15px; height: 40px; padding-left: 12p
     .col-lg-offset-1 { margin-left: 8.33333333% }
     .col-lg-offset-0 { margin-left: 0 }
 }
-
 /* Telerik Fixes */
 .k-gantt-toolbar .k-state-default, .k-grid .k-grouping-header, .k-grid-header, .k-grid-header-wrap, .k-grouping-header .k-group-indicator, .k-header, .k-pager-wrap, .k-pager-wrap .k-textbox { margin: 4px 0 !important; width: calc(100% - 20px) !important; }
 .k-gantt-toolbar .k-state-default input, .k-grid .k-grouping-header input, .k-grid-header input, .k-grid-header-wrap input, .k-grouping-header .k-group-indicator input, .k-header input, .k-pager-wrap input, .k-pager-wrap .k-link input, .k-pager-wrap .k-textbox input { min-height: 0 !important; height: 30px !important }
