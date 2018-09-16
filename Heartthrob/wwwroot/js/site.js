@@ -19,6 +19,18 @@
         env.stopPropagation();
         $(menu).next(".menu").slideToggle("fast");
     };
+
+    $("header .search a").clickToggle(
+        function () {
+            $("header .search a").addClass("searchactived", function () {
+                $("header .search input").effect('slide', { direction: 'right', mode: 'show' }, 300).focus();
+            });
+        }, function () {
+            $("header .search input").effect('slide', { direction: 'right', mode: 'hide' }, 300, function () {
+                $("header .search a").removeClass("searchactived");
+            });
+        }
+    );
 });
 
 //function openMenu(menuparaabrir, mensageiro) {

@@ -131,21 +131,27 @@ option, .ui-menu-item-wrapper { font-size: 15px; height: 40px; padding-left: 12p
 .shadow-middle, blockquote { box-shadow: 0 4px 10px rgba(0,0,0,0.25); }
 
 /* Header */
-header { width: 100%; background: #2e2e2e; height: 48px; z-index: 10 }
+header { width: 100%; background: #2e2e2e; height: 48px; z-index: 5 }
 header .logo { float: left }
-header .logo img { max-height: 25px; margin: 11px 0 0 11px; }
+header .logo img { max-height: 25px; margin: 12px 0 0 12px; }
 header .line { float: left; height: 32px; width: 1px; background: #ccc; margin: 8px 24px }
 header ul { list-style: none; margin: 0; padding: 0; }
-header ul li { float: left; margin: 0; margin-right: 24px; }
+header ul li { float: left; margin: 0; margin-right: 16px; }
 header ul li:last-child { margin-right: 0 }
-header ul li a { display: block; height: 48px; font-size: 15px; color: #ccc; line-height: 48px; font-weight: 600; padding:0 5px }
-header ul li a:hover { color: #fff; border-bottom: 2px solid #1d5bbc; background: #3a3a3a; transition: all .3s }
+header ul li a { display: block; height: 48px; font-size: 15px; color: #ccc; line-height: 48px; font-weight: 600; padding: 0 8px }
+header ul li a:hover { color: #fff; border-bottom: 2px solid #0078D7; background: #3a3a3a; transition: all .3s }
 header ul li a i { font-size: 15px !important; margin-right: 5px }
 header ul li a.active { border-bottom: 2px solid #0078D7; color: #fff }
 header .right ul li, header .right ul li a i { margin: 0 }
-header .right ul li a { color: #fff; min-width: 33px; text-align: center; padding: 0 15px }
+header .right ul li a { color: #fff; width: 48px; text-align: center; padding: 0 15px }
+header .right ul li:last-child a { width: auto }
 header .right ul li a:hover { border-bottom: none }
-header .search input { display: none }
+header .search a { position: relative; z-index: 8; }
+header .search a.searchactived { text-align: right !important; width: auto !important; color: #2e2e2e !important; margin-left: 192px !important; }
+header .search a.searchactived:hover { background: #f4f4f4 !important; transition: all .3s }
+header .search input { display: none; height: 48px; position: relative; top: -52px; z-index: 7; min-width: 240px; border: none; background: #f4f4f4; }
+header .search input:hover { background: #fff !important; transition: all .3s }
+/*header .search:hover input { display: block }*/
 
 /*.box-icons, .box-login { height: 48px; float: right; }
 .box-login, .box-icons li:first-of-type { border-left: 1px solid #4d4d4d; }
