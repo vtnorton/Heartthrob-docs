@@ -131,7 +131,7 @@ option, .ui-menu-item-wrapper { font-size: 15px; height: 40px; padding-left: 12p
 .shadow-middle, blockquote { box-shadow: 0 4px 10px rgba(0,0,0,0.25); }
 
 /* Header */
-header { width: 100%; background: #2e2e2e; height: 48px; z-index: 5 }
+header { width: 100%; background: #2e2e2e; height: 48px; z-index: 5; overflow-y: hidden; }
 header .logo { float: left }
 header .logo img { max-height: 25px; margin: 12px 0 0 12px; }
 header .line { float: left; height: 32px; width: 1px; background: #ccc; margin: 8px 24px }
@@ -151,6 +151,8 @@ header .search a.searchactived { text-align: right !important; width: auto !impo
 header .search a.searchactived:hover { background: #f4f4f4 !important; transition: all .3s }
 header .search input { display: none; height: 48px; position: relative; top: -52px; z-index: 7; min-width: 240px; border: none; background: #f4f4f4; }
 header .search input:hover { background: #fff !important; transition: all .3s }
+header #notifications i { position: relative; z-index: 7 }
+header #notifications span { color: #000; position: relative; left: 7px; background: #f4f4f4; width: 17px; height: 17px; display: block; border-radius: 50%; z-index: 6; line-height: 16px; font-size: 11px; margin-top: -23px; opacity: 0.75 }
 /*header .search:hover input { display: block }*/
 
 /*.box-icons, .box-login { height: 48px; float: right; }

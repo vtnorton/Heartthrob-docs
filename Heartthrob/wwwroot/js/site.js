@@ -33,6 +33,44 @@
     );
 });
 
+function addNotification() {
+    campo = "#notifications span";
+    itens = 1;
+
+    if ($(campo).text()) {
+        itens = parseInt($(campo).text(), 10) + 1;
+    } else {
+        $("#notifications").append("<span></span>")
+    }
+
+    if (itens < 10) {
+        $(campo).html("").append(itens);
+    } else {
+        $(campo).html("").append("9+");
+    }
+}
+
+function addNotificationNum(quantidade) {
+    campo = "#notifications span";
+    itens = quantidade;
+
+    if ($(campo).text()) {
+        itens = parseInt($(campo).text(), 10) + quantidade;
+    } else {
+        $("#notifications").append("<span></span>")
+    }
+
+    if (itens < 10) {
+        $(campo).html("").append(itens);
+    } else {
+        $(campo).html("").append("9+");
+    }
+}
+
+function clearNotification() {
+    $("#notifications span").remove("");
+}
+
 //function openMenu(menuparaabrir, mensageiro) {
 //    $(menuparaabrir).slideToggle("normal", function () {
 //        if ($(mensageiro).css("font-weight") == "600") {
