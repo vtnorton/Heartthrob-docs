@@ -31,7 +31,28 @@
             });
         }
     );
+
+    $(".user-img").each(function () {
+        var nome = this.nextSibling.nodeValue.trim();
+        $(".user-img").append('<span>' + getIntials(nome) + '</span>');
+    });
 });
+
+function getIntials(towork) {
+    towork = removeAcento(towork);
+    return towork.replace(/\W*(\w)\w*/g, '$1').toUpperCase()
+}
+
+function removeAcento(text) {
+    text = text.toLowerCase();
+    text = text.replace(new RegExp('[ÁÀÂÃ]', 'gi'), 'a');
+    text = text.replace(new RegExp('[ÉÈÊ]', 'gi'), 'e');
+    text = text.replace(new RegExp('[ÍÌÎ]', 'gi'), 'i');
+    text = text.replace(new RegExp('[ÓÒÔÕ]', 'gi'), 'o');
+    text = text.replace(new RegExp('[ÚÙÛ]', 'gi'), 'u');
+    text = text.replace(new RegExp('[Ç]', 'gi'), 'c');
+    return text;
+}
 
 function addNotification() {
     campo = "#notifications span";
