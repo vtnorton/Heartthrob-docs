@@ -75,6 +75,30 @@ select:focus { box-shadow: 0 3px 4px rgba(0, 91, 166, 0.3) inset; outline: 3px s
 elect[disabled], [include*="form-input-select()"] select:disabled { opacity: 0.4; cursor: not-allowed; }
 select:invalid { color: #C7C7C7; }
 
+/*input[type="checkbox"] { position: absolute; opacity: 0; }
+input[type="checkbox"] + label { position: relative; cursor: pointer; padding: 0; }
+input[type="checkbox"] + label:before { content: ''; margin-right: 10px; display: inline-block; vertical-align: text-top; width: 20px; height: 20px; background: white; }
+input[type="checkbox"]:hover + label:before { background: #f35429; }
+input[type="checkbox"]:focus + label:before { box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.12); }
+input[type="checkbox"]:checked + label:before { background: #f35429; }
+input[type="checkbox"]:disabled + label { color: #b8b8b8; cursor: auto; }
+input[type="checkbox"]:disabled + label:before { box-shadow: none; background: #ddd; }
+input[type="checkbox"]:checked + label:after { content: ''; position: absolute; left: 5px; top: 9px; background: white; width: 2px; height: 2px; box-shadow: 2px 0 0 white, 4px 0 0 white, 4px -2px 0 white, 4px -4px 0 white, 4px -6px 0 white, 4px -8px 0 white; -webkit-transform: rotate(45deg); transform: rotate(45deg); }*/
+
+input[type="checkbox"], input[type="radio"] { position: absolute; opacity: 0; z-index: -1; }
+input[type="checkbox"] + label, input[type="radio"] + label { position: relative; padding: 0 0 0 30px; line-height: 32px; cursor: pointer; }
+input[type="checkbox"] + label::before, input[type="radio"] + label::before, input[type="checkbox"] + label::after, input[type="radio"] + label::after { position: absolute; top: 0; left: 0; display: block; width: 20px; height: 20px; }
+input[type="checkbox"] + label::before, input[type="radio"] + label::before { content: " "; border: 1px solid #c5c5c5; background: #fff }
+input[type="checkbox"] + label::after { content: "\2714"; color: #fff; line-height: 20px; text-align: center; }
+input[type="checkbox"]:disabled + label::before { background: #c5c5c5 }
+
+input[type="radio"] + label::before { border-radius: 50%; }
+input[type=radio] + label::after { content: " "; top: 1px; left: 1px; width: 18px; height: 18px; background: #000; border: 3px solid #fff; border-radius: 50%; }
+input[type="checkbox"]:checked + label::before, input[type="radio"]:checked + label::before { background: #0078D7; border-color: #0078D7; }
+input[type="checkbox"] + label::after, input[type=radio] + label::after { -webkit-transform: scale(0); -ms-transform: scale(0); -o-transform: scale(0); transform: scale(0); }
+input[type="checkbox"]:checked + label::after, input[type=radio]:checked + label::after { -webkit-transform: scale(1); -ms-transform: scale(1); -o-transform: scale(1); transform: scale(1); }
+
+
 .ui-autocomplete-input { position: relative; z-index: 9 }
 .ui-autocomplete { position: absolute; z-index: 8; float: left; min-width: 160px; padding: 0; margin: -40px 0 0; list-style: none; background-color: #fcfcfc; }
 option, .ui-menu-item-wrapper { font-size: 15px; height: 40px; padding-left: 12px; padding-top: 8px }
@@ -93,14 +117,15 @@ option, .ui-menu-item-wrapper { font-size: 15px; height: 40px; padding-left: 12p
 .menu .line { width: 216px; margin: 0 auto; border-bottom: 1px solid #ccc; height: 2px }
 .menu .more:after { content: ' '; width: 10px; height: 10px; display: inline-grid; top: 10px; position: relative; margin-top: 2px; float: right; border: solid #999; border-width: 0 2px 2px 0; transform: rotate(-45deg); -webkit-transform: rotate(-45deg); margin-right: 13px }
 .menu-open { display: block }
-.menu ul.right { float: none }
-.menu li ul.right li:hover ul, .menu li:hover ul.right { left: -235px }
-
+.menu.right { float: none }
+.menu.right li ul li:hover ul, .menu.right li:hover ul { left: -235px }
 
 /* Fluent Design Stuff */
 .acrylic { -webkit-backdrop-filter: blur(20px) saturate(125%); backdrop-filter: blur(20px) saturate(125%); background-color: rgba(255,255,255,.3); }
 
-.shadow, .ui-autocomplete, .menu ul { box-shadow: 0 4px 30px rgba(0, 0, 0, 0.25); }
+.shadow, .ui-autocomplete, .menu, .menu ul { box-shadow: 0 4px 30px rgba(0, 0, 0, 0.25); }
+.shadow-middle, blockquote { box-shadow: 0 4px 10px rgba(0,0,0,0.25); }
+
 /* Compatible mode */
 .table { border-collapse: collapse; border-spacing: 0; width: 100%; margin-top: 10px; border-top: 1px solid #ccc }
 .table tr { border-bottom: 1px solid #ccc }

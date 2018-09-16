@@ -1,4 +1,9 @@
-﻿<h1>Pure CSS</h1>
+﻿@{
+    ViewData["Title"] = "Pure CSS";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Pure CSS</h1>
 <p>The heartthrob framework (heartthrob.css) can add more elegancy to your project, here you will find the basic stuff from this ultimate framework.</p>
 
 <div class="space-medium"></div>
@@ -114,3 +119,23 @@
 </script>
 <input id="tags">
 <p>The Autocomplete widgets provides suggestions while you type into the field. Here the suggestions are tags for programming languages, give "ja" (for Java or JavaScript) a try.</p>
+
+<div class="space-long"></div>
+<h3>Checkbox</h3>
+<p>A checkbox is used to select or deselect action items. It can be used for a single item or for a list of multiple items that a user can choose from. The control has three selection states: unselected and selected.</p>
+<div class="space-medium"></div>
+<h4>Examples</h4>
+<br />
+
+<input type="checkbox" id="1" /><label for="1">Checkbox unselected</label><br />
+<input type="checkbox" id="2" checked /><label for="2">Checkbox selected</label><br />
+<input type="checkbox" id="3" disabled /><label for="3">Checkbox disabled</label><br />
+
+<div class="space-long"></div>
+<h3>Radio button</h3>
+<p>A radio button is used for two or more mutually exclusive options.</p>
+<div class="space-medium"></div>
+<h4>Examples</h4>
+<br />
+<input type="radio" id="10" /><label for="10">Checkbox unselected</label><br />
+<input type="radio" id="20" checked /><label for="20">Checkbox selected</label><br />
