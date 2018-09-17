@@ -1,1 +1,2 @@
-﻿.docs-box{background: url('/img/fluent-wallpaper3.jpg'); background-size:cover; height:360px}
+﻿.docs-box { background: url('/img/fluent-wallpaper3.jpg'); background-size: cover; height: 360px }
+.docs.alert { position: relative; top: unset; left: unset; transform: none }

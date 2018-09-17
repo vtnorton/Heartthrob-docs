@@ -63,13 +63,33 @@
 <div class="row">
     <div class="col-md-6 docs-box">
         <div style="margin:20px">
-            <div class="alert">
+            <div class="alert docs">
                 <h3>Delete file permanently?</h3>
                 <p>If you delete this file, you won’t be able to recover it. Do you want to delete it?</p>
 
-                <a class="btn btn-primary" href="#">Delete</a> <a class="btn" href="#">Cancel</a>
+                <a class="btn" href="#">Cancel</a> <a class="btn btn-primary" href="#">Yes</a>
             </div>
         </div>
+    </div>
+</div>
+<div class="space-medium"></div>
+<script>
+    var x = {
+        title: "Delete file permanently?",
+        description: "If you delete this file, you won’t be able to recover it. Do you want to delete it?",
+        cancel: "Cancel",
+        confirm: "Yes",
+        action: "alert('vn');"
+    };
+</script>
+<a class="btn" onclick="dialog(x);">Call dialog</a>
+@*<a onclick="dialog('Delete file permanently?', 'If you delete this file, you won’t be able to recover it. Do you want to delete it?');" class="btn">Call Dialog</a>*@
+
+<div class="alert-modal">
+    <div class="alert">
+        <h3>Delete file permanently?</h3>
+        <p>If you delete this file, you won’t be able to recover it. Do you want to delete it?</p>
+        <a class="btn close-button" onclick="closeDialog();">Cancel</a> <a class="btn btn-primary" href="#">Yes</a>
     </div>
 </div>
 
@@ -88,7 +108,7 @@
 <br />
 <div class="row">
     <div class="col-md-10">
-        <header>
+        <header class="acrylic">
             <div class="logo">
                 <img alt="Logo" src="~/img/200px.png" />
             </div>
@@ -110,7 +130,7 @@
                     </li>
                     <li>
                         <a onclick="openMenu(event, this);"><i class="fa fa-gears"></i></a>
-                        <ul class="menu right" style="margin-left:20px;">
+                        <ul class="menu dark right">
                             <li><a href="#"><i class="fa fa-share"></i>Share</a></li>
                             <li><a href="#"><i class="fa fa-user"></i>Edit profile</a></li>
                             <li>
@@ -125,7 +145,20 @@
                         </ul>
                     </li>
                     <li>
-                        <a href="#"><div class="user-img"></div> Vítor Norton</a>
+                        <a onclick="openMenu(event, this);"><div class="user-img"></div> Vítor Norton</a>
+                        <ul class="menu dark right">
+                            <li><a href="#"><i class="fa fa-share"></i>Share</a></li>
+                            <li><a href="#"><i class="fa fa-user"></i>Edit profile</a></li>
+                            <li>
+                                <a href="#" class="more"><i class="fa fa-gear"></i>More options...</a>
+                                <ul>
+                                    <li><a href="#"><i class="fa fa-share"></i>Share</a></li>
+                                    <li><a href="#"><i class="fa fa-user"></i>Edit profile</a></li>
+                                </ul>
+                            </li>
+                            <li class="line"></li>
+                            <li><a href="#" class="no-icon">Sign out</a></li>
+                        </ul>
                     </li>
                 </ul>
             </div>
@@ -133,12 +166,76 @@
         </header>
     </div>
 </div>
-<div class="space-long"></div>
+<div class="space-medium"></div>
 <a onclick="addNotification();" class="btn">Add notification</a>
 <a onclick="addNotificationNum(5);" class="btn">Add 5 notification</a>
 <a onclick="clearNotification();" class="btn">Clear notification</a>
-
 <div class="space-long"></div>
+
+<h3>Container elements</h3>
+<p>Put your content here</p>
+<div class="space-medium"></div>
+<h4>Examples</h4>
+<br />
+<div class="row">
+    <div class="col-md-10 docs-box" style="padding:20px 10px">
+        <div class="row">
+            <div class="col-md-8">
+                <div class="view-element acrylic">
+                    <h4>Your content here</h4>
+                    <hr />
+                    <p>
+                        Bacon ipsum dolor amet pork chop burgdoggen boudin, spare ribs tenderloin tongue porchetta ribeye brisket doner jowl picanha andouille. Pork loin jowl kielbasa boudin sausage, cupim drumstick landjaeger t-bone corned beef short ribs pork chop prosciutto. Ham tail bacon jerky shank alcatra, fatback turkey shankle beef corned beef. Venison pancetta short ribs t-bone pig andouille, flank jerky beef ribs sirloin drumstick. Short loin brisket pork chop chicken, pork belly porchetta landjaeger pork loin boudin ribeye beef doner. Tail prosciutto kevin boudin beef ribs shank. Andouille venison cupim chicken.
+                    </p><br />
+                    <p>
+                        Ground round capicola sausage ribeye doner. Strip steak pig ball tip meatloaf ground round salami, chicken drumstick. Venison swine prosciutto andouille burgdoggen. Biltong pork belly tail, tri-tip pork chop shankle bacon strip steak doner drumstick ball tip beef bresaola boudin.
+                    </p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="view-element acrylic">
+                    <h4>Another content with actions</h4>
+                    <div class="taskbar">
+                        <div class="right">
+                            <a href="#" class="btn btn-primary"><i class="fa fa-save"></i> Save</a>
+                        </div>
+                        <div class="clean"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-10" style="padding:20px 10px">
+        <div class="row">
+            <div class="col-md-8">
+                <div class="view-element">
+                    <h4>Your content here</h4>
+                    <hr />
+                    <p>
+                        Bacon ipsum dolor amet pork chop burgdoggen boudin, spare ribs tenderloin tongue porchetta ribeye brisket doner jowl picanha andouille. Pork loin jowl kielbasa boudin sausage, cupim drumstick landjaeger t-bone corned beef short ribs pork chop prosciutto. Ham tail bacon jerky shank alcatra, fatback turkey shankle beef corned beef. Venison pancetta short ribs t-bone pig andouille, flank jerky beef ribs sirloin drumstick. Short loin brisket pork chop chicken, pork belly porchetta landjaeger pork loin boudin ribeye beef doner. Tail prosciutto kevin boudin beef ribs shank. Andouille venison cupim chicken.
+                    </p><br />
+                    <p>
+                        Ground round capicola sausage ribeye doner. Strip steak pig ball tip meatloaf ground round salami, chicken drumstick. Venison swine prosciutto andouille burgdoggen. Biltong pork belly tail, tri-tip pork chop shankle bacon strip steak doner drumstick ball tip beef bresaola boudin.
+                    </p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="view-element">
+                    <h4>Another content with actions</h4>
+                    <div class="taskbar">
+                        <div class="right">
+                            <a href="#" class="btn"><i class="fa fa-arrow-left"></i> Cancel</a> <a href="#" class="btn btn-primary"><i class="fa fa-save"></i> Save</a>
+                        </div>
+                        <div class="clean"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
 <div class="space-long"></div>
 <div class="space-long"></div>
 <div class="space-long"></div>
