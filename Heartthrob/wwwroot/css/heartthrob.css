@@ -67,9 +67,9 @@ small { font-size: 12px; line-height: 14px; }
 .btn-action { width: intrinsic; width: -moz-max-content; width: -webkit-max-content; }
 .btn-action .btn { padding-top: 14px; color: #000; padding-left: 19px; min-width: 50px; max-width: 50px; height: 50px; border-radius: 50px; margin-right: 15px; box-shadow: 0 5px 7px rgba(0, 0, 0, 0.25); background: #fff; border: none; float: left; overflow: hidden; display: flex; white-space: pre; }
 .btn-action:hover .btn.btn-primary { min-width: 50px; max-width: 50px; transition: all .2s; }
-.btn-action .btn:hover { background: #fff; box-shadow: 0 5px 14px rgba(0, 0, 0, 0.45); transition: width .2s initial; min-width: 140px; }
-.btn-action .btn.btn-primary, .btn-action .btn.btn-primary:hover { background: #0078D7; min-width: 140px; color: #fff; background: #0078D7; }
-.btn-action .btn i { color: #000; font-size: 16px; margin-right: 18px; margin-top: 3px; }
+.btn-action .btn:hover { background: #0078D7; color: #fff; box-shadow: 0 5px 14px rgba(0, 0, 0, 0.45); transition: width .2s initial; min-width: 140px; }
+.btn-action .btn.btn-primary { background: #0078D7; min-width: 140px; color: #fff; }
+.btn-action .btn i { font-size: 16px; margin-right: 18px; margin-top: 3px; }
 .btn-action .btn.btn-primary i { color: #fff }
 .btn-action .btn:last-of-type { margin-right: 0 }
 
