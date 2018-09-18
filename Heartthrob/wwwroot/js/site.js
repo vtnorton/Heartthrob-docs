@@ -40,11 +40,12 @@
 
     var modal = document.querySelector(".alert-modal");
     dialog = function (env) {
-        var html = `<div id='dialog52895' class="alert"><h3>` + env.title + `</h3><p>` + env.description + `</p>
+        /*var html = `<div id='dialog52895' class="alert"><h3>` + env.title + `</h3><p>` + env.description + `</p>
                 <a class="btn close" href="#">` + env.cancel + `</a> <a class="btn btn-primary" onclick='` + env.action + `'>` + env.confirm + `</a></div>`;
+                */
 
-        alert(env.title);
-        //modal.classList.toggle("show-alert");
+        //alert(env.title);
+        modal.classList.toggle("show-alert");
     }
     closeDialog = function () {
         modal.classList.toggle("show-alert");
