@@ -64,11 +64,12 @@ small { font-size: 12px; line-height: 14px; }
 .btn-link { background: transparent; border-color: transparent; color: #0078D7 }
 .btn-link i { margin-right: 8px }
 .btn-link:hover { background: transparent; color: #1d5bbc; border-color: transparent; }
+
 .btn-action { width: intrinsic; width: -moz-max-content; width: -webkit-max-content; }
 .btn-action .btn { padding-top: 14px; color: #000; padding-left: 19px; min-width: 50px; max-width: 50px; height: 50px; border-radius: 50px; margin-right: 15px; box-shadow: 0 5px 7px rgba(0, 0, 0, 0.25); background: #fff; border: none; float: left; overflow: hidden; display: flex; white-space: pre; }
 .btn-action:hover .btn.btn-primary { min-width: 50px; max-width: 50px; transition: all .2s; }
 .btn-action .btn:hover { background: #0078D7; color: #fff; box-shadow: 0 5px 14px rgba(0, 0, 0, 0.45); transition: width .2s initial; min-width: 140px; }
-.btn-action .btn.btn-primary { background: #0078D7; min-width: 140px; color: #fff; }
+.btn-action .btn.btn-primary { background: #0078D7; min-width: 140px; color: #fff; transition: all .35s; }
 .btn-action .btn i { font-size: 16px; margin-right: 18px; margin-top: 3px; }
 .btn-action .btn.btn-primary i { color: #fff }
 .btn-action .btn:last-of-type { margin-right: 0 }
@@ -196,6 +197,22 @@ header .user-img span { display: block; margin-top: -8px; font-style: italic; }
 .view-box-content ul li a:hover { background: rgba(100,100,100,0.18) }
 .view-box-content ul li a i { margin-right: 15px; width: 20px; text-align: center }
 .view-map { height: 360px; margin: 20px -25px -11px; }
+
+nav { width: 250px; background: #0078D7; float: left; z-index: 9; position: fixed; height: calc(100% - 48px); margin-top: 48px; }
+nav a.child:after { content: ' '; width: 10px; height: 10px; display: block; position: absolute; right: 20px; margin-top: -15px; border: solid rgba(255,255,255,0.5); border-width: 0 2px 2px 0; transform: rotate(45deg); -webkit-transform: rotate(45deg); }
+nav .nav-bottom-menus a.child:after { transform: rotate(225deg); -webkit-transform: rotate(225deg); margin-top: -12px }
+nav a { color: #fff; font-size: 14px; text-decoration: none; width: 100%; display: block; padding: 14px 20px; height: 48px }
+nav a:hover { background: rgba(255,255,255,0.2); transition: all .3s }
+nav a i { width: 25px; text-align: center; font-size: 14px; margin-right: 5px; }
+nav ul, nav ul li { list-style: none; padding: 0; margin: 0 }
+nav ul li ul { display: none; max-height: 280px !important; overflow-x: auto }
+nav ul li ul li a { background: rgba(255,255,255,0.3); transition: all .3s }
+nav ul li ul li a:hover { background: rgba(255,255,255,0.4); transition: all 0.3s }
+.nav-bottom-menus { margin-bottom: 10px }
+.nav-bottom-menus:before, .nav-top-menus:before { content: " "; border-top: 1px solid rgba(255,255,255,0.4); display: block; margin: 0 16px 5px }
+.nav-bottom-menus { position: absolute; bottom: 0; width: 100%; }
+.menu-drop { display: block; height: 23px; width: 23px; position: static; top: -15px; background: url(/images/dark.png) no-repeat -84px -363px; margin-top: -20px; cursor: pointer; margin-left: 185px; }
+.menu-drop-dark { display: block; height: 23px; width: 23px; position: static; top: -15px; background: url(/images/light.png) no-repeat -84px -363px; cursor: pointer; float: right; }
 
 /* Fluent Design Stuff */
 .acrylic, .menu, .menu ul, .alert { -webkit-backdrop-filter: blur(15px) saturate(125%); backdrop-filter: blur(15px) saturate(125%); background: rgba(255,255,255,0.75); }
