@@ -56,15 +56,15 @@
         $(".user-img").append('<span>' + getIntials(nome) + '</span>');
     });
 
-    $(".view-element-actions .view-element.link").click(function () {
-        $(".view-element-actions .view-element.link").removeClass("opened", 300);
+    $(".cards-actions .card.link").click(function () {
+        $(".cards-actions .card.link").removeClass("opened", 300);
         $(this).addClass("opened", 300);
     });
 
-    if ($("nav ul li ul li a").hasClass("active")) {
-        $("nav a.active").parent().parent().parent().css("background", "#555");
-        $("nav.light a.active").parent().parent().parent().css("background", "#d9d9d9");
-        $("nav a.active").parent().parent().show();
+    if ($(".nav ul li ul li a").hasClass("active")) {
+        $(".nav a.active").parent().parent().parent().css("background", "#555");
+        $(".nav.light a.active").parent().parent().parent().css("background", "#d9d9d9");
+        $(".nav a.active").parent().parent().show();
     };
 
     var modal = document.querySelector(".alert-modal");
@@ -83,30 +83,30 @@
 
 function minNav() {
     setCookie('hb-menustate', true);
-    $("nav a.child").addClass("closed");
-    $("nav a").css("color", "transparent");
-    $("nav a").css("overflow", "hidden");
-    $("nav a i").css("color", "#fff");
-    $("nav.light a i").css("color", "#666");
-    $("nav").animate({ "width": "65px" }, 400);
-    $("nav.middle").animate({ "width": "50px" }, 300);
+    $(".nav a.child").addClass("closed");
+    $(".nav a").css("color", "transparent");
+    $(".nav a").css("overflow", "hidden");
+    $(".nav a i").css("color", "#fff");
+    $(".nav.light a i").css("color", "#666");
+    $(".nav").animate({ "width": "65px" }, 400);
+    $(".nav.middle").animate({ "width": "50px" }, 300);
 }
 function maxNav() {
     setCookie('hb-menustate', false);
 
     var width;
-    if ($("nav").hasClass("middle")) {
+    if ($(".nav").hasClass("middle")) {
         width = "200px";
     } else {
         width = "250px";
     }
 
-    $("nav").animate({ "width": width }, 350, function () {
-        $("nav a.child").removeClass("closed");
-        $("nav a").css("color", "#fff");
-        $("nav.light a").css("color", "#666");
-        $("nav a").css("overflow", "auto");
-        $("nav a.child:after").css("", "block");
+    $(".nav").animate({ "width": width }, 350, function () {
+        $(".nav a.child").removeClass("closed");
+        $(".nav a").css("color", "#fff");
+        $(".nav.light a").css("color", "#666");
+        $(".nav a").css("overflow", "auto");
+        $(".nav a.child:after").css("", "block");
     });
 }
 
@@ -218,3 +218,55 @@ function getCookie(name) {
     }
     return null;
 }
+
+$.fn.extend({
+    treeview: function () {
+        return this.each(function () {
+            // Initialize the top levels;
+            var tree = $(this);
+
+            tree.addClass('treeview-tree');
+            tree.find('li').each(function () {
+                var stick = $(this);
+            });
+            tree.find('li').has("ul").each(function () {
+                var branch = $(this); //li with children ul
+
+                branch.prepend("<i class='tree-indicator fa fa-chevron-right'></i>");
+                branch.addClass('tree-branch');
+                branch.on('click', function (e) {
+                    if (this == e.target) {
+                        var icon = $(this).children('i:first');
+                        icon.toggleClass("fa-chevron-down fa-chevron-right");
+                        $(this).children().children().toggle();
+                    }
+                })
+                branch.children().children().toggle();
+
+				/**
+				 *	The following snippet of code enables the treeview to
+				 *	function when a button, indicator or anchor is clicked.
+				 *
+				 *	It also prevents the default function of an anchor and
+				 *	a button from firing.
+				 */
+                branch.children('.tree-indicator, button, a').click(function (e) {
+                    branch.click();
+
+                    e.preventDefault();
+                });
+            });
+        });
+    }
+});
+
+/**
+ *	The following snippet of code automatically converst
+ *	any '.treeview' DOM elements into a treeview component.
+ */
+$(window).on('load', function () {
+    $('.treeview').each(function () {
+        var tree = $(this);
+        tree.treeview();
+    })
+})

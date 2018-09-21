@@ -3,7 +3,6 @@
     ViewData["Title"] = "Layout";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-
 <h2>Layout</h2>
 <h3>Menus</h3>
 <p>Have a single entry point (a File menu at the top of the screen, for example) that is always displayed. Are usually attached to a button or a parent menu item. Are invoked by left-clicking (or an equivalent action, such as tapping with your finger). </p>
@@ -172,7 +171,7 @@
 <a onclick="clearNotification();" class="btn">Clear notification</a>
 <div class="space-long"></div>
 
-<h3>Container elements</h3>
+<h3>Container elements - cards</h3>
 <p>Put your content here</p>
 <div class="space-medium"></div>
 <h4>Examples</h4>
@@ -181,7 +180,7 @@
     <div class="col-md-10 docs-box" style="padding:20px 10px">
         <div class="row">
             <div class="col-md-8">
-                <div class="view-element acrylic">
+                <div class="card acrylic">
                     <h4>Your content here</h4>
                     <hr />
                     <p>
@@ -193,7 +192,7 @@
                 </div>
             </div>
             <div class="col-md-4">
-                <div class="view-element acrylic">
+                <div class="card acrylic">
                     <h4>Another content with actions</h4>
                     <div class="taskbar">
                         <div class="right">
@@ -210,7 +209,7 @@
     <div class="col-md-10" style="padding:20px 10px">
         <div class="row">
             <div class="col-md-8">
-                <div class="view-element">
+                <div class="card">
                     <h4>Your content here</h4>
                     <hr />
                     <p>
@@ -222,7 +221,7 @@
                 </div>
             </div>
             <div class="col-md-4">
-                <div class="view-element">
+                <div class="card">
                     <h4>Another content with actions</h4>
                     <div class="taskbar">
                         <div class="right">
@@ -240,8 +239,8 @@
 <br />
 <div class="row">
     <div class="col-md-8 docs-box" style="padding:20px 10px; height:500px">
-        <div class="view-element-steps">
-            <div class="view-element opened acrylic" id="part1">
+        <div class="cards-steps">
+            <div class="card opened acrylic" id="part1">
                 <h4>Your content here</h4>
                 <hr />
                 <p>
@@ -252,7 +251,7 @@
                 </div>
             </div>
 
-            <div class="view-element acrylic" id="part2">
+            <div class="card acrylic" id="part2">
                 <h4>Your content here</h4>
                 <hr />
                 <p>
@@ -264,7 +263,7 @@
                 </div>
             </div>
 
-            <div class="view-element acrylic" id="part3">
+            <div class="card acrylic" id="part3">
                 <h4>Your content here</h4>
                 <hr />
                 <p>
@@ -282,8 +281,8 @@
 <br />
 <div class="row">
     <div class="col-md-5 docs-box" style="padding:20px 10px; height: 400px">
-        <div class="view-element-actions">
-            <div class="view-element link acrylic">
+        <div class="cards-actions">
+            <div class="card link acrylic">
                 <h4>Your content here</h4>
                 <hr />
                 <p>
@@ -291,7 +290,7 @@
                 </p>
             </div>
 
-            <div class="view-element link acrylic">
+            <div class="card link acrylic">
                 <h4>Your content here</h4>
                 <hr />
                 <p>
@@ -299,7 +298,7 @@
                 </p>
             </div>
 
-            <div class="view-element link acrylic">
+            <div class="card link acrylic">
                 <h4>Your content here</h4>
                 <hr />
                 <p>
@@ -317,7 +316,7 @@
 <h4>Examples</h4>
 <div class="row">
     <div class="col-md-2">
-        <nav style="height:540px; position:relative">
+        <nav class="nav" style="height:540px; position:relative">
             <div class="nav-action">
                 <a><i class="fa fa-navicon"></i></a>
             </div>
@@ -349,7 +348,7 @@
         </nav>
     </div>
     <div class="col-md-2 col-md-offset-1">
-        <nav class="light" style="height:540px; position:relative">
+        <nav class="nav light" style="height:540px; position:relative">
             <div class="nav-action">
                 <a><i class="fa fa-navicon"></i></a>
             </div>
@@ -381,7 +380,7 @@
         </nav>
     </div>
     <div class="col-md-2 col-md-offset-1">
-        <nav class="light middle" style="height:540px; position:relative">
+        <nav class="nav light middle" style="height:540px; position:relative">
             <ul class="nav-top-menus">
                 <li><a><i class="fa fa-dashboard"></i> Dashboard</a></li>
                 <li>
