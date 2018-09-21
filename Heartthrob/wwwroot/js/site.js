@@ -34,7 +34,7 @@
     }
 
     $('.nav-action').clickToggle(function () {
-        if (menustate) { maxNav(); } else { minNav();}
+        if (menustate) { maxNav(); } else { minNav(); }
     }, function () {
         if (menustate) { minNav(); } else { maxNav(); }
     });
@@ -60,6 +60,12 @@
         $(".view-element-actions .view-element.link").removeClass("opened", 300);
         $(this).addClass("opened", 300);
     });
+
+    if ($("nav ul li ul li a").hasClass("active")) {
+        $("nav a.active").parent().parent().parent().css("background", "#555");
+        $("nav.light a.active").parent().parent().parent().css("background", "#d9d9d9");
+        $("nav a.active").parent().parent().show();
+    };
 
     var modal = document.querySelector(".alert-modal");
     dialog = function (env) {
@@ -87,7 +93,15 @@ function minNav() {
 }
 function maxNav() {
     setCookie('hb-menustate', false);
-    $("nav").animate({ "width": "250px" }, 400, function () {
+
+    var width;
+    if ($("nav").hasClass("middle")) {
+        width = "200px";
+    } else {
+        width = "250px";
+    }
+
+    $("nav").animate({ "width": width }, 350, function () {
         $("nav a.child").removeClass("closed");
         $("nav a").css("color", "#fff");
         $("nav.light a").css("color", "#666");
