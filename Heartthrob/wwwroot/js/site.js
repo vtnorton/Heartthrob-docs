@@ -20,6 +20,25 @@
         $(menu).next(".menu").slideToggle("fast");
     };
 
+    $('.nav-top-menus a.child').click(function () {
+        closeMenus(this);
+    });
+
+    $('.nav-bottom-menus a.child').click(function () {
+        closeMenus(this);
+    });
+
+    var menustate = getCookie('hb-menustate');
+    if (menustate) {
+        minNav();
+    }
+
+    $('.nav-action').clickToggle(function () {
+        if (menustate) { maxNav(); } else { minNav();}
+    }, function () {
+        if (menustate) { minNav(); } else { maxNav(); }
+    });
+
     $("header .search a").clickToggle(
         function () {
             $("header .search a").addClass("searchactived", function () {
@@ -52,6 +71,35 @@
     }
 });
 
+function minNav() {
+    setCookie('hb-menustate', true);
+    $("nav a.child").addClass("closed");
+    $("nav a").css("color", "transparent");
+    $("nav a").css("overflow", "hidden");
+    $("nav a i").css("color", "#fff");
+    $("nav.light a i").css("color", "#666");
+    $("nav").animate({ "width": "65px" }, 400);
+    $("nav.middle").animate({ "width": "50px" }, 300);
+}
+function maxNav() {
+    setCookie('hb-menustate', false);
+    $("nav").animate({ "width": "250px" }, 400, function () {
+        $("nav a.child").removeClass("closed");
+        $("nav a").css("color", "#fff");
+        $("nav.light a").css("color", "#666");
+        $("nav a").css("overflow", "auto");
+        $("nav a.child:after").css("", "block");
+    });
+}
+
+function closeMenus(menu) {
+    $('.nav-top-menus li ul').slideUp("fast");
+    $('.nav-bottom-menus li ul').slideUp("fast");
+
+    if ($(menu).next('ul').is(":hidden")) {
+        $(menu).next('ul').slideDown("fast");
+    };
+}
 
 function getIntials(towork) {
     towork = removeAcento(towork);
@@ -136,4 +184,24 @@ function nextStep(destino, mensageiro) {
 
     $(destino).removeClass("view-closed", 1000);
     $(destino).addClass("view-opened");
+}
+
+function setCookie(name, value, days) {
+    var expires = "";
+    if (days) {
+        var date = new Date();
+        date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+        expires = "; expires=" + date.toUTCString();
+    }
+    document.cookie = name + "=" + (value || "") + expires + "; path=/";
+}
+function getCookie(name) {
+    var nameEQ = name + "=";
+    var ca = document.cookie.split(';');
+    for (var i = 0; i < ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0) == ' ') c = c.substring(1, c.length);
+        if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
+    }
+    return null;
 }
