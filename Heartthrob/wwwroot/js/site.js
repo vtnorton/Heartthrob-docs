@@ -56,6 +56,10 @@
         $(".user-img").append('<span>' + getIntials(nome) + '</span>');
     });
 
+    $(".view-element-actions .view-element.link").click(function () {
+        $(".view-element-actions .view-element.link").removeClass("opened", 300);
+        $(this).addClass("opened", 300);
+    });
 
     var modal = document.querySelector(".alert-modal");
     dialog = function (env) {
@@ -168,22 +172,17 @@ function clearNotification() {
 //    //TODO: mudar o ícone para seta para cima
 //};
 
-function backStep(destino, mensageiro) {
-    $(mensageiro).removeClass("view-opened");
-    $(mensageiro).addClass("view-alarm");
-    $(mensageiro).addClass("view-closed", 1000);
-
-    $(destino).removeClass("view-closed", 1000);
-    $(destino).addClass("view-opened");
+function goToStep(destino, mensageiro) {
+    $("#" + mensageiro).removeClass("opened", 650);
+    $("#" + destino).addClass("opened", 650);
 }
 
-function nextStep(destino, mensageiro) {
-    $(mensageiro).addClass("view-passed");
-    $(mensageiro).removeClass("view-opened");
-    $(mensageiro).addClass("view-closed", 1000);
+function setDone(destino) {
+    $("#" + destino).addClass("view-done", 100);
+}
 
-    $(destino).removeClass("view-closed", 1000);
-    $(destino).addClass("view-opened");
+function setWarning(destino) {
+    $("#" + destino).addClass("view-warning", 650);
 }
 
 function setCookie(name, value, days) {
