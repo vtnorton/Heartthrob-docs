@@ -1,36 +1,43 @@
-﻿@addTagHelper *, Kendo.Mvc
-@using Kendo.Mvc.UI
-
-@{
+﻿@{
     ViewData["Title"] = "Kendo";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Kendo elements</h2>
-
-<h2>Input fields</h2>
-<h3>Rich text box</h3>
-<p>A rich text box is several lines high, and allows for more and/or richer text to be entered Note that having a rich text box does not mean that “rich” text must be entered.</p>
+<h2>Kendo elements: grids</h2>
+<p>Lorem ipsum</p>
 <div class="space-medium"></div>
-<h4>Examples</h4>
-<textarea></textarea>
-
-<div class="space-medium"></div>
-<h2>Dropdowns</h2>
-<h3>Basic dropdown</h3>
-
-<div class="space-medium"></div>
-<h2>Dropdowns</h2>
-<h3>Basic dropdown</h3>
-<p>Basic dropdowns are used to select single text-based elements from a list of items.</p>
-<div class="space-medium"></div>
-
 <h4>Example</h4>
-<div>
-    <select>
-        <option value="volvo">Volvo</option>
-        <option value="saab">Saab</option>
-        <option value="opel">Opel</option>
-        <option value="audi">Audi</option>
-    </select>
+<br />
+<div class="row">
+    <div class="col-md-8">
+        @(Html.Kendo().Grid<Heartthrob.Entities.Customer>().Name("grid").Columns(columns =>
+            {
+                columns.Bound(c => c.ContactName);
+                columns.Bound(c => c.ContactTitle);
+                columns.Bound(c => c.CompanyName);
+                columns.Bound(c => c.Country).Width(110);
+            }).HtmlAttributes(new { style = "height: 250px;" }).Scrollable().Groupable().Sortable().Filterable()
+                      .Pageable(pageable => pageable.Refresh(true).PageSizes(true).ButtonCount(5))
+                      .DataSource(dataSource => dataSource.Ajax().Read(read => read.Action("Read", "Kendo"))))
+    </div>
+</div>
+<div class="space-medium"></div>
+<h4>Example inside card</h4>
+<br />
+<div class="row">
+    <div class="col-md-8">
+        <div class="card">
+            <h4>Some table</h4>
+            <hr />
+            @(Html.Kendo().Grid<Heartthrob.Entities.Customer>().Name("grid2").Columns(columns =>
+            {
+                columns.Bound(c => c.ContactName);
+                columns.Bound(c => c.ContactTitle);
+                columns.Bound(c => c.CompanyName);
+                columns.Bound(c => c.Country).Width(110);
+            }).HtmlAttributes(new { style = "height: 250px;" }).Scrollable().Groupable().Sortable().Filterable()
+                      .Pageable(pageable => pageable.Refresh(true).PageSizes(true).ButtonCount(5))
+                      .DataSource(dataSource => dataSource.Ajax().Read(read => read.Action("Read", "Kendo"))))
+        </div>
+    </div>
 </div>
