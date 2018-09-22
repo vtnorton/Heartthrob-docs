@@ -218,7 +218,7 @@ header .user-img span { display: block; margin-top: -8px; font-style: italic; }
 .nav.light a:hover, nav.light ul li ul li a { background: #d9d9d9; transition: all .3s }
 .nav.light a.active { background: #bcbcbc !important; }
 .nav.light ul li ul li a:hover { background: #bcbcbc; transition: all 0.3s }
-.nav.light a.child:after, nav.light .nav-bottom-menus:before, nav.light .nav-top-menus:before { border-color: #ccc; }
+.nav.light a.child:after, nav.light .nav-bottom-menus:before, nav.light .nav-top-menus:before { border-color: #bcbcbc; }
 .nav a.closed:after { display: none }
 
 div.panel:first-child { margin-top: 20px; }
