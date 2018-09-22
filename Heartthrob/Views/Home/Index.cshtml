@@ -1,10 +1,11 @@
-﻿@{
-    ViewData["Title"] = "Pure CSS";
+﻿
+@{
+    ViewData["Title"] = "Typography";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-
-<h2>Pure CSS</h2>
-<p>The heartthrob framework (heartthrob.css) can add more elegancy to your project, here you will find the basic stuff from this ultimate framework.</p>
+<h2>Typography</h2>
+@*<h2>Pure CSS</h2>
+<p>The heartthrob framework (heartthrob.css) can add more elegancy to your project, here you will find the basic stuff from this ultimate framework.</p>*@
 
 <div class="space-medium"></div>
 <h3>Titles and texts</h3>
@@ -45,101 +46,4 @@
         </blockquote>
     </div>
 </div>
-<div class="space-medium"></div>
-<h3>Util classes</h3>
-<p>You can use classes like <i>space-long</i>, <i>space-medium</i> and <i>space-low</i> to add a white space with the height of 48px, 30px and 15px, successively.</p>
-<p>You can as well use the class <i>tag</i> to create a more relevant content like <span class="tag">this one</span>.</p><br />
-<p>In this framework, you can use the classes <i>left</i>, <i>right</i>, <i>center</i> to help you positionate you content, after using those, you will need to use the <i>clear</i> the clear both. You can use the <i>show</i> and the <i>hide</i> class to make your element visible or hidden.</p>
-<div class="space-long"></div>
 
-<h3>Buttons & links</h3>
-<p>Use primary buttons, set to either the user’s accent color or the app brand color, to indicate the default action when the user presses “Enter” when a dialog or window is open. Use secondary buttons for all other main actions. Use tertiary buttons for lesser actions.</p>
-<div class="space-medium"></div>
-<h4>Examples</h4>
-<br />
-<a class="btn btn-primary">Button text</a>
-<a class="btn">Button text</a>
-<a class="btn btn-lesser">Button text</a>
-
-<div class="space-medium"></div>
-
-<h4>Examples with icon</h4>
-<br />
-<a class="btn btn-primary"><i class="fa fa-phone"></i> Button text</a>
-<a class="btn"><i class="fa fa-whatsapp"></i> Button text</a>
-<a class="btn btn-lesser"><i class="fa fa-deviantart"></i> Button text</a>
-<div class="space-medium"></div>
-
-<h4>Examples with action buttons</h4>
-<br />
-<div class="btn-action">
-    <a class="btn"><i class="fa fa-phone"></i> Button text</a>
-    <a class="btn"><i class="fa fa-whatsapp"></i> Button text</a>
-    <a class="btn btn-primary"><i class="fa fa-file-movie-o"></i> Button text</a>
-</div>
-
-<div class="space-medium"></div>
-<p>Buttons may have 16x16 icons next to the text—remember that the group containing the icon and text should be centered.</p>
-
-<div class="space-long"></div>
-<h3>Action links</h3>
-<p>An action link may be used in place of a button where the action the user is performing takes place in another app or experience. Action links typically have a right pointing arrow on the left, followed by text—though that arrow icon may be replaced where appropriate. Action links are set to the user’s accent color or the app brand color.</p>
-<div class="space-medium"></div>
-<h4>Examples</h4>
-<br />
-<a href="#" class="btn btn-link"><i class="fa fa-angle-right"></i> Link that continues in another app</a>
-
-<div class="space-long"></div>
-<h3>Hyperlink</h3>
-<p>Hyperlinks can be used in the traditional sense—i.e. to link to a web experience, or to link to another page in an app. Hyperlinks may or may not be underlined, but must always be set to the user’s accent color or the app brand color. Hyperlinks may use a semibold font.</p>
-<div class="space-medium"></div>
-<a href="#">Hyperlinks may use a semibold font.</a>
-
-<div class="space-long"></div>
-
-<h3>Simple text box</h3>
-<p>Simple text boxes should be used for 1-line entries—if additional space is needed, use the rich text box. These fields may be used for password entry, see the example below. When the text box is inactive, the border is black at 20% opacity and the fill is white at 40% opacity. When active, the border is the accent/brand color at 100% opacity, and the fill is white at 100% opacity.</p>
-
-<div class="space-medium"></div>
-<h4>Examples</h4>
-<input type="text" placeholder="Simple text box" />
-<br />
-<input type="text" disabled placeholder="Disabled text box" />
-<div class="space-medium"></div>
-<p>Labels may be placed either above or to the left side of the input field. When placed on the left side, ensure all the input fields line up along the left edge.</p>
-
-<div class="space-medium"></div>
-<h3>Auto-suggest box</h3>
-<p>Use an AutoSuggestBox to provide a list of suggestions for a user to select from as they type. You can use <a href="https://jqueryui.com/autocomplete/">jQuery-ui Autocomplete</a> to do so.</p>
-<div class="space-medium"></div>
-<h4>Examples</h4>
-<script>
-    $(function () {
-        var availableTags = ["ActionScript", "AppleScript", "Asp", "BASIC", "C", "C++", "Clojure", "COBOL", "ColdFusion", "Erlang", "Fortran", "Groovy", "Haskell", "Java", "JavaScript", "Lisp", "Perl", "PHP", "Python", "Ruby", "Scala", "Scheme"];
-        $("#tags").autocomplete({
-            source: availableTags
-        });
-    });
-</script>
-<input id="tags">
-<p>The Autocomplete widgets provides suggestions while you type into the field. Here the suggestions are tags for programming languages, give "ja" (for Java or JavaScript) a try.</p>
-
-<div class="space-long"></div>
-<h3>Checkbox</h3>
-<p>A checkbox is used to select or deselect action items. It can be used for a single item or for a list of multiple items that a user can choose from. The control has three selection states: unselected and selected.</p>
-<div class="space-medium"></div>
-<h4>Examples</h4>
-<br />
-
-<input type="checkbox" id="1" /><label for="1">Checkbox unselected</label><br />
-<input type="checkbox" id="2" checked /><label for="2">Checkbox selected</label><br />
-<input type="checkbox" id="3" disabled /><label for="3">Checkbox disabled</label><br />
-
-<div class="space-long"></div>
-<h3>Radio button</h3>
-<p>A radio button is used for two or more mutually exclusive options.</p>
-<div class="space-medium"></div>
-<h4>Examples</h4>
-<br />
-<input type="radio" id="10" /><label for="10">Checkbox unselected</label><br />
-<input type="radio" id="20" checked /><label for="20">Checkbox selected</label><br />

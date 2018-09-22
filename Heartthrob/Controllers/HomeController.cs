@@ -9,26 +9,20 @@ namespace Heartthrob.Controllers
             return View();
         }
 
-        [Route("/Layout")]
-        public IActionResult Layout()
+        [Route("/pure/Classes")]
+        public IActionResult Classes()
         {
             return View();
         }
 
-        [Route("/Kendo")]
-        public IActionResult Kendo()
+        [Route("/pure/Buttons")]
+        public IActionResult Buttons()
         {
             return View();
         }
 
-        [Route("/Account")]
-        public IActionResult Account()
-        {
-            return View();
-        }
-
-        [Route("/Scripts")]
-        public IActionResult Scripts()
+        [Route("/pure/Inputs")]
+        public IActionResult Inputs()
         {
             return View();
         }

@@ -221,8 +221,6 @@ header .user-img span { display: block; margin-top: -8px; font-style: italic; }
 .nav.light a.child:after, nav.light .nav-bottom-menus:before, nav.light .nav-top-menus:before { border-color: #bcbcbc; }
 .nav a.closed:after { display: none }
 
-div.panel:first-child { margin-top: 20px; }
-
 .treeview, .treeview ul { margin: 0; padding: 0; list-style: none; min-width: 200px; }
 .treeview ul ul { margin-left: .5em }
 .treeview ul li { margin: 0; padding: 0 5px; line-height: 2em; font-weight: 700; position: relative; }
@@ -247,23 +245,6 @@ header.acrylic { background: rgba(40,40,40,0.85); }
 .shadow, .ui-autocomplete, .menu, .menu ul, .alert { box-shadow: 0 4px 30px rgba(0, 0, 0, 0.25); }
 .shadow-middle, blockquote, .card { box-shadow: 0 4px 10px rgba(0,0,0,0.25); }
 
-/*.box-icons, .box-login { height: 48px; float: right; }
-.box-login, .box-icons li:first-of-type { border-left: 1px solid #4d4d4d; }
-.box-profile { width: auto !important; padding-right: 20px !important; font-size: 16px }
-.box-icons li:hover, .box-login a:hover { background: #333; transition: all .3s; }*/
-
-/*header .right ul { width: auto; margin: 0; list-style: none; padding: 0 }
-header .right ul li { float: left; margin: 0 }
-header .right ul li a { height: 48px; display: block; font-size: 20px; width: 48px; padding: 11px 12px; cursor: pointer; }
-header .right ul li ul { display: none; position: absolute; background: #333; list-style: none; padding: 0; width: 200px; right: 0; z-index: 99 }
-header .right ul li ul li { float: none }
-header .right ul li ul li:first-of-type { border: none }
-header .right ul li ul li a { width: 100%; font-size: 16px; padding: 13px 15px; }
-header .right ul li ul li a:hover { background: #404040 }*/
-
-.box-login { width: auto }
-.box-login a { padding: 14px 20px 0; display: block; cursor: pointer }
-.box-icons a, .box-icons span, .box-login a { text-decoration: none; color: #e3e3e3; height: 48px; }
 
 /* Compatible mode */
 .table { border-collapse: collapse; border-spacing: 0; width: 100%; margin-top: 10px; border-top: 1px solid #ccc }

@@ -1,0 +1,144 @@
+﻿
+@{
+    ViewData["Title"] = "Cards";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Container elements - cards</h2>
+<p>Put your content here</p>
+<div class="space-medium"></div>
+<h4>Examples</h4>
+<br />
+<div class="row">
+    <div class="col-md-10 docs-box" style="padding:20px 10px">
+        <div class="row">
+            <div class="col-md-8">
+                <div class="card acrylic">
+                    <h4>Your content here</h4>
+                    <hr />
+                    <p>
+                        Bacon ipsum dolor amet pork chop burgdoggen boudin, spare ribs tenderloin tongue porchetta ribeye brisket doner jowl picanha andouille. Pork loin jowl kielbasa boudin sausage, cupim drumstick landjaeger t-bone corned beef short ribs pork chop prosciutto. Ham tail bacon jerky shank alcatra, fatback turkey shankle beef corned beef. Venison pancetta short ribs t-bone pig andouille, flank jerky beef ribs sirloin drumstick. Short loin brisket pork chop chicken, pork belly porchetta landjaeger pork loin boudin ribeye beef doner. Tail prosciutto kevin boudin beef ribs shank. Andouille venison cupim chicken.
+                    </p><br />
+                    <p>
+                        Ground round capicola sausage ribeye doner. Strip steak pig ball tip meatloaf ground round salami, chicken drumstick. Venison swine prosciutto andouille burgdoggen. Biltong pork belly tail, tri-tip pork chop shankle bacon strip steak doner drumstick ball tip beef bresaola boudin.
+                    </p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card acrylic">
+                    <h4>Another content with actions</h4>
+                    <div class="taskbar">
+                        <div class="right">
+                            <a href="#" class="btn btn-primary"><i class="fa fa-save"></i> Save</a>
+                        </div>
+                        <div class="clean"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-10" style="padding:20px 10px">
+        <div class="row">
+            <div class="col-md-8">
+                <div class="card">
+                    <h4>Your content here</h4>
+                    <hr />
+                    <p>
+                        Bacon ipsum dolor amet pork chop burgdoggen boudin, spare ribs tenderloin tongue porchetta ribeye brisket doner jowl picanha andouille. Pork loin jowl kielbasa boudin sausage, cupim drumstick landjaeger t-bone corned beef short ribs pork chop prosciutto. Ham tail bacon jerky shank alcatra, fatback turkey shankle beef corned beef. Venison pancetta short ribs t-bone pig andouille, flank jerky beef ribs sirloin drumstick. Short loin brisket pork chop chicken, pork belly porchetta landjaeger pork loin boudin ribeye beef doner. Tail prosciutto kevin boudin beef ribs shank. Andouille venison cupim chicken.
+                    </p><br />
+                    <p>
+                        Ground round capicola sausage ribeye doner. Strip steak pig ball tip meatloaf ground round salami, chicken drumstick. Venison swine prosciutto andouille burgdoggen. Biltong pork belly tail, tri-tip pork chop shankle bacon strip steak doner drumstick ball tip beef bresaola boudin.
+                    </p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <h4>Another content with actions</h4>
+                    <div class="taskbar">
+                        <div class="right">
+                            <a href="#" class="btn"><i class="fa fa-arrow-left"></i> Cancel</a> <a href="#" class="btn btn-primary"><i class="fa fa-save"></i> Save</a>
+                        </div>
+                        <div class="clean"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="space-medium"></div>
+<h4>Examples with steps</h4>
+<br />
+<div class="row">
+    <div class="col-md-8 docs-box" style="padding:20px 10px; height:500px">
+        <div class="cards-steps">
+            <div class="card opened acrylic" id="part1">
+                <h4>Your content here</h4>
+                <hr />
+                <p>
+                    Ground round capicola sausage ribeye doner. Strip steak pig ball tip meatloaf ground round salami, chicken drumstick. Venison swine prosciutto andouille burgdoggen. Biltong pork belly tail, tri-tip pork chop shankle bacon strip steak doner drumstick ball tip beef bresaola boudin.
+                </p>
+                <div class="taskbar">
+                    <a onclick="setDone('part1'); goToStep('part2', 'part1'); " class="btn btn-primary">Next step</a>
+                </div>
+            </div>
+
+            <div class="card acrylic" id="part2">
+                <h4>Your content here</h4>
+                <hr />
+                <p>
+                    Ground round capicola sausage ribeye doner. Strip steak pig ball tip meatloaf ground round salami, chicken drumstick. Venison swine prosciutto andouille burgdoggen. Biltong pork belly tail, tri-tip pork chop shankle bacon strip steak doner drumstick ball tip beef bresaola boudin.
+                </p>
+                <div class="taskbar">
+                    <a onclick="setWarning('part2'); goToStep('part1', 'part2')" class="btn btn">Back</a>
+                    <a onclick="goToStep('part3', 'part2')" class="btn btn-primary">Next step</a>
+                </div>
+            </div>
+
+            <div class="card acrylic" id="part3">
+                <h4>Your content here</h4>
+                <hr />
+                <p>
+                    Ground round capicola sausage ribeye doner. Strip steak pig ball tip meatloaf ground round salami, chicken drumstick. Venison swine prosciutto andouille burgdoggen. Biltong pork belly tail, tri-tip pork chop shankle bacon strip steak doner drumstick ball tip beef bresaola boudin.
+                </p>
+                <div class="taskbar">
+                    <a onclick="goToStep('part2', 'part3')" class="btn btn">Back</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="space-medium"></div>
+<h4>Examples of boxes with actions</h4>
+<br />
+<div class="row">
+    <div class="col-md-5 docs-box" style="padding:20px 10px; height: 400px">
+        <div class="cards-actions">
+            <div class="card link acrylic">
+                <h4>Your content here</h4>
+                <hr />
+                <p>
+                    Ground round capicola sausage ribeye doner. Strip steak pig ball tip meatloaf ground round salami, chicken drumstick. Venison swine prosciutto andouille burgdoggen. Biltong pork belly tail, tri-tip pork chop shankle bacon strip steak doner drumstick ball tip beef bresaola boudin.
+                </p>
+            </div>
+
+            <div class="card link acrylic">
+                <h4>Your content here</h4>
+                <hr />
+                <p>
+                    Ground round capicola sausage ribeye doner. Strip steak pig ball tip meatloaf ground round salami, chicken drumstick. Venison swine prosciutto andouille burgdoggen. Biltong pork belly tail, tri-tip pork chop shankle bacon strip steak doner drumstick ball tip beef bresaola boudin.
+                </p>
+            </div>
+
+            <div class="card link acrylic">
+                <h4>Your content here</h4>
+                <hr />
+                <p>
+                    Ground round capicola sausage ribeye doner. Strip steak pig ball tip meatloaf ground round salami, chicken drumstick. Venison swine prosciutto andouille burgdoggen. Biltong pork belly tail, tri-tip pork chop shankle bacon strip steak doner drumstick ball tip beef bresaola boudin.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
