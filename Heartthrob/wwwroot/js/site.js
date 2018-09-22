@@ -102,8 +102,9 @@ function minNav() {
     $(".nav a").css("overflow", "hidden");
     $(".nav a i").css("color", "#fff");
     $(".nav.light a i").css("color", "#666");
-    $(".nav").animate({ "width": "65px" }, 400);
-    $(".nav.middle").animate({ "width": "50px" }, 300);
+    $(".nav").animate({ "width": "65px" }, 400, function () {
+        $("content").css("width", "calc(100% - 65px)");
+    });
 }
 function maxNav() {
     setCookie('hb-menustate', false);
@@ -121,6 +122,7 @@ function maxNav() {
         $(".nav.light a").css("color", "#666");
         $(".nav a").css("overflow", "auto");
         $(".nav a.child:after").css("", "block");
+        $("content").css("width", "calc(100% - " + width + ")");
     });
 }
 

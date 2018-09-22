@@ -20,45 +20,39 @@
 
 </head>
 <body>
+    <nav class="main" style="position:fixed; padding:20px">
+        <h2>Heatthrob: The CSS</h2>
+        <hr />
+        <nav class="treeview">
+            <ul>
+                <li>
+                    <a href="/">Pure CSS</a>
+                    <ul>
+                        <li><a href="/pure/Buttons">Buttons & links</a></li>
+                        <li><a href="/pure/Inputs">Inputs</a></li>
+                        <li><a href="/pure/Classes">Util classes</a></li>
+                        <li><a class="active" href="/">Typography</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="/Layout/Cards">Layout elements</a>
+                    <ul>
+                        <li><a href="/Layout/Cards">Cards</a></li>
+                        <li><a href="/Layout/Dialog">Dialog controls</a></li>
+                        <li><a href="/Layout/Header">Header</a></li>
+                        <li><a href="/Layout/Menus">Menus</a></li>
+                        <li><a href="/Layout/Navigation">Navigation</a></li>
+                    </ul>
+                </li>
+                <li><a href="/Kendo">Kendo elements</a></li>
+                <li><a href="/Account">Account page</a></li>
+                <li><a href="/Scripts">Scripts</a></li>
+            </ul>
+        </nav>
+    </nav>
+
     <content>
-        <div class="row">
-            <div class="col-md-2">
-                <div style="position:fixed">
-                    <h2>Heatthrob: The CSS</h2>
-                    <hr />
-                    <nav class="treeview">
-                        <ul>
-                            <li>
-                                <a href="/">Pure CSS</a>
-                                <ul>
-                                    <li><a href="/pure/Buttons">Buttons & links</a></li>
-                                    <li><a href="/pure/Inputs">Inputs</a></li>
-                                    <li><a href="/pure/Classes">Util classes</a></li>
-                                    <li><a class="active" href="/">Typography</a></li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="/Layout/Cards">Layout elements</a>
-                                <ul>
-                                    <li><a href="/Layout/Cards">Cards</a></li>
-                                    <li><a href="/Layout/Dialog">Dialog controls</a></li>
-                                    <li><a href="/Layout/Header">Header</a></li>
-                                    <li><a href="/Layout/Menus">Menus</a></li>
-                                    <li><a href="/Layout/Navigation">Navigation</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="/Kendo">Kendo elements</a></li>
-                            <li><a href="/Account">Account page</a></li>
-                            <li><a href="/Scripts">Scripts</a></li>
-                        </ul>
-                    </nav>
-                </div>
-                
-            </div>
-            <div class="col-md-10">
-                @RenderBody()
-            </div>
-        </div>
+        @RenderBody()
     </content>
 </body>
 </html>
