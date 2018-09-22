@@ -15,6 +15,7 @@
     $(document).click(function () {
         $('.menu').slideUp("fast");
     });
+
     openMenu = function (env, menu) {
         env.stopPropagation();
         $(menu).next(".menu").slideToggle("fast");
@@ -61,23 +62,36 @@
         $(this).addClass("opened", 300);
     });
 
+    //if ($(".treeview ul li ul li a").hasClass("active")) {
+    //    $(".treeview a.active").parent().parent().show();
+    //};
+
     if ($(".nav ul li ul li a").hasClass("active")) {
         $(".nav a.active").parent().parent().parent().css("background", "#555");
         $(".nav.light a.active").parent().parent().parent().css("background", "#d9d9d9");
         $(".nav a.active").parent().parent().show();
     };
 
-    var modal = document.querySelector(".alert-modal");
+    
     dialog = function (env) {
-        /*var html = `<div id='dialog52895' class="alert"><h3>` + env.title + `</h3><p>` + env.description + `</p>
-                <a class="btn close" href="#">` + env.cancel + `</a> <a class="btn btn-primary" onclick='` + env.action + `'>` + env.confirm + `</a></div>`;
-                */
+        if (!env.cancel) {
+            env.cancel = "Cancel";
+        }
 
-        //alert(env.title);
-        modal.classList.toggle("show-alert");
+        var buttons;
+        if (env.confirm && env.action) {
+            buttons = `<a class="btn close" onclick="closeDialog();">` + env.cancel + `</a> <a class="btn btn-primary" onclick="` + env.action + `">` + env.confirm + `</a>`;
+        } else {
+            buttons = `<div class="right"><a class="btn btn-primary close" onclick="closeDialog();">` + env.cancel + `</a></div>`;
+        }
+
+        var html = `<div class="alert-modal"><div id='dialog52895' class="alert"><h3>` + env.title + `</h3><p>` + env.description + `</p>` + buttons + `</div></div>`;
+
+        $("html").append(html);
+        $(".alert-modal").addClass("show-alert");
     }
     closeDialog = function () {
-        modal.classList.toggle("show-alert");
+        $(".alert-modal").removeClass("show-alert");
     }
 });
 
@@ -173,19 +187,6 @@ function clearNotification() {
     $("#notifications span").remove("");
 }
 
-//function openMenu(menuparaabrir, mensageiro) {
-//    $(menuparaabrir).slideToggle("normal", function () {
-//        if ($(mensageiro).css("font-weight") == "600") {
-//            $(mensageiro).css("font-weight", "300");
-//            //$(mensageiro + " .menu-drop").css("background-position-x", "-84px !important");
-//        } else {
-//            $(mensageiro).css("font-weight", "600");
-//            //$(mensageiro + " .menu-drop").css("background-position-x", "-56px !important");
-//        }
-//    });
-//    //TODO: mudar o ícone para seta para cima
-//};
-
 function goToStep(destino, mensageiro) {
     $("#" + mensageiro).removeClass("opened", 650);
     $("#" + destino).addClass("opened", 650);
@@ -222,13 +223,9 @@ function getCookie(name) {
 $.fn.extend({
     treeview: function () {
         return this.each(function () {
-            // Initialize the top levels;
             var tree = $(this);
 
             tree.addClass('treeview-tree');
-            tree.find('li').each(function () {
-                var stick = $(this);
-            });
             tree.find('li').has("ul").each(function () {
                 var branch = $(this); //li with children ul
 
@@ -243,6 +240,7 @@ $.fn.extend({
                 })
                 branch.children().children().toggle();
 
+
 				/**
 				 *	The following snippet of code enables the treeview to
 				 *	function when a button, indicator or anchor is clicked.
@@ -252,10 +250,10 @@ $.fn.extend({
 				 */
                 branch.children('.tree-indicator, button, a').click(function (e) {
                     branch.click();
-
-                    e.preventDefault();
+                    $('.tree-branch .active').parent().show();
                 });
             });
+            $('.tree-branch .active').parent().show();
         });
     }
 });
@@ -268,5 +266,5 @@ $(window).on('load', function () {
     $('.treeview').each(function () {
         var tree = $(this);
         tree.treeview();
-    })
+    });
 })

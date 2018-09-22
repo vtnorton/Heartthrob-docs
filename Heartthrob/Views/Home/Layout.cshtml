@@ -76,21 +76,12 @@
     var x = {
         title: "Delete file permanently?",
         description: "If you delete this file, you won’t be able to recover it. Do you want to delete it?",
-        cancel: "Cancel",
+        cancel: "No",
         confirm: "Yes",
         action: "alert('vn');"
     };
 </script>
 <a class="btn" onclick="dialog(x);">Call dialog</a>
-@*<a onclick="dialog('Delete file permanently?', 'If you delete this file, you won’t be able to recover it. Do you want to delete it?');" class="btn">Call Dialog</a>*@
-
-<div class="alert-modal">
-    <div class="alert">
-        <h3>Delete file permanently?</h3>
-        <p>If you delete this file, you won’t be able to recover it. Do you want to delete it?</p>
-        <a class="btn close-button" onclick="closeDialog();">Cancel</a> <a class="btn btn-primary" href="#">Yes</a>
-    </div>
-</div>
 
 <div class="space-long"></div>
 <h3>Header</h3>
