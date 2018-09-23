@@ -18,7 +18,23 @@ namespace Heartthrob.Controllers
             return View();
         }
 
+        [Route("Kendo/Inputs")]
+        public IActionResult Inputs()
+        {
+            return View();
+        }
+
         public IActionResult Read([DataSourceRequest] DataSourceRequest request)
+        {
+            var cnae = _context.Customer;
+            return Json(cnae.ToDataSourceResult(request));
+        }
+        public IActionResult HierarchyBinding_Employees([DataSourceRequest] DataSourceRequest request)
+        {
+            var cnae = _context.Customer;
+            return Json(cnae.ToDataSourceResult(request));
+        }
+        public IActionResult HierarchyBinding_Orders([DataSourceRequest] DataSourceRequest request)
         {
             var cnae = _context.Customer;
             return Json(cnae.ToDataSourceResult(request));

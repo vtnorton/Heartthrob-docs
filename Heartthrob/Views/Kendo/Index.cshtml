@@ -11,14 +11,14 @@
 <div class="row">
     <div class="col-md-8">
         @(Html.Kendo().Grid<Heartthrob.Entities.Customer>().Name("grid").Columns(columns =>
-                    {
-                        columns.Bound(c => c.ContactName);
-                        columns.Bound(c => c.ContactTitle);
-                        columns.Bound(c => c.CompanyName);
-                        columns.Bound(c => c.Country).Width(110);
-                    }).HtmlAttributes(new { style = "height: 250px;" }).Scrollable().Sortable().Groupable()
-                              .Pageable(pageable => pageable.Refresh(true).PageSizes(true).ButtonCount(5))
-                              .DataSource(dataSource => dataSource.Ajax().Read(read => read.Action("Read", "Kendo"))))
+                            {
+                                columns.Bound(c => c.ContactName);
+                                columns.Bound(c => c.ContactTitle);
+                                columns.Bound(c => c.CompanyName);
+                                columns.Bound(c => c.Country).Width(110);
+                            }).HtmlAttributes(new { style = "height: 250px;" }).Scrollable().Sortable().Groupable()
+                                      .Pageable(pageable => pageable.Refresh(true).PageSizes(true).ButtonCount(5))
+                                      .DataSource(dataSource => dataSource.Ajax().Read(read => read.Action("Read", "Kendo"))))
     </div>
 </div>
 <div class="space-medium"></div>
@@ -30,14 +30,14 @@
             <h4>Some table</h4>
             <hr />
             @(Html.Kendo().Grid<Heartthrob.Entities.Customer>().Name("grid2").Columns(columns =>
-                    {
-                        columns.Bound(c => c.ContactName);
-                        columns.Bound(c => c.ContactTitle);
-                        columns.Bound(c => c.CompanyName);
-                        columns.Bound(c => c.Country).Width(110);
-                    }).HtmlAttributes(new { style = "height: 250px;" }).Scrollable().Sortable().Filterable()
-                              .Pageable(pageable => pageable.Refresh(true).PageSizes(true).ButtonCount(5))
-                              .DataSource(dataSource => dataSource.Ajax().Read(read => read.Action("Read", "Kendo"))))
+                            {
+                                columns.Bound(c => c.ContactName);
+                                columns.Bound(c => c.ContactTitle);
+                                columns.Bound(c => c.CompanyName);
+                                columns.Bound(c => c.Country).Width(110);
+                            }).HtmlAttributes(new { style = "height: 250px;" }).Scrollable().Sortable().Filterable()
+                                      .Pageable(pageable => pageable.Refresh(true).PageSizes(true).ButtonCount(5))
+                                      .DataSource(dataSource => dataSource.Ajax().Read(read => read.Action("Read", "Kendo"))))
         </div>
     </div>
 </div>
@@ -47,22 +47,44 @@
 <div class="row">
     <div class="col-md-8">
         @(Html.Kendo().Grid<Heartthrob.Entities.Customer>().Name("grid3").Columns(columns =>
-    {
-        columns.Bound(c => c.ContactName);
-        columns.Bound(c => c.ContactTitle);
-        columns.Bound(c => c.CompanyName);
-        columns.Bound(c => c.Country).Width(110);
-        columns.Bound(p => p.CustomerID).ClientTemplate(@"
+            {
+                columns.Bound(c => c.ContactName);
+                columns.Bound(c => c.ContactTitle);
+                columns.Bound(c => c.CompanyName);
+                columns.Bound(c => c.Country).Width(110);
+                columns.Bound(p => p.CustomerID).ClientTemplate(@"
                 <a class='k-button k-button-icontext k-grid-Edit' href='#=CustomerID#'>
                     <span class='k-icon k-i-hyperlink-open'></span> Edit
                 </a>
                 <a class='k-button k-button-icontext k-grid-Details' href='#=CustomerID#'>
                     <span class='k-icon k-i-hyperlink'></span> More
                 </a>").Title("Options").Width(174).Editable("noEdit").Filterable(false).HtmlAttributes(new { @style = "padding-right:0" }); ;
-        columns.Command(command => { command.Destroy().Text("Delete"); }).Width(100).HtmlAttributes(new { @style = "padding-left:3px" }); ;
-    }).HtmlAttributes(new { style = "height: 350px;" }).Scrollable().Sortable().Filterable()
-                          .Pageable(pageable => pageable.Refresh(true).PageSizes(true).ButtonCount(5))
-                          .DataSource(dataSource => dataSource.Ajax().Read(read => read.Action("Read", "Kendo"))))
+                columns.Command(command => { command.Destroy().Text("Delete"); }).Width(100).HtmlAttributes(new { @style = "padding-left:3px" }); ;
+            }).HtmlAttributes(new { style = "height: 350px;" }).Scrollable().Sortable().Filterable()
+                                  .Pageable(pageable => pageable.Refresh(true).PageSizes(true).ButtonCount(5))
+                                  .DataSource(dataSource => dataSource.Ajax().Read(read => read.Action("Read", "Kendo"))))
+    </div>
+</div>
+<div class="space-medium"></div>
+<h4>Example inside card with detail view</h4>
+<br />
+<div class="row">
+    <div class="col-md-8">
+        @(Html.Kendo().Grid<Heartthrob.Entities.Customer>()
+                    .Name("grid4")
+                    .Columns(columns =>
+                    {
+                        columns.Bound(c => c.ContactName);
+                        columns.Bound(c => c.ContactTitle);
+                        columns.Bound(c => c.CompanyName);
+                        columns.Bound(c => c.Country).Width(110);
+                    })
+                    .Sortable()
+                    .Pageable()
+                    .Scrollable()
+                    .ClientDetailTemplateId("template")
+                    .HtmlAttributes(new { style = "height:430px;" })
+                    .DataSource(dataSource => dataSource.Ajax().Read(read => read.Action("HierarchyBinding_Employees", "Kendo"))))
     </div>
 </div>
 <br /><br /><br />
@@ -74,4 +96,20 @@
     function CellCloseScript(e) {
         this.saveChanges();
     }
+</script>
+
+<script id="template" type="text/kendo-tmpl">
+    @(Html.Kendo().Grid<Heartthrob.Entities.Customer>()
+                .Name("gridx_")
+                .Columns(columns =>
+                {
+                    columns.Bound(c => c.ContactName);
+                    columns.Bound(c => c.ContactTitle);
+                    columns.Bound(c => c.CompanyName);
+                    columns.Bound(c => c.Country).Width(110);
+                })
+                .DataSource(dataSource => dataSource.Ajax().Read(read => read.Action("HierarchyBinding_Orders", "Kendo")))
+                .Pageable()
+                .Sortable()
+                .ToClientTemplate())
 </script>
