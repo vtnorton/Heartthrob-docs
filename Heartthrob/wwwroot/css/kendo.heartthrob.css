@@ -159,8 +159,8 @@ button.k-button-expand, input[type=submit].k-button-expand, input[type=button].k
 .k-window > div.k-popup-edit-form { padding: 1em 0 }
 .k-grid-edit-row .k-edit-form td { border-bottom-width: 0 }
 .k-edit-form-container { position: relative; width: 400px }
-.k-edit-form-container .editor-label, .k-edit-label { float: left; clear: both; width: 30%; padding: .4em 0 1em; margin-left: 2%; text-align: right }
-.k-edit-field, .k-edit-form-container .editor-field { float: right; clear: right; width: 60%; margin-right: 2%; padding: 0 0 .6em }
+.k-edit-form-container .editor-label, .k-edit-label { float: left; clear: both; width: 30%; margin-left: 2%; text-align: right; line-height: 49px; }
+.k-edit-field, .k-edit-form-container .editor-field { float: right; clear: right; width: 60%; margin-right: 2%;}
 .k-edit-field > input[type=radio], .k-edit-field > input[type=checkbox] { margin-top: .4em }
 .k-edit-form-container .k-button { margin: 0 .16em }
 .k-edit-field > .k-button:first-child, .k-edit-field > input[type=radio]:first-child, .k-edit-field > input[type=checkbox]:first-child, .k-edit-field > label:first-child > input[type=checkbox] { margin-left: 0 }
@@ -168,7 +168,7 @@ button.k-button-expand, input[type=submit].k-button-expand, input[type=button].k
 div.k-window { display: inline-block; position: absolute; z-index: 10001; border-style: solid; border-width: 1px; padding-top: 2em }
 .k-block > .k-header, .k-window-titlebar { width: 100%; border-bottom-style: solid; border-bottom-width: 1px; margin-top: -2em; padding: .4em 0; font-size: 1.2em; white-space: nowrap; min-height: 16px }
 .k-block > .k-header { position: relative; margin: -2px 0 10px -2px; padding: .3em 2px }
-.k-window-title { padding: 0 .44em; overflow: hidden; cursor: default; text-overflow: ellipsis }
+.k-window-title { padding: 0 20px; overflow: hidden; cursor: default; text-overflow: ellipsis }
 .k-window-title .k-image { margin: 0 5px 0 0; vertical-align: middle }
 div.k-window-titleless { padding-top: 0 }
 div.k-window-content { position: relative; height: 100%; padding: .58em; overflow: auto; outline: 0 }
@@ -186,7 +186,10 @@ div.k-window-iframecontent { padding: 0; overflow: visible }
 .k-resize-sw { bottom: -3px; left: -3px; width: 6px; height: 6px; cursor: sw-resize }
 .k-resize-ne { top: -3px; right: -3px; width: 6px; height: 6px; cursor: ne-resize }
 .k-resize-nw { top: -3px; left: -3px; width: 6px; height: 6px; cursor: nw-resize }
-.k-overlay { position: fixed; top: 0; left: 0; z-index: 10001; width: 100%; height: 100%; background-color: #000; filter: alpha(opacity=50); opacity: .5; -webkit-backface-visibility: hidden }
+
+.k-overlay { position: fixed; top: 0; left: 0; z-index: 10001; width: 100%; height: 100%; background: rgba(40,40,40,0.5); -webkit-backface-visibility: hidden }
+.k-overlay { -webkit-backdrop-filter: blur(10px) saturate(125%); backdrop-filter: blur(10px) saturate(125%); background: rgba(40,40,40,0.5); }
+
 .k-window .k-overlay { position: absolute; width: 100%; height: 100%; background-color: #fff; filter: alpha(opacity=0); opacity: 0 }
 .k-action-buttons { clear: both; text-align: right; border-width: 1px 0 0; border-style: solid; position: relative; padding: .6em; margin: 0 -1em -1em }
 .k-action-buttons .k-button { display: inline-block; margin: 0 6px 0 0; min-width: 75px }
@@ -995,7 +998,7 @@ a.k-tool { color: inherit; outline: 0 }
 .k-ct-popup { width: 180.4px; padding: .65em .5em .5em }
 .k-ct-popup .k-status { margin: .3em 0 }
 .k-ct-cell { border-width: 1px; border-style: solid; width: 18px; height: 18px; margin: 1px; vertical-align: top; display: inline-block; overflow: hidden; -ms-high-contrast-adjust: none }
-.k-editor .k-resize-handle { position: absolute; padding: 0px 0; right: 1px; bottom: -4px; cursor: se-resize; }
+.k-editor .k-resize-handle { position: absolute; padding: 0px 0; right: -4px; bottom: -4px; cursor: se-resize; }
 .k-editor .k-overlay { position: absolute; background-color: #fff; opacity: 0 }
 .k-editor .k-toolbar-resizable { min-height: 2.4375em; position: relative }
 .k-overflow-tools { position: absolute; right: 0; top: 0 }
@@ -2842,11 +2845,10 @@ table.k-editor { border-spacing: 0 }
 .k-slider-vertical .k-draghandle { width: 18px; height: 6px; left: -9px }
 .k-widget.k-slider .k-slider-buttons .k-button { border-width: 0; background: 0 0 }
 .k-widget.k-flatcolorpicker .k-hue-slider .k-draghandle { margin-top: -1px; -webkit-box-shadow: none; box-shadow: none }
-.k-window-titlebar { padding: .857em 0 }
+.k-window-titlebar { padding: 20px 0; border-bottom: 1px solid #ccc !important; }
 div.k-window-content { padding: .231em .857em }
 .editorToolbarWindow { padding: 3px .857em }
 .k-editortoolbar-dragHandle { line-height: 2em }
-.k-window-title { padding: 0 .8em }
 .k-window-titlebar .k-window-actions { top: .7em; right: .857em }
 .k-nav-current > .k-link span + span { font-size: 1.786em }
 .k-scheduler-table td, .k-scheduler-table th { height: 1.286em }
