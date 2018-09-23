@@ -33,11 +33,27 @@
 <div class="space-medium"></div>
 
 <h4>Example</h4>
-<div>
-    <select>
-        <option value="volvo">Volvo</option>
-        <option value="saab">Saab</option>
-        <option value="opel">Opel</option>
-        <option value="audi">Audi</option>
-    </select>
+<div class="row">
+    <div class="col-md-4">
+        @(Html.Kendo().DropDownList()
+                 .Name("color")
+                 .DataTextField("Text")
+                 .DataValueField("Value")
+                 .BindTo(new List<SelectListItem>() {
+              new SelectListItem() {
+                  Text = "Black",
+                  Value = "1"
+              },
+              new SelectListItem() {
+                  Text = "Orange",
+                  Value = "2"
+              },
+              new SelectListItem() {
+                  Text = "Grey",
+                  Value = "3"
+              }
+                 })
+                 .Value("1")
+        )
+    </div>
 </div>

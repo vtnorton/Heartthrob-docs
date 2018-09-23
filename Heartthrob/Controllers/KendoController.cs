@@ -17,6 +17,11 @@ namespace Heartthrob.Controllers
         {
             return View();
         }
+        [Route("Kendo/Dialogs")]
+        public IActionResult Dialogs()
+        {
+            return View();
+        }
 
         [Route("Kendo/Inputs")]
         public IActionResult Inputs()
