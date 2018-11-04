@@ -140,8 +140,8 @@ function closeMenus(menu) {
 }
 
 function getIntials(towork) {
-    towork = removeAcento(towork);
-    return towork.replace(/\W*(\w)\w*/g, '$1').toUpperCase()
+    towork = removeAcento(towork).replace(/\W*(\w)\w*/g, '$1').toUpperCase().trim();
+    return towork[0] + towork[towork.length - 1];
 }
 
 function removeAcento(text) {
@@ -327,4 +327,33 @@ function allTheSame(array) {
     return array.every(function (element) {
         return element === first;
     });
+}
+
+function pesquisarCep(valor) {
+    var cep = valor.replace(/\D/g, '');
+    if (cep != "") {
+        var validacep = /^[0-9]{8}$/;
+        if (validacep.test(cep)) {
+            var script = document.createElement('script');
+            script.src = 'https://viacep.com.br/ws/' + cep + '/json/?callback=preencherdados';
+            document.body.appendChild(script);
+        }
+        else {
+            alert("Formato de CEP inválido.");
+        }
+    }
+};
+
+function preencherdados(conteudo) {
+    if (!("erro" in conteudo)) {
+        document.getElementById('rua').value = conteudo.logradouro;
+        document.getElementById('bairro').value = conteudo.bairro;
+        document.getElementById('cidade').value = conteudo.localidade;
+
+        var dropdownlist = $("#Estado").data("kendoDropDownList");
+        dropdownlist.select(function (dataItem) {
+            return dataItem == conteudo.uf;
+        });
+        dropdownlist.trigger("change");
+    }
 }
