@@ -53,13 +53,13 @@
                 columns.Bound(c => c.CompanyName);
                 columns.Bound(c => c.Country).Width(110);
                 columns.Bound(p => p.CustomerID).ClientTemplate(@"
-                <a class='k-button k-button-icontext k-grid-Edit' href='#=CustomerID#'>
-                    <span class='k-icon k-i-hyperlink-open'></span> Edit
+                <a class='btn' href='#=CustomerID#'>
+                    <i class='fa fa-user'></i> Edit
                 </a>
-                <a class='k-button k-button-icontext k-grid-Details' href='#=CustomerID#'>
-                    <span class='k-icon k-i-hyperlink'></span> More
-                </a>").Title("Options").Width(174).Editable("noEdit").Filterable(false).HtmlAttributes(new { @style = "padding-right:0" }); ;
-                columns.Command(command => { command.Destroy().Text("Delete"); }).Width(100).HtmlAttributes(new { @style = "padding-left:3px" }); ;
+                <a class='btn' href='#=CustomerID#'>
+                    <i class='fa fa-user'></i> More
+                </a>").Title("Options").Width(259).Editable("noEdit").Filterable(false).HtmlAttributes(new { @style = "padding-right:0" }); ;
+                columns.Command(command => { command.Destroy().Text("Delete"); }).Width(128).HtmlAttributes(new { @style = "padding-left:3px" }); ;
             }).HtmlAttributes(new { style = "height: 350px;" }).Scrollable().Sortable().Filterable()
                                   .Pageable(pageable => pageable.Refresh(true).PageSizes(true).ButtonCount(5))
                                   .DataSource(dataSource => dataSource.Ajax().Read(read => read.Action("Read", "Kendo"))))
