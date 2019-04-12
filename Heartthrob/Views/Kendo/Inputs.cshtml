@@ -38,7 +38,7 @@
         @(Html.Kendo().DropDownList()
                  .Name("color")
                  .DataTextField("Text")
-                 .DataValueField("Value")
+                 .DataValueField("Value").AutoWidth(true)
                  .BindTo(new List<SelectListItem>() {
               new SelectListItem() {
                   Text = "Black",

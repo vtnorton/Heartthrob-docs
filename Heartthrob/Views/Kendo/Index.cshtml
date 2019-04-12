@@ -4,7 +4,6 @@
 }
 
 <h2>Kendo elements: grids</h2>
-<p>Lorem ipsum</p>
 <div class="space-medium"></div>
 <h4>Example</h4>
 <br />
@@ -58,7 +57,7 @@
                 </a>
                 <a class='btn' href='#=CustomerID#'>
                     <i class='fa fa-user'></i> More
-                </a>").Title("Options").Width(259).Editable("noEdit").Filterable(false).HtmlAttributes(new { @style = "padding-right:0" }); ;
+                </a>").Title("Options").Width(260).Editable("noEdit").Filterable(false).HtmlAttributes(new { @style = "padding-right:0" }); ;
                 columns.Command(command => { command.Destroy().Text("Delete"); }).Width(128).HtmlAttributes(new { @style = "padding-left:3px" }); ;
             }).HtmlAttributes(new { style = "height: 350px;" }).Scrollable().Sortable().Filterable()
                                   .Pageable(pageable => pageable.Refresh(true).PageSizes(true).ButtonCount(5))

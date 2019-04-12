@@ -26,5 +26,10 @@ namespace Heartthrob.Controllers
         {
             return View();
         }
+        [Route("/pure/Typography")]
+        public IActionResult Typography()
+        {
+            return View();
+        }
     }
 }
