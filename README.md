@@ -13,7 +13,7 @@ Click here to see the full [documentation](http://heartthrob.vtnorton.com/)
 Here is a quicky guide in how to contribute to the framework:
 
 1. Clone the project from GitHub.
-2. Use Visual Studio 2017 or 2019, with AspNet Core, to change and build it.
+2. Edit the HTML for it.
 
 ## Don't code? Still want to contribute!?
 Here is a few things you can do - almost in every open source project - that would help it be even better:
