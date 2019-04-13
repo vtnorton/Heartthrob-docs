@@ -4,20 +4,14 @@
   "description": "Documentation for Heartthrob",
   "private": true,
   "devDependencies": {
-    "gulp": "^3.9.1",
+    "gulp": "^4.0.0",
     "merge-stream": "1.0.1"
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.7.1",
-    "jquery": "3.3.1",
+    "jquery": "3.4.0",
     "jquery-ui-dist": "1.12.1",
-    "jquery-validation": "1.17.0",
-    "jquery-validation-unobtrusive": "3.2.6",
-    "nicescroll": "3.7.4",
-    "nprogress": "0.2.0",
-    "smooth-scroll": "14.2.0",
     "heartthrob": "1.0.28"
   },
   "license": "MIT"
 }
- 
