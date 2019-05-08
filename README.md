@@ -9,6 +9,12 @@ THIS IS THE DOCUMENTATION REPOSITORY, TO SEE THE FRAMWORK GO TO [heartthrob](htt
 
 Click here to see the full [documentation](http://heartthrob.vtnorton.com/) 
 
+Heartthrob status
+[![Build Status](https://dev.azure.com/vtnorton/Heartthrob/_apis/build/status/heartthrob?branchName=master)](https://dev.azure.com/vtnorton/Heartthrob/_build/latest?definitionId=9&branchName=master)
+
+Heartthrob-docs status
+[![Build Status](https://dev.azure.com/vtnorton/Heartthrob/_apis/build/status/heartthrob-docs%20-%20master?branchName=master)](https://dev.azure.com/vtnorton/Heartthrob/_build/latest?definitionId=8&branchName=master)
+
 ## How to contribute
 Here is a quicky guide in how to contribute to the framework:
 
