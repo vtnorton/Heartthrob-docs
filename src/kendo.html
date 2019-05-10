@@ -1,109 +1,117 @@
 ﻿<!DOCTYPE html>
 <html>
- 
+
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>heartthrob: kendo</title>
-    <link rel="stylesheet" href="lib/@fortawesome/css/all.css" />
-    <link rel="stylesheet" href="lib/heartthrob/css/heartthrob.css" />
-    <link rel="stylesheet" href="lib/heartthrob/css/kendo.heartthrob.css" />
+	<title>heartthrob: kendo</title>
+	<link rel="stylesheet" href="lib/@fortawesome/css/all.css" />
+	<link rel="stylesheet" href="lib/heartthrob/css/heartthrob.css" />
+	<link rel="stylesheet" href="lib/heartthrob/css/kendo.heartthrob.css" />
 
-    <script src="https://code.jquery.com/jquery-1.12.1.js"></script>
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-    <script src="lib/kendo-ui/js/kendo.all.min.js"></script>
-    <script src="lib/heartthrob/js/heartthrob.js"></script>
+	<script src="https://code.jquery.com/jquery-1.12.1.js"></script>
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+	<script src="lib/kendo-ui/js/kendo.all.min.js"></script>
+	<script src="lib/heartthrob/js/heartthrob.js"></script>
 
-    <link href="css/style.css" rel="stylesheet" />
-    <script src="js/kendo.js"></script>
+	<link href="css/style.css" rel="stylesheet" />
+	<script src="js/kendo.js"></script>
+
+	<!-- Prism -->
+	<link href="lib/prism/prism.css" rel="stylesheet" />
+	<script src="lib/prism/prism.js"></script>
+	<!-- End Prism -->
 </head>
 
 <body>
-    <header class="acrylic">
-        <div class="logo">
-            <h2>heatthrob</h2>
-        </div>
-        <div class="line"></div>
-        <nav>
-            <ul>
-                <li><a href="index.html"><i class="fa fa-home"></i> basics</a></li>
-                <li><a href="onlycss.html"><i class="fab fa-css3-alt"></i> css</a></li>
-                <li><a href="layout.html"><i class="fa fa-drafting-compass"></i> layout</a></li>
-                <li><a href="kendo.html" class="active"><i class="fas fa-user-ninja"></i> kendo</a></li>
-                <li><a href="js.html"><i class="fa fa-file-code"></i> scripts</a></li>
-            </ul>
-        </nav>
-    </header>
-    <!-- TODO: content passar para heatthrob essa gambiarra aqui para não ser gambiarra -->
-    <content style="width: calc(90% - 30px); float: left">
-        <!-- TODO: adicionar dialogs -->
-        <h1>kendo elementes</h1>
-        <h2>grid</h2>
-        <br />
-        <h4>Example</h4>
-        <div class="space-medium"></div>
-        <div id="grid"></div>
+	<header class="acrylic">
+		<div class="container">
+			<div class="logo">
+				<h2>heatthrob</h2>
+			</div>
+			<div class="line"></div>
+			<nav>
+				<ul>
+					<li><a href="index.html"><i class="fa fa-home"></i> basics</a></li>
+					<li><a href="grids.html"><i class="fas fa-grip-horizontal"></i> grids</a></li>
+					<li><a href="onlycss.html"><i class="fab fa-css3-alt"></i> css</a></li>
+					<li><a href="layout.html"><i class="fa fa-drafting-compass"></i> layout</a></li>
+					<li><a href="kendo.html" class="active"><i class="fas fa-user-ninja"></i> kendo</a></li>
+					<li><a href="js.html"><i class="fa fa-file-code"></i> scripts</a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+	<!-- TODO: content passar para heatthrob essa gambiarra aqui para não ser gambiarra -->
+	<div class="container">
+		<!-- TODO: adicionar dialogs -->
+		<h1>kendo elementes</h1>
+		<h2>grid</h2>
+		<br />
+		<h4>Example</h4>
+		<div class="space-medium"></div>
+		<div id="grid"></div>
 
-        <div class="space-medium"></div>
-        <h2>grid inside a card</h2>
-        <br />
-        <h4>Example</h4>
-        <div class="space-medium"></div>
-        <div class="card">
-            <h3>Some table</h3>
-            <hr>
-            <div id="grid2"></div>
-        </div>
-        
-        <div class="space-medium"></div>
-        <h2>grid with client template</h2>
-        <br />
-        <h4>Example</h4>
-        <div class="space-medium"></div>
-        <div class="card">
-            <h3>Some table</h3>
-            <hr>
-            <div id="grid3"></div>
-        </div>
-        <!-- TODO: put example with buttons -->
-        <!--<div class="space-medium"></div>
-        <h2>grid with buttons</h2>
-        <br />
-        <h4>Example</h4>
-        <div class="space-medium"></div>
-        <div class="card">
-            <h3>Some table</h3>
-            <hr>
-            <div id="grid4"></div>
-        </div>-->
-    </content>
+		<div class="space-medium"></div>
+		<h2>grid inside a card</h2>
+		<br />
+		<h4>Example</h4>
+		<div class="space-medium"></div>
+		<div class="card">
+			<h3>Some table</h3>
+			<hr>
+			<div id="grid2"></div>
+		</div>
 
-    <script type="text/x-kendo-template" id="template">
-        <div class="tabstrip">
-            <ul>
-                <li class="k-state-active">
-                   Orders
-                </li>
-                <li>
-                    Contact Information
-                </li>
-            </ul>
-            <div>
-                <div class="orders"></div>
-            </div>
-            <div>
-                <div class='employee-details'>
-                    <ul>
-                        <li><label>Country:</label>#= Country #</li>
-                        <li><label>City:</label>#= City #</li>
-                        <li><label>Address:</label>#= Address #</li>
-                        <li><label>Home Phone:</label>#= HomePhone #</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </script>
+		<div class="space-medium"></div>
+		<h2>grid with client template</h2>
+		<br />
+		<h4>Example</h4>
+		<div class="space-medium"></div>
+		<div class="card">
+			<h3>Some table</h3>
+			<hr>
+			<div id="grid3"></div>
+		</div>
+		<!-- TODO: put example with buttons -->
+		<!--<div class="space-medium"></div>
+		<h2>grid with buttons</h2>
+		<br />
+		<h4>Example</h4>
+		<div class="space-medium"></div>
+		<div class="card">
+			<h3>Some table</h3>
+			<hr>
+			<div id="grid4"></div>
+		</div>-->
+	</div>
+
+	<script type="text/x-kendo-template" id="template">
+		<div class="tabstrip">
+			<ul>
+				<li class="k-state-active">
+					Orders
+				</li>
+				<li>
+					Contact Information
+				</li>
+			</ul>
+			<div>
+				<div class="orders"></div>
+			</div>
+			<div>
+				<div class='employee-details'>
+					<ul>
+						<li><label>Country:</label>#= Country #</li>
+						<li><label>City:</label>#= City #</li>
+						<li><label>Address:</label>#= Address #</li>
+						<li><label>Home Phone:</label>#= HomePhone #</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</script>
 
 </body>
 

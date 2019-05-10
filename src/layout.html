@@ -1,518 +1,535 @@
 ﻿<!DOCTYPE html>
 <html>
- 
+
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>heartthrob: layout</title>
-    <link rel="stylesheet" href="lib/@fortawesome/css/all.css" />
-    <link rel="stylesheet" href="lib/heartthrob/css/heartthrob.css" />
-    <link rel="stylesheet" href="lib/heartthrob/css/kendo.heartthrob.css" />
+	<title>heartthrob: layout</title>
+	<link rel="stylesheet" href="lib/@fortawesome/css/all.css" />
+	<link rel="stylesheet" href="lib/heartthrob/css/heartthrob.css" />
+	<link rel="stylesheet" href="lib/heartthrob/css/kendo.heartthrob.css" />
 
-    <script src="https://code.jquery.com/jquery-1.12.1.js"></script>
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-    <script src="lib/kendo-ui/js/kendo.all.min.js"></script>
-    <script src="lib/heartthrob/js/heartthrob.js"></script>
+	<script src="https://code.jquery.com/jquery-1.12.1.js"></script>
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+	<script src="lib/kendo-ui/js/kendo.all.min.js"></script>
+	<script src="lib/heartthrob/js/heartthrob.js"></script>
 
-    <link href="css/style.css" rel="stylesheet" />
+	<link href="css/style.css" rel="stylesheet" />
 
+	<!-- Prism -->
+	<link href="lib/prism/prism.css" rel="stylesheet" />
+	<script src="lib/prism/prism.js"></script>
+	<!-- End Prism -->
 </head>
 
 <body>
-    <header class="acrylic" style="z-index:15">
-        <div class="logo">
-            <h2>heatthrob</h2>
-        </div>
-        <div class="line"></div>
-        <nav>
-            <ul>
-                <li><a href="index.html"><i class="fa fa-home"></i> basics</a></li>
-                <li><a href="onlycss.html"><i class="fab fa-css3-alt"></i> css</a></li>
-                <li><a href="layout.html" class="active"><i class="fa fa-drafting-compass"></i> layout</a></li>
-                <li><a href="kendo.html"><i class="fas fa-user-ninja"></i> kendo</a></li>
-                <li><a href="js.html"><i class="fa fa-file-code"></i> scripts</a></li>
-            </ul>
-        </nav>
-    </header>
-    <!-- TODO: content passar para heatthrob essa gambiarra aqui para não ser gambiarra -->
-    <content style="width: calc(90% - 30px); float: left">
-        <h1>layout</h1>
-        <h2>container elements - cards</22>
-        <h4>Examples</h4>
-        <br>
-        <div class="row">
-            <div class="col-md-10 docs-box" style="padding:20px 10px">
-                <div class="row">
-                    <div class="col-md-8">
-                        <div class="card acrylic">
-                            <h4>Your content here</h4>
-                            <hr>
-                            <p>
-                                Bacon ipsum dolor amet pork chop burgdoggen boudin, spare ribs tenderloin tongue
-                                porchetta ribeye brisket doner jowl picanha andouille. Pork loin jowl kielbasa boudin
-                                sausage, cupim drumstick landjaeger t-bone corned beef short ribs pork chop prosciutto.
-                                Ham tail bacon jerky shank alcatra, fatback turkey shankle beef corned beef. Venison
-                                pancetta short ribs t-bone pig andouille, flank jerky beef ribs sirloin drumstick. Short
-                                loin brisket pork chop chicken, pork belly porchetta landjaeger pork loin boudin ribeye
-                                beef doner. Tail prosciutto kevin boudin beef ribs shank. Andouille venison cupim
-                                chicken.
-                            </p><br>
-                            <p>
-                                Ground round capicola sausage ribeye doner. Strip steak pig ball tip meatloaf ground
-                                round salami, chicken drumstick. Venison swine prosciutto andouille burgdoggen. Biltong
-                                pork belly tail, tri-tip pork chop shankle bacon strip steak doner drumstick ball tip
-                                beef bresaola boudin.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="card acrylic">
-                            <h4>Another content with actions</h4>
-                            <div class="taskbar">
-                                <div class="right">
-                                    <a href="#" class="btn btn-primary"><i class="fa fa-save"></i> Save</a>
-                                </div>
-                                <div class="clean"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-10" style="padding:20px 10px">
-                <div class="row">
-                    <div class="col-md-8">
-                        <div class="card">
-                            <h4>Your content here</h4>
-                            <hr>
-                            <p>
-                                Bacon ipsum dolor amet pork chop burgdoggen boudin, spare ribs tenderloin tongue
-                                porchetta ribeye brisket doner jowl picanha andouille. Pork loin jowl kielbasa boudin
-                                sausage, cupim drumstick landjaeger t-bone corned beef short ribs pork chop prosciutto.
-                                Ham tail bacon jerky shank alcatra, fatback turkey shankle beef corned beef. Venison
-                                pancetta short ribs t-bone pig andouille, flank jerky beef ribs sirloin drumstick. Short
-                                loin brisket pork chop chicken, pork belly porchetta landjaeger pork loin boudin ribeye
-                                beef doner. Tail prosciutto kevin boudin beef ribs shank. Andouille venison cupim
-                                chicken.
-                            </p><br>
-                            <p>
-                                Ground round capicola sausage ribeye doner. Strip steak pig ball tip meatloaf ground
-                                round salami, chicken drumstick. Venison swine prosciutto andouille burgdoggen. Biltong
-                                pork belly tail, tri-tip pork chop shankle bacon strip steak doner drumstick ball tip
-                                beef bresaola boudin.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="card">
-                            <h4>Another content with actions</h4>
-                            <div class="taskbar">
-                                <div class="right">
-                                    <a href="#" class="btn"><i class="fa fa-arrow-left"></i> Cancel</a> <a href="#"
-                                        class="btn btn-primary"><i class="fa fa-save"></i> Save</a>
-                                </div>
-                                <div class="clean"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="space-medium"></div>
-        <h4>Examples with steps</h4>
-        <br>
-        <div class="row">
-            <div class="col-md-8 docs-box" style="padding:20px 10px; height:500px">
-                <div class="cards-steps">
-                    <div class="card opened acrylic" id="part1">
-                        <h4>Your content here</h4>
-                        <hr>
-                        <p>
-                            Ground round capicola sausage ribeye doner. Strip steak pig ball tip meatloaf ground round
-                            salami, chicken drumstick. Venison swine prosciutto andouille burgdoggen. Biltong pork belly
-                            tail, tri-tip pork chop shankle bacon strip steak doner drumstick ball tip beef bresaola
-                            boudin.
-                        </p>
-                        <div class="taskbar">
-                            <a onclick="setDone('part1'); goToStep('part2', 'part1'); " class="btn btn-primary">Next
-                                step</a>
-                        </div>
-                    </div>
+	<header class="acrylic">
+		<div class="container">
+			<div class="logo">
+				<h2>heatthrob</h2>
+			</div>
+			<div class="line"></div>
+			<nav>
+				<ul>
+					<li><a href="index.html"><i class="fa fa-home"></i> basics</a></li>
+					<li><a href="grids.html"><i class="fas fa-grip-horizontal"></i> grids</a></li>
+					<li><a href="onlycss.html"><i class="fab fa-css3-alt"></i> css</a></li>
+					<li><a href="layout.html" class="active"><i class="fa fa-drafting-compass"></i> layout</a></li>
+					<li><a href="kendo.html"><i class="fas fa-user-ninja"></i> kendo</a></li>
+					<li><a href="js.html"><i class="fa fa-file-code"></i> scripts</a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+	<div class="container">
+		<h1>layout</h1>
+		<h2>container elements - cards</h2>
+			<h4>Examples</h4>
+			<br>
+			<div class="row">
+				<div class="col-md-10 docs-box" style="padding:20px 10px">
+					<div class="row">
+						<div class="col-md-8">
+							<div class="card acrylic">
+								<h4>Your content here</h4>
+								<hr>
+								<p>
+									Bacon ipsum dolor amet pork chop burgdoggen boudin, spare ribs tenderloin tongue
+									porchetta ribeye brisket doner jowl picanha andouille. Pork loin jowl kielbasa boudin
+									sausage, cupim drumstick landjaeger t-bone corned beef short ribs pork chop prosciutto.
+									Ham tail bacon jerky shank alcatra, fatback turkey shankle beef corned beef. Venison
+									pancetta short ribs t-bone pig andouille, flank jerky beef ribs sirloin drumstick. Short
+									loin brisket pork chop chicken, pork belly porchetta landjaeger pork loin boudin ribeye
+									beef doner. Tail prosciutto kevin boudin beef ribs shank. Andouille venison cupim
+									chicken.
+								</p><br>
+								<p>
+									Ground round capicola sausage ribeye doner. Strip steak pig ball tip meatloaf ground
+									round salami, chicken drumstick. Venison swine prosciutto andouille burgdoggen. Biltong
+									pork belly tail, tri-tip pork chop shankle bacon strip steak doner drumstick ball tip
+									beef bresaola boudin.
+								</p>
+							</div>
+						</div>
+						<div class="col-md-4">
+							<div class="card acrylic">
+								<h4>Another content with actions</h4>
+								<div class="taskbar">
+									<div class="right">
+										<a href="#" class="btn btn-primary"><i class="fa fa-save"></i> Save</a>
+									</div>
+									<div class="clean"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-10" style="padding:20px 10px">
+					<div class="row">
+						<div class="col-md-8">
+							<div class="card">
+								<h4>Your content here</h4>
+								<hr>
+								<p>
+									Bacon ipsum dolor amet pork chop burgdoggen boudin, spare ribs tenderloin tongue
+									porchetta ribeye brisket doner jowl picanha andouille. Pork loin jowl kielbasa boudin
+									sausage, cupim drumstick landjaeger t-bone corned beef short ribs pork chop prosciutto.
+									Ham tail bacon jerky shank alcatra, fatback turkey shankle beef corned beef. Venison
+									pancetta short ribs t-bone pig andouille, flank jerky beef ribs sirloin drumstick. Short
+									loin brisket pork chop chicken, pork belly porchetta landjaeger pork loin boudin ribeye
+									beef doner. Tail prosciutto kevin boudin beef ribs shank. Andouille venison cupim
+									chicken.
+								</p><br>
+								<p>
+									Ground round capicola sausage ribeye doner. Strip steak pig ball tip meatloaf ground
+									round salami, chicken drumstick. Venison swine prosciutto andouille burgdoggen. Biltong
+									pork belly tail, tri-tip pork chop shankle bacon strip steak doner drumstick ball tip
+									beef bresaola boudin.
+								</p>
+							</div>
+						</div>
+						<div class="col-md-4">
+							<div class="card">
+								<h4>Another content with actions</h4>
+								<div class="taskbar">
+									<div class="right">
+										<a href="#" class="btn"><i class="fa fa-arrow-left"></i> Cancel</a> <a href="#"
+																						   class="btn btn-primary"><i class="fa fa-save"></i>Save</a>
+									</div>
+									<div class="clean"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="space-medium"></div>
+			<h4>Examples with steps</h4>
+			<br>
+			<div class="row">
+				<div class="col-md-8 docs-box" style="padding:20px 10px; height:500px">
+					<div class="cards-steps">
+						<div class="card opened acrylic" id="part1">
+							<h4>Your content here</h4>
+							<hr>
+							<p>
+								Ground round capicola sausage ribeye doner. Strip steak pig ball tip meatloaf ground round
+								salami, chicken drumstick. Venison swine prosciutto andouille burgdoggen. Biltong pork belly
+								tail, tri-tip pork chop shankle bacon strip steak doner drumstick ball tip beef bresaola
+								boudin.
+							</p>
+							<div class="taskbar">
+								<a onclick="setDone('part1'); goToStep('part2', 'part1'); " class="btn btn-primary">
+									Next
+									step
+								</a>
+							</div>
+						</div>
 
-                    <div class="card acrylic" id="part2">
-                        <h4>Your content here</h4>
-                        <hr>
-                        <p>
-                            Ground round capicola sausage ribeye doner. Strip steak pig ball tip meatloaf ground round
-                            salami, chicken drumstick. Venison swine prosciutto andouille burgdoggen. Biltong pork belly
-                            tail, tri-tip pork chop shankle bacon strip steak doner drumstick ball tip beef bresaola
-                            boudin.
-                        </p>
-                        <div class="taskbar">
-                            <a onclick="setWarning('part2'); goToStep('part1', 'part2')" class="btn btn">Back</a>
-                            <a onclick="goToStep('part3', 'part2')" class="btn btn-primary">Next step</a>
-                        </div>
-                    </div>
+						<div class="card acrylic" id="part2">
+							<h4>Your content here</h4>
+							<hr>
+							<p>
+								Ground round capicola sausage ribeye doner. Strip steak pig ball tip meatloaf ground round
+								salami, chicken drumstick. Venison swine prosciutto andouille burgdoggen. Biltong pork belly
+								tail, tri-tip pork chop shankle bacon strip steak doner drumstick ball tip beef bresaola
+								boudin.
+							</p>
+							<div class="taskbar">
+								<a onclick="setWarning('part2'); goToStep('part1', 'part2')" class="btn btn">Back</a>
+								<a onclick="goToStep('part3', 'part2')" class="btn btn-primary">Next step</a>
+							</div>
+						</div>
 
-                    <div class="card acrylic" id="part3">
-                        <h4>Your content here</h4>
-                        <hr>
-                        <p>
-                            Ground round capicola sausage ribeye doner. Strip steak pig ball tip meatloaf ground round
-                            salami, chicken drumstick. Venison swine prosciutto andouille burgdoggen. Biltong pork belly
-                            tail, tri-tip pork chop shankle bacon strip steak doner drumstick ball tip beef bresaola
-                            boudin.
-                        </p>
-                        <div class="taskbar">
-                            <a onclick="goToStep('part2', 'part3')" class="btn btn">Back</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="space-medium"></div>
-        <h4>Examples of boxes with actions</h4>
-        <br>
-        <div class="row">
-            <div class="col-md-5 docs-box" style="padding:20px 10px; height: 400px">
-                <div class="cards-actions">
-                    <div class="card link acrylic">
-                        <h4>Your content here</h4>
-                        <hr>
-                        <p>
-                            Ground round capicola sausage ribeye doner. Strip steak pig ball tip meatloaf ground round
-                            salami, chicken drumstick. Venison swine prosciutto andouille burgdoggen. Biltong pork belly
-                            tail, tri-tip pork chop shankle bacon strip steak doner drumstick ball tip beef bresaola
-                            boudin.
-                        </p>
-                    </div>
+						<div class="card acrylic" id="part3">
+							<h4>Your content here</h4>
+							<hr>
+							<p>
+								Ground round capicola sausage ribeye doner. Strip steak pig ball tip meatloaf ground round
+								salami, chicken drumstick. Venison swine prosciutto andouille burgdoggen. Biltong pork belly
+								tail, tri-tip pork chop shankle bacon strip steak doner drumstick ball tip beef bresaola
+								boudin.
+							</p>
+							<div class="taskbar">
+								<a onclick="goToStep('part2', 'part3')" class="btn btn">Back</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="space-medium"></div>
+			<h4>Examples of boxes with actions</h4>
+			<br>
+			<div class="row">
+				<div class="col-md-5 docs-box" style="padding:20px 10px; height: 400px">
+					<div class="cards-actions">
+						<div class="card link acrylic">
+							<h4>Your content here</h4>
+							<hr>
+							<p>
+								Ground round capicola sausage ribeye doner. Strip steak pig ball tip meatloaf ground round
+								salami, chicken drumstick. Venison swine prosciutto andouille burgdoggen. Biltong pork belly
+								tail, tri-tip pork chop shankle bacon strip steak doner drumstick ball tip beef bresaola
+								boudin.
+							</p>
+						</div>
 
-                    <div class="card link acrylic">
-                        <h4>Your content here</h4>
-                        <hr>
-                        <p>
-                            Ground round capicola sausage ribeye doner. Strip steak pig ball tip meatloaf ground round
-                            salami, chicken drumstick. Venison swine prosciutto andouille burgdoggen. Biltong pork belly
-                            tail, tri-tip pork chop shankle bacon strip steak doner drumstick ball tip beef bresaola
-                            boudin.
-                        </p>
-                    </div>
+						<div class="card link acrylic">
+							<h4>Your content here</h4>
+							<hr>
+							<p>
+								Ground round capicola sausage ribeye doner. Strip steak pig ball tip meatloaf ground round
+								salami, chicken drumstick. Venison swine prosciutto andouille burgdoggen. Biltong pork belly
+								tail, tri-tip pork chop shankle bacon strip steak doner drumstick ball tip beef bresaola
+								boudin.
+							</p>
+						</div>
 
-                    <div class="card link acrylic">
-                        <h4>Your content here</h4>
-                        <hr>
-                        <p>
-                            Ground round capicola sausage ribeye doner. Strip steak pig ball tip meatloaf ground round
-                            salami, chicken drumstick. Venison swine prosciutto andouille burgdoggen. Biltong pork belly
-                            tail, tri-tip pork chop shankle bacon strip steak doner drumstick ball tip beef bresaola
-                            boudin.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
+						<div class="card link acrylic">
+							<h4>Your content here</h4>
+							<hr>
+							<p>
+								Ground round capicola sausage ribeye doner. Strip steak pig ball tip meatloaf ground round
+								salami, chicken drumstick. Venison swine prosciutto andouille burgdoggen. Biltong pork belly
+								tail, tri-tip pork chop shankle bacon strip steak doner drumstick ball tip beef bresaola
+								boudin.
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
 
-        <div class="space-long"></div>
-        <h2>header</h2>
-        <p>The header, can take the following forms: </p>
-        <ul>
-            <li>Show the project logo</li>
-            <li>Icons on all navigation components</li>
-            <li>Icon only on header navigation component, with the remaining components using plain text components.
-            </li>
-            <li>Icons on no navigation components.</li>
-        </ul>
+			<div class="space-long"></div>
+			<h2>header</h2>
+			<p>The header, can take the following forms: </p>
+			<ul>
+				<li>Show the project logo</li>
+				<li>Icons on all navigation components</li>
+				<li>
+					Icon only on header navigation component, with the remaining components using plain text components.
+				</li>
+				<li>Icons on no navigation components.</li>
+			</ul>
 
-        <div class="space-medium"></div>
-        <h4>Examples</h4>
-        <br>
-        <div class="row">
-            <div class="col-md-10">
-                <header class="acrylic" style="width:80%; position: absolute">
-                    <div class="logo">
-                        <img alt="Logo" src="img/blue100.png">
-                    </div>
-                    <div class="line"></div>
-                    <ul>
-                        <li><a href="#" class="active"><i class="fa fa-home"></i>Dashboard</a></li>
-                        <li><a href="#"><i class="fa fa-line-chart"></i>Page</a></li>
-                        <li><a href="#">Another page</a></li>
-                    </ul>
+			<div class="space-medium"></div>
+			<h4>Examples</h4>
+			<br>
+			<div class="row">
+				<div class="col-md-10">
+					<header class="acrylic" style="width:80%; position: absolute">
+						<div class="logo">
+							<img alt="Logo" src="img/blue100.png">
+						</div>
+						<div class="line"></div>
+						<ul>
+							<li><a href="#" class="active"><i class="fa fa-home"></i>Dashboard</a></li>
+							<li><a href="#"><i class="fa fa-line-chart"></i>Page</a></li>
+							<li><a href="#">Another page</a></li>
+						</ul>
 
-                    <div class="right">
-                        <ul>
-                            <li class="search">
-                                <a><i class="fa fa-search"></i></a>
-                                <input type="text" name="search" placeholder="Type here to search">
-                            </li>
-                            <li>
-                                <a id="notifications"><i class="fa fa-inbox"></i></a>
-                            </li>
-                            <li>
-                                <a onclick="openMenu(event, this);"><i class="fa fa-cogs"></i></a>
-                                <ul class="menu dark right">
-                                    <li><a href="#"><i class="fa fa-share"></i>Share</a></li>
-                                    <li><a href="#"><i class="fa fa-user"></i>Edit profile</a></li>
-                                    <li>
-                                        <a href="#" class="more"><i class="fa fa-cogs"></i>More options...</a>
-                                        <ul>
-                                            <li><a href="#"><i class="fa fa-share"></i>Share</a></li>
-                                            <li><a href="#"><i class="fa fa-user"></i>Edit profile</a></li>
-                                        </ul>
-                                    </li>
-                                    <li class="line"></li>
-                                    <li><a href="#" class="no-icon">Sign out</a></li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a onclick="openMenu(event, this);">
-                                    <div class="user-img"></div> Vítor Norton
-                                </a>
-                                <ul class="menu dark right">
-                                    <li><a href="#"><i class="fa fa-share"></i>Share</a></li>
-                                    <li><a href="#"><i class="fa fa-user"></i>Edit profile</a></li>
-                                    <li>
-                                        <a href="#" class="more"><i class="fa fa-cogs"></i>More options...</a>
-                                        <ul>
-                                            <li><a href="#"><i class="fa fa-share"></i>Share</a></li>
-                                            <li><a href="#"><i class="fa fa-user"></i>Edit profile</a></li>
-                                        </ul>
-                                    </li>
-                                    <li class="line"></li>
-                                    <li><a href="#" class="no-icon">Sign out</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="clean"></div>
-                </header>
-                <div class="clean"></div>
-            </div>
-        </div>
-        <div class="space-long"></div>
-        <div class="space-long"></div>
-        <a onclick="addNotification();" class="btn">Add notification</a>
-        <a onclick="addNotificationNum(5);" class="btn">Add 5 notification</a>
-        <a onclick="clearNotification();" class="btn">Clear notification</a>
-        <div class="space-long"></div>
+						<div class="right">
+							<ul>
+								<li class="search">
+									<a><i class="fa fa-search"></i></a>
+									<input type="text" name="search" placeholder="Type here to search">
+								</li>
+								<li>
+									<a id="notifications"><i class="fa fa-inbox"></i></a>
+								</li>
+								<li>
+									<a onclick="openMenu(event, this);"><i class="fa fa-cogs"></i></a>
+									<ul class="menu dark right">
+										<li><a href="#"><i class="fa fa-share"></i>Share</a></li>
+										<li><a href="#"><i class="fa fa-user"></i>Edit profile</a></li>
+										<li>
+											<a href="#" class="more"><i class="fa fa-cogs"></i>More options...</a>
+											<ul>
+												<li><a href="#"><i class="fa fa-share"></i>Share</a></li>
+												<li><a href="#"><i class="fa fa-user"></i>Edit profile</a></li>
+											</ul>
+										</li>
+										<li class="line"></li>
+										<li><a href="#" class="no-icon">Sign out</a></li>
+									</ul>
+								</li>
+								<li>
+									<a onclick="openMenu(event, this);">
+										<div class="user-img"></div> Vítor Norton
+									</a>
+									<ul class="menu dark right">
+										<li><a href="#"><i class="fa fa-share"></i>Share</a></li>
+										<li><a href="#"><i class="fa fa-user"></i>Edit profile</a></li>
+										<li>
+											<a href="#" class="more"><i class="fa fa-cogs"></i>More options...</a>
+											<ul>
+												<li><a href="#"><i class="fa fa-share"></i>Share</a></li>
+												<li><a href="#"><i class="fa fa-user"></i>Edit profile</a></li>
+											</ul>
+										</li>
+										<li class="line"></li>
+										<li><a href="#" class="no-icon">Sign out</a></li>
+									</ul>
+								</li>
+							</ul>
+						</div>
+						<div class="clean"></div>
+					</header>
+					<div class="clean"></div>
+				</div>
+			</div>
+			<div class="space-long"></div>
+			<div class="space-long"></div>
+			<a onclick="addNotification();" class="btn">Add notification</a>
+			<a onclick="addNotificationNum(5);" class="btn">Add 5 notification</a>
+			<a onclick="clearNotification();" class="btn">Clear notification</a>
+			<div class="space-long"></div>
 
-        <h2>menus</h2>
-        <p>Have a single entry point (a File menu at the top of the screen, for example) that is always displayed. Are
-            usually attached to a button or a parent menu item. Are invoked by left-clicking (or an equivalent action,
-            such as tapping with your finger). </p>
+			<h2>menus</h2>
+			<p>
+				Have a single entry point (a File menu at the top of the screen, for example) that is always displayed. Are
+				usually attached to a button or a parent menu item. Are invoked by left-clicking (or an equivalent action,
+				such as tapping with your finger).
+			</p>
 
-        <h4>Examples</h4>
-        <br>
-        <div class="row">
-            <div class="col-md-5 docs-box">
-                <div class="row">
-                    <div class="col-md-6">
-                        <a class="btn btn-primary" onclick="openMenu(event, this);" style="margin:20px 20px 0">Open
-                            menu</a>
-                        <ul class="menu" id="demo-1" style="margin-left:20px;">
-                            <li><a href="#"><i class="fa fa-share"></i>Share</a></li>
-                            <li><a href="#"><i class="fa fa-user"></i>Edit profile</a></li>
-                            <li>
-                                <a href="#" class="more"><i class="fa fa-gear"></i>More options...</a>
-                                <ul>
-                                    <li><a href="#"><i class="fa fa-share"></i>Share</a></li>
-                                    <li>
-                                        <a href="#" class="more"><i class="fa fa-user"></i>Edit profile</a>
-                                        <ul>
-                                            <li><a href="#" class="no-icon">Change password</a></li>
-                                        </ul>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="line"></li>
-                            <li><a href="#" class="no-icon">Sign out</a></li>
-                        </ul>
-                    </div>
-                    <div class="col-md-6">
-                        <a class="btn" onclick="openMenu(event, this);" style="margin:20px 20px 0">Open right menu</a>
-                        <ul class="menu right" style="margin-left:20px;">
-                            <li><a href="#"><i class="fa fa-share"></i>Share</a></li>
-                            <li><a href="#"><i class="fa fa-user"></i>Edit profile</a></li>
-                            <li>
-                                <a href="#" class="more"><i class="fa fa-gear"></i>More options...</a>
-                                <ul>
-                                    <li><a href="#"><i class="fa fa-share"></i>Share</a></li>
-                                    <li><a href="#"><i class="fa fa-user"></i>Edit profile</a></li>
-                                </ul>
-                            </li>
-                            <li class="line"></li>
-                            <li><a href="#" class="no-icon">Sign out</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
+			<h4>Examples</h4>
+			<br>
+			<div class="row">
+				<div class="col-md-5 docs-box">
+					<div class="row">
+						<div class="col-md-6">
+							<a class="btn btn-primary" onclick="openMenu(event, this);" style="margin:20px 20px 0">
+								Open
+								menu
+							</a>
+							<ul class="menu" id="demo-1" style="margin-left:20px;">
+								<li><a href="#"><i class="fa fa-share"></i>Share</a></li>
+								<li><a href="#"><i class="fa fa-user"></i>Edit profile</a></li>
+								<li>
+									<a href="#" class="more"><i class="fa fa-gear"></i>More options...</a>
+									<ul>
+										<li><a href="#"><i class="fa fa-share"></i>Share</a></li>
+										<li>
+											<a href="#" class="more"><i class="fa fa-user"></i>Edit profile</a>
+											<ul>
+												<li><a href="#" class="no-icon">Change password</a></li>
+											</ul>
+										</li>
+									</ul>
+								</li>
+								<li class="line"></li>
+								<li><a href="#" class="no-icon">Sign out</a></li>
+							</ul>
+						</div>
+						<div class="col-md-6">
+							<a class="btn" onclick="openMenu(event, this);" style="margin:20px 20px 0">Open right menu</a>
+							<ul class="menu right" style="margin-left:20px;">
+								<li><a href="#"><i class="fa fa-share"></i>Share</a></li>
+								<li><a href="#"><i class="fa fa-user"></i>Edit profile</a></li>
+								<li>
+									<a href="#" class="more"><i class="fa fa-gear"></i>More options...</a>
+									<ul>
+										<li><a href="#"><i class="fa fa-share"></i>Share</a></li>
+										<li><a href="#"><i class="fa fa-user"></i>Edit profile</a></li>
+									</ul>
+								</li>
+								<li class="line"></li>
+								<li><a href="#" class="no-icon">Sign out</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
 
-        <div class="space-long"></div>
-        <h2>dialogs</h2>
-        <p>Dialog controls are modal UI overlays that provide contextual app information. They block interactions with
-            the app window until being explicitly dismissed. They often request some kind of action from the user.</p>
-        <div class="space-medium"></div>
-        <h4>Example</h4>
-        <br>
-        <div class="row">
-            <div class="col-md-6 docs-box">
-                <div style="margin:20px">
-                    <div class="alert docs">
-                        <h3>Delete file permanently?</h3>
-                        <p>If you delete this file, you won’t be able to recover it. Do you want to delete it?</p>
+			<div class="space-long"></div>
+			<h2>dialogs</h2>
+			<p>
+				Dialog controls are modal UI overlays that provide contextual app information. They block interactions with
+				the app window until being explicitly dismissed. They often request some kind of action from the user.
+			</p>
+			<div class="space-medium"></div>
+			<h4>Example</h4>
+			<br>
+			<div class="row">
+				<div class="col-md-6 docs-box">
+					<div style="margin:20px">
+						<div class="alert docs">
+							<h3>Delete file permanently?</h3>
+							<p>If you delete this file, you won’t be able to recover it. Do you want to delete it?</p>
 
-                        <a class="btn" href="#">Cancel</a> <a class="btn btn-primary" href="#">Yes</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="space-medium"></div>
-        <script>
-            var dialogToShow = {
-                title: "Delete file permanently?",
-                description: "If you delete this file, you won’t be able to recover it. Do you want to delete it?",
-                cancel: "No",
-                confirm: "Yes",
-                action: "alert('vn');"
-            };
-        </script>
-        <a class="btn" onclick="dialog(dialogToShow);">Call dialog</a>
+							<a class="btn" href="#">Cancel</a> <a class="btn btn-primary" href="#">Yes</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="space-medium"></div>
+			<script>
+				var dialogToShow = {
+					title: "Delete file permanently?",
+					description: "If you delete this file, you won’t be able to recover it. Do you want to delete it?",
+					cancel: "No",
+					confirm: "Yes",
+					action: "alert('vn');"
+				};
+			</script>
+			<a class="btn" onclick="dialog(dialogToShow);">Call dialog</a>
 
-        <div class="space-long"></div>
-        <h2>navigation</h2>
-        <h4>Examples</h4>
-        <div class="row">
-            <div class="col-md-2">
-                <nav class="nav" style="height:540px; position:relative">
-                    <div class="nav-action">
-                        <a><i class="fa fa-navicon"></i></a>
-                    </div>
-                    <ul class="nav-top-menus">
-                        <li><a><i class="fa fa-dashboard"></i> Dashboard</a></li>
-                        <li>
-                            <a class="child"><i class="fa fa-money"></i> First Menu </a>
-                            <ul>
-                                <li><a href="#"><i class="fa fa-list-ul"></i> Option 1</a></li>
-                            </ul>
-                        </li>
-                        <li style="background: rgb(85, 85, 85);">
-                            <a class="child"><i class="fa fa-money"></i> First Menu </a>
-                            <ul style="display: block;">
-                                <li><a href="#"><i class="fa fa-list-ul"></i> Option 1</a></li>
-                                <li><a class="active" href="#"><i class="fa fa-list-ul"></i> Option 2</a></li>
-                                <li><a href="#"><i class="fa fa-list-ul"></i> Option 3</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                    <ul class="nav-bottom-menus">
-                        <li>
-                            <a class="child"><i class="fa fa-connectdevelop"></i> Administrativo </a>
-                            <ul>
-                                <li><a href="#"><i class="fa fa-users"></i> Gerência de usuários</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </nav>
-            </div>
-            <div class="col-md-2 col-md-offset-1">
-                <nav class="nav light" style="height:540px; position:relative">
-                    <div class="nav-action">
-                        <a><i class="fa fa-navicon"></i></a>
-                    </div>
-                    <ul class="nav-top-menus">
-                        <li><a><i class="fa fa-dashboard"></i> Dashboard</a></li>
-                        <li style="background: rgb(217, 217, 217);">
-                            <a class="child"><i class="fa fa-money"></i> First Menu </a>
-                            <ul style="display: block;">
-                                <li><a class="active" href="#"><i class="fa fa-list-ul"></i> Option 1</a></li>
-                                <li><a href="#"><i class="fa fa-list-ul"></i> Option 2</a></li>
-                                <li><a href="#"><i class="fa fa-list-ul"></i> Option 3</a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a class="child"><i class="fa fa-money"></i> First Menu </a>
-                            <ul>
-                                <li><a href="#"><i class="fa fa-list-ul"></i> Option 1</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                    <ul class="nav-bottom-menus">
-                        <li>
-                            <a class="child"><i class="fa fa-connectdevelop"></i> Administrativo </a>
-                            <ul>
-                                <li><a href="#"><i class="fa fa-users"></i> Gerência de usuários</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </nav>
-            </div>
-            <div class="col-md-2 col-md-offset-1">
-                <nav class="nav light middle" style="height:540px; position:relative">
-                    <ul class="nav-top-menus">
-                        <li><a><i class="fa fa-dashboard"></i> Dashboard</a></li>
-                        <li style="background: rgb(217, 217, 217);">
-                            <a class="child"><i class="fa fa-money"></i> First Menu </a>
-                            <ul style="display: block;">
-                                <li><a href="#"><i class="fa fa-list-ul"></i> Option 1</a></li>
-                                <li><a class="active" href="#"><i class="fa fa-list-ul"></i> Option 2</a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a class="child"><i class="fa fa-money"></i> First Menu </a>
-                            <ul>
-                                <li><a href="#"><i class="fa fa-list-ul"></i> Option 1</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                    <ul class="nav-bottom-menus">
-                        <li>
-                            <a class="child"><i class="fa fa-connectdevelop"></i> Administrativo </a>
-                            <ul>
-                                <li><a href="#"><i class="fa fa-users"></i> Gerência de usuários</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </nav>
-            </div>
-        </div>
-        <div class="space-long"></div>
-        <h3>Tree view</h3>
-        <div class="space-medium"></div>
-        <h4>Examples</h4>
+			<div class="space-long"></div>
+			<h2>navigation</h2>
+			<h4>Examples</h4>
+			<div class="row">
+				<div class="col-md-2">
+					<nav class="nav" style="height:540px; position:relative">
+						<div class="nav-action">
+							<a><i class="fa fa-navicon"></i></a>
+						</div>
+						<ul class="nav-top-menus">
+							<li><a><i class="fa fa-dashboard"></i> Dashboard</a></li>
+							<li>
+								<a class="child"><i class="fa fa-money"></i> First Menu </a>
+								<ul>
+									<li><a href="#"><i class="fa fa-list-ul"></i> Option 1</a></li>
+								</ul>
+							</li>
+							<li style="background: rgb(85, 85, 85);">
+								<a class="child"><i class="fa fa-money"></i> First Menu </a>
+								<ul style="display: block;">
+									<li><a href="#"><i class="fa fa-list-ul"></i> Option 1</a></li>
+									<li><a class="active" href="#"><i class="fa fa-list-ul"></i> Option 2</a></li>
+									<li><a href="#"><i class="fa fa-list-ul"></i> Option 3</a></li>
+								</ul>
+							</li>
+						</ul>
+						<ul class="nav-bottom-menus">
+							<li>
+								<a class="child"><i class="fa fa-connectdevelop"></i> Administrativo </a>
+								<ul>
+									<li><a href="#"><i class="fa fa-users"></i> Gerência de usuários</a></li>
+								</ul>
+							</li>
+						</ul>
+					</nav>
+				</div>
+				<div class="col-md-2 col-md-offset-1">
+					<nav class="nav light" style="height:540px; position:relative">
+						<div class="nav-action">
+							<a><i class="fa fa-navicon"></i></a>
+						</div>
+						<ul class="nav-top-menus">
+							<li><a><i class="fa fa-dashboard"></i> Dashboard</a></li>
+							<li style="background: rgb(217, 217, 217);">
+								<a class="child"><i class="fa fa-money"></i> First Menu </a>
+								<ul style="display: block;">
+									<li><a class="active" href="#"><i class="fa fa-list-ul"></i> Option 1</a></li>
+									<li><a href="#"><i class="fa fa-list-ul"></i> Option 2</a></li>
+									<li><a href="#"><i class="fa fa-list-ul"></i> Option 3</a></li>
+								</ul>
+							</li>
+							<li>
+								<a class="child"><i class="fa fa-money"></i> First Menu </a>
+								<ul>
+									<li><a href="#"><i class="fa fa-list-ul"></i> Option 1</a></li>
+								</ul>
+							</li>
+						</ul>
+						<ul class="nav-bottom-menus">
+							<li>
+								<a class="child"><i class="fa fa-connectdevelop"></i> Administrativo </a>
+								<ul>
+									<li><a href="#"><i class="fa fa-users"></i> Gerência de usuários</a></li>
+								</ul>
+							</li>
+						</ul>
+					</nav>
+				</div>
+				<div class="col-md-2 col-md-offset-1">
+					<nav class="nav light middle" style="height:540px; position:relative">
+						<ul class="nav-top-menus">
+							<li><a><i class="fa fa-dashboard"></i> Dashboard</a></li>
+							<li style="background: rgb(217, 217, 217);">
+								<a class="child"><i class="fa fa-money"></i> First Menu </a>
+								<ul style="display: block;">
+									<li><a href="#"><i class="fa fa-list-ul"></i> Option 1</a></li>
+									<li><a class="active" href="#"><i class="fa fa-list-ul"></i> Option 2</a></li>
+								</ul>
+							</li>
+							<li>
+								<a class="child"><i class="fa fa-money"></i> First Menu </a>
+								<ul>
+									<li><a href="#"><i class="fa fa-list-ul"></i> Option 1</a></li>
+								</ul>
+							</li>
+						</ul>
+						<ul class="nav-bottom-menus">
+							<li>
+								<a class="child"><i class="fa fa-connectdevelop"></i> Administrativo </a>
+								<ul>
+									<li><a href="#"><i class="fa fa-users"></i> Gerência de usuários</a></li>
+								</ul>
+							</li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+			<div class="space-long"></div>
+			<h3>Tree view</h3>
+			<div class="space-medium"></div>
+			<h4>Examples</h4>
 
-        <nav class="treeview treeview-tree">
-            <ul>
-                <li class="tree-branch"><i class="tree-indicator fa fa-chevron-right"></i>
-                    <a>Item 1</a>
-                    <ul>
-                        <li style="display: none;"><a>Option 1</a></li>
-                        <li class="tree-branch" style="display: none;"><i
-                                class="tree-indicator fa fa-chevron-right"></i><a>Option 2</a>
-                            <ul>
-                                <li style="display: list-item;"><a class="active">Option 2.1</a></li>
-                                <li style="display: none;"><a>Option 2.2</a></li>
-                                <li style="display: none;"><a>Option 2.3</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </li>
-                <li>
-                    <a>Item 2</a>
-                </li>
-                <li class="tree-branch"><i class="tree-indicator fa fa-chevron-right"></i>
-                    <a>Item 3</a>
-                    <ul>
-                        <li style="display: none;"><a>Option 1</a></li>
-                        <li style="display: none;"><a>Option 2</a></li>
-                        <li style="display: none;"><a>Option 3</a></li>
-                    </ul>
-                </li>
-            </ul>
-        </nav>
-    </content>
+			<nav class="treeview treeview-tree">
+				<ul>
+					<li class="tree-branch">
+						<i class="tree-indicator fa fa-chevron-right"></i>
+						<a>Item 1</a>
+						<ul>
+							<li style="display: none;"><a>Option 1</a></li>
+							<li class="tree-branch" style="display: none;">
+								<i class="tree-indicator fa fa-chevron-right"></i><a>Option 2</a>
+								<ul>
+									<li style="display: list-item;"><a class="active">Option 2.1</a></li>
+									<li style="display: none;"><a>Option 2.2</a></li>
+									<li style="display: none;"><a>Option 2.3</a></li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a>Item 2</a>
+					</li>
+					<li class="tree-branch">
+						<i class="tree-indicator fa fa-chevron-right"></i>
+						<a>Item 3</a>
+						<ul>
+							<li style="display: none;"><a>Option 1</a></li>
+							<li style="display: none;"><a>Option 2</a></li>
+							<li style="display: none;"><a>Option 3</a></li>
+						</ul>
+					</li>
+				</ul>
+			</nav>
+	</div>
 </body>
 
 </html>

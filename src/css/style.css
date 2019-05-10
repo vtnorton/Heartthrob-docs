@@ -1,5 +1,4 @@
-﻿.logo h2{color: #fff;font-weight: 300;margin: 6px 0 0 10px;}
-
+﻿.logo h2{color: #fff;font-weight: 300;margin: 6px 0 0 0;}
 
 
 .docs-box { background: url('../img/fluent-wallpaper3.jpg'); background-size: cover; height: 360px }
@@ -13,5 +12,10 @@
 .docs-menu a.active { color: #000; border-left: 3px solid #0078D7; margin-left: -5px; padding-left: 3px; }
 .docs-menu .fa-chevron-right { margin-left: 2px; margin-right: -15px; }
 
+.show-grid [class^=col-] {padding-top: 10px;padding-bottom: 10px;background-color: #e5e5e5;border: 1px solid #ccc;}
+
 /* Jogar nativamente para o heartthrob  */
-content{margin-left: 80px}
+.container{width: 1400px; margin: 0 auto}
+header + .container{padding-top: 75px !important}
+
+

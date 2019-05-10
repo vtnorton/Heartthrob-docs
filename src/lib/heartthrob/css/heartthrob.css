@@ -10,24 +10,27 @@ html, body { margin: 0; padding: 0; height: 100%; font-family: 'Segoe UI', Tahom
 
 /* Basic and typographi */
 body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; overflow-x: hidden; background: #f8f8f8; font-size: 15px; line-height: 20px; color: #666 }
-h1, h2, h3, h4, h5, h6 { color: #000 }
+h1, h2, h3, h4, h5, h6 { color: #000; margin-bottom:15px }
 h1 { font-size: 28px; line-height: 36px; font-weight: 400 }
 h2 { font-size: 24px; line-height: 32px; font-weight: 600 }
 h3 { font-size: 18px; line-height: 24px; font-weight: 600 }
 h4, b, strong, dl dt { font-size: 15px; line-height: 20px; font-weight: 600 }
 h5 { font-size: 16px; line-height: 20px; font-weight: 800 }
 h6 { font-size: 16px; line-height: 20px; font-weight: 400 }
+p{margin:5px 0 10px}
 a { color: #0078D7; text-decoration: none; cursor: pointer; }
 i { font-style: italic; }
 hr { border-bottom: none !important; border: 1px solid #ccc; margin: 10px 0 15px; }
 li { margin: 3px 0; line-height: 20px }
 blockquote, .validation-summary-valid, .validation-summary-errors { background: #fff; padding: 15px 20px; border: 1px solid #e5e5e5; margin: 30px 0; margin-top: 12px; border-left: 3px solid #0078D7 }
-blockquote footer { font-style: italic; color: #665; font-size: 14px; margin-top: 15px; }
+blockquote footer {text-align:right; font-style: italic; color: #665; font-size: 14px; margin-top: 15px; }
 blockquote footer:before { content: " "; width: 16px; border-bottom: 2px solid #888; display: inline-block; position: relative; top: -3px; margin-right: 6px; }
+.card blockquote{box-shadow:none; border:1px solid #ccc; margin: 8px 0 0}
 small { font-size: 12px; line-height: 14px; }
 label { font-weight: 600; color: #555 }
 img { width: 100% }
 img.rounded { border-radius: 50% }
+code{font-family: 'Courier New', Courier, monospace}
 
 /* Help classes */
 .link { cursor: pointer }
@@ -55,6 +58,7 @@ img.rounded { border-radius: 50% }
 .space-medium { height: 30px }
 .space-long { height: 48px }
 .accent { color: #0078D7 !important }
+code .tag{background:none; padding:0; border:none}
 
 /* Buttons */
 .btn, button { border: 1px solid #ccc; background: #ccc; color: #000; min-height: 30px; min-width: 110px; padding: 10px 15px 0; cursor: pointer; display: inline-block; text-align: center; box-sizing: content-box; }
@@ -130,11 +134,11 @@ option, .ui-menu-item-wrapper { font-size: 15px; height: 40px; padding-left: 12p
 .alert { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 400px; min-height: 152px; padding: 16px 24px; background: rgba(255,255,255,0.85) }
 .alert-modal { position: fixed; left: 0; top: 0; width: 100%; height: 100%; opacity: 0; visibility: hidden; transform: scale(1.1); transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s; z-index: 50 }
 .alert h3 { margin-bottom: 2px; }
-.alert .btn { margin-top: 14px; width: calc(50% - 4px); }
+.alert .btn { margin-top: 14px; width: calc(41% - 4px); }
 .show-alert { opacity: 1; visibility: visible; transform: scale(1.0); transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s; }
 
 /* Header */
-header { width: 100%; background: #2e2e2e; height: 48px; z-index: 5; position: fixed }
+header {width: 100%;background: #2e2e2e;height: 48px;z-index: 15;position: fixed;}
 header a { font-weight: normal }
 header .logo { float: left }
 header .logo img { max-height: 25px; margin: 12px 0 0 12px; cursor: pointer; width:auto }
@@ -246,7 +250,7 @@ header .user-img span, .icon span { display: block; margin-top: -8px; font-style
 .treeview a.active { color: #000; border-left: 3px solid #0078D7; margin-left: 0; padding-left: 12px; }
 .treeview .fa-chevron-right { margin-left: 2px; margin-right: -15px; }
 
-/* TODO: Inserir na documentação */
+/* TODO: Inserir na documentaÃ§Ã£o */
 header + nav { height: calc(100% - 48px) !important; margin-top: 48px }
 header ~ content .nav { height: calc(100% - 48px); }
 header ~ content { margin-top: 48px; }
@@ -319,8 +323,8 @@ header.acrylic { background: rgba(40,40,40,0.85); }
 
 .row:after, .clean, .btn-action:after { clear: both; }
 .row:after, .row:before, .btn-action:after { display: table; content: " "; }
-.row { padding: 0; margin: 0 -5px; }
-.col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 { min-height: 1px; padding: 0 5px; }
+.row {padding: 0;margin: 0 -10px;}
+.col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {min-height: 1px;padding: 0 10px;}
 .card .col-xs-1, .card .col-sm-1, .card .col-md-1, .card .col-lg-1, .card .col-xs-2, .card .col-sm-2, .card .col-md-2, .card .col-lg-2, .card .col-xs-3, .card .col-sm-3, .card .col-md-3, .card .col-lg-3, .card .col-xs-4, .card .col-sm-4, .card .col-md-4, .card .col-lg-4, .card .col-xs-5, .card .col-sm-5, .card .col-md-5, .card .col-lg-5, .card .col-xs-6, .card .col-sm-6, .card .col-md-6, .card .col-lg-6, .card .col-xs-7, .card .col-sm-7, .card .col-md-7, .card .col-lg-7, .card .col-xs-8, .card .col-sm-8, .card .col-md-8, .card .col-lg-8, .card .col-xs-9, .card .col-sm-9, .card .col-md-9, .card .col-lg-9, .card .col-xs-10, .card .col-sm-10, .card .col-md-10, .card .col-lg-10, .card .col-xs-11, .card .col-sm-11, .card .col-md-11, .card .col-lg-11, .card .col-xs-12, .card .col-sm-12, .card .col-md-12, .card .col-lg-12 { padding: 0 5px }
 .col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12 { float: left }
 .col-xs-12 { width: 100% }
@@ -552,3 +556,17 @@ header.acrylic { background: rgba(40,40,40,0.85); }
 .k-tabstrip-items .k-link { font-size: 16px !important; padding: 7px 0 !important; }
 .k-tabstrip .k-content.k-state-active .k-grid { border: none !important }
 .k-detail-cell .k-command-cell .k-button .k-icon { margin-top: 2px !important }
+
+
+.table { border-collapse: collapse; border-spacing: 0; width: 100%; margin-top: 10px; border: 1px solid #ccc }
+.table tr { border-bottom: 1px solid #ccc }
+.table thead { border-top: none !important; font-weight: 600; border-bottom-width: 2px }
+.table thead:hover { background: none; }
+.table tr td {padding: 9px 3px 8px 11px;}
+.table.table-condensed tr td { padding: 3px 1px 4px 5px }
+.table tr td:last-of-type { padding-right: 0 !important }
+.table-striped > tbody > tr:nth-of-type(2n+1):hover,
+.table tr:hover { background: #dedfe7; -moz-transition: all .5s; -o-transition: all .5s; -webkit-transition: all .5s; transition: all .5s; }
+.table-striped > tbody > tr:nth-of-type(2n+1) { background: rgba(200,200,200,0.23) }
+.table-bordered tr td,
+.table-bordered {border: 1px solid #ccc;}

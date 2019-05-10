@@ -23,9 +23,6 @@ var deps = {
     "jquery-ui-dist": {
         "*": ""
     },
-    "font-awesome": {
-        "**/*": ""
-    },
     "heartthrob": {
         "build/**": ""
     },

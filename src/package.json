@@ -8,10 +8,11 @@
     "merge-stream": "1.0.1"
   },
   "dependencies": {
-    "@fortawesome/fontawesome-free": "^5.7.1",
+    "@fortawesome/fontawesome-free": "^5.8.0",
+    "heartthrob": "1.0.28",
+    "highlight.js": "^9.15.6",
     "jquery": "3.4.0",
-    "jquery-ui-dist": "1.12.1",
-    "heartthrob": "1.0.28"
+    "jquery-ui-dist": "1.12.1"
   },
   "license": "MIT"
 }

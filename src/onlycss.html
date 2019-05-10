@@ -1,6 +1,6 @@
 ﻿<!DOCTYPE html>
 <html>
- 
+
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -17,197 +17,235 @@
 
     <link href="css/style.css" rel="stylesheet" />
 
+    <!-- Prism -->
+    <link href="lib/prism/prism.css" rel="stylesheet" />
+    <script src="lib/prism/prism.js"></script>
+    <!-- End Prism -->
 </head>
 
 <body>
     <header class="acrylic">
-        <div class="logo">
-            <h2>heatthrob</h2>
+        <div class="container">
+            <div class="logo">
+                <h2>heatthrob</h2>
+            </div>
+            <div class="line"></div>
+            <nav>
+                <ul>
+                    <li><a href="index.html"><i class="fa fa-home"></i> basics</a></li>
+                    <li><a href="grids.html"><i class="fas fa-grip-horizontal"></i> grids</a></li>
+                    <li><a href="onlycss.html" class="active"><i class="fab fa-css3-alt"></i> css</a></li>
+                    <li><a href="layout.html"><i class="fa fa-drafting-compass"></i> layout</a></li>
+                    <li><a href="kendo.html"><i class="fas fa-user-ninja"></i> kendo</a></li>
+                    <li><a href="js.html"><i class="fa fa-file-code"></i> scripts</a></li>
+                </ul>
+            </nav>
         </div>
-        <div class="line"></div>
-        <nav>
-            <ul>
-                <li><a href="index.html"><i class="fa fa-home"></i> basics</a></li>
-                <li><a href="onlycss.html" class="active"><i class="fab fa-css3-alt"></i> css</a></li>
-                <li><a href="layout.html"><i class="fa fa-drafting-compass"></i> layout</a></li>
-                <li><a href="kendo.html"><i class="fas fa-user-ninja"></i> kendo</a></li>
-                <li><a href="js.html"><i class="fa fa-file-code"></i> scripts</a></li>
-            </ul>
-        </nav>
     </header>
     <!-- TODO: content passar para heatthrob essa gambiarra aqui para não ser gambiarra -->
-    <content style="width: calc(90% - 30px); float: left">
-        <h1>basics</h1>
-        <h2>typography</h2>
-        <h3>titles and texts</h3>
-        <p>You can use classes like <i>link</i>, <i>text-left</i>, <i>text-right</i>, <i>text-center</i>,
-            <i>text-justify</i>, <i>text-lowercase</i>, <i>text-uppercase</i>, <i>text-capitalize</i> to recreate those
-            functions.</p>
-        <p>There is also a control for the weight of the font that you are using, with the claases <i>text-light</i>,
-            <i>text-bold</i>, <i>text-extra-bold</i>. You can control the color by using <i>text-black</i>,
-            <i>text-mid-black</i>, <i>text-white</i>.</p>
-        <p>Use titles to help your users navige across you web portal. The tags <i>b</i>, <i>strong</i> will have the
-            same style as the <i>h4</i> title.</p>
-        <div class="space-medium"></div>
-
-        <h4>Examples</h4>
-        <br>
-        <h1>This is a h1 title</h1>
-        <h2>This is a h2 title</h2>
-        <h3>This is a h3 title</h3>
-        <h4>This is a h4 title</h4>
-        <h5>This is a h5 title</h5>
-        <h6>This is a h6 title</h6>
-
-        <div class="space-medium"></div>
-        <p>The tag <i>small</i> will make your text <small>looks a little bit small</small>.</p>
-        <p>The paragraph will always be a more clear than the usual black. You can use the <i>hr</i> to create a line.
-        </p>
-
-        <div class="space-medium"></div>
-        <h4>Example</h4>
-        <br>
+    <div class="container">
         <div class="row">
-            <div class="col-md-6">
-                <hr>
+            <div class="col-lg-9 col-md-7">
+                <h1>css: the basics + getting started</h1>
+                <p>Here you will find how to use basic stuff from heartthrob, like typography, buttons and inputs. </p>
+
+                <div class="space-medium"></div>
+                <h2>typography</h2>
+                <h3>titles and texts</h3>
+                <p>You can use classes like <code>.link</code>, <code>.text-left</code>, <code>.text-right</code>, <code>.text-center</code>,
+                    <code>.text-justify</code>, <code>.text-lowercase</code>, <code>.text-uppercase</code>, <code>.text-capitalize</code> to
+                    recreate those
+                    functions.</p>
+                <p>There is also a control for the weight of the font that you are using, with the claases
+                    <code>.text-light</code>,
+                    <code>.text-bold</code>, <code>.text-extra-bold</code>. You can control the color by using <code>.text-black</code>,
+                    <code>.text-mid-black</code>, <code>.text-white</code>.</p>
+                <p>Use titles to help your users navige across you web portal. The tags <code>.b</code>, <code>.strong</code> will
+                    have the
+                    same style as the <code>.h4</code> title.</p>
+                <div class="space-medium"></div>
+
+                <h4>Examples</h4>
+                <br>
+                <h1>This is a h1 title</h1>
+                <h2>This is a h2 title</h2>
+                <h3>This is a h3 title</h3>
+                <h4>This is a h4 title</h4>
+                <h5>This is a h5 title</h5>
+                <h6>This is a h6 title</h6>
+
+                <div class="space-medium"></div>
+                <p>The tag <code>.small</code> will make your text <small>looks a little bit small</small>.</p>
+                <p>The paragraph will always be a more clear than the usual black. You can use the <code>.hr</code> to create a
+                    line.
+                </p>
+
+                <div class="space-medium"></div>
+                <h4>Example</h4>
+                <br>
+                <div class="row">
+                    <div class="col-md-6">
+                        <hr>
+                    </div>
+                </div>
+
+                <div class="space-medium"></div>
+                <h3>Blockquote</h3>
+                <h4>Example</h4>
+                <br>
+                <div class="row">
+                    <div class="col-md-6">
+                        <blockquote>
+                            Here you can view a simple text.
+                            <footer>If you use <code>.footer</code> inside the blockquote you have a nice text like this
+                            </footer>
+                        </blockquote>
+                    </div>
+                </div>
+
+                <div class="space-long"></div>
+                <h2>classes</h2>
+
+                <h3>Util classes</h3>
+                <p>You can use classes like <code>.space-long</code>, <code>.space-medium</code> and <code>.space-low</code> to add a white
+                    space
+                    with the height of 48px, 30px and 15px, successively.</p>
+                <p>You can as well use the class <code>.tag</code> to create a more relevant content like <span
+                        class="tag">this
+                        one</span>.</p><br>
+                <p>In this framework, you can use the classes <code>.left</code>, <code>.right</code>, <code>.center</code> to help you
+                    positionate
+                    you content, after using those, you will need to use the <code>.clear</code> the clear both. You can use
+                    the
+                    <code>.show</code> and the <code>.hide</code> class to make your element visible or hidden.</p>
+
+                <div class="space-long"></div>
+                <h2>inputs</h2>
+                <h3>Simple text box</h3>
+                <p>Simple text boxes should be used for 1-line entries—if additional space is needed, use the rich text
+                    box.
+                    These fields may be used for password entry, see the example below. When the text box is inactive,
+                    the
+                    border is black at 20% opacity and the fill is white at 40% opacity. When active, the border is the
+                    accent/brand color at 100% opacity, and the fill is white at 100% opacity.</p>
+
+                <div class="space-medium"></div>
+                <h4>Examples</h4>
+                <input type="text" placeholder="Simple text box">
+                <br>
+                <input type="text" disabled="" placeholder="Disabled text box">
+                <div class="space-medium"></div>
+                <p>Labels may be placed either above or to the left side of the input field. When placed on the left
+                    side,
+                    ensure all the input fields line up along the left edge.</p>
+
+                <div class="space-medium"></div>
+                <h3>Auto-suggest box</h3>
+                <p>Use an AutoSuggestBox to provide a list of suggestions for a user to select from as they type. You
+                    can use <a href="https://jqueryui.com/autocomplete/">jQuery-ui Autocomplete</a> to do so.</p>
+                <div class="space-medium"></div>
+                <h4>Examples</h4>
+                <script>
+                    $(function () {
+                        var availableTags = ["ActionScript", "AppleScript", "Asp", "BASIC", "C", "C++", "Clojure", "COBOL", "ColdFusion", "Erlang", "Fortran", "Groovy", "Haskell", "Java", "JavaScript", "Lisp", "Perl", "PHP", "Python", "Ruby", "Scala", "Scheme"];
+                        $("#tags").autocomplete({
+                            source: availableTags
+                        });
+                    });
+                </script>
+                <input id="tags" class="ui-autocomplete-input" autocomplete="off">
+                <p>The Autocomplete widgets provides suggestions while you type into the field. Here the suggestions are
+                    tags
+                    for programming languages, give "ja" (for Java or JavaScript) a try.</p>
+
+                <div class="space-long"></div>
+                <h3>Checkbox</h3>
+                <p>A checkbox is used to select or deselect action items. It can be used for a single item or for a list
+                    of
+                    multiple items that a user can choose from. The control has three selection states: unselected and
+                    selected.
+                </p>
+                <div class="space-medium"></div>
+                <h4>Examples</h4>
+                <br>
+
+                <input type="checkbox" id="1"><label for="1">Checkbox unselected</label><br>
+                <input type="checkbox" id="2" checked=""><label for="2">Checkbox selected</label><br>
+                <input type="checkbox" id="3" disabled=""><label for="3">Checkbox disabled</label><br>
+
+                <div class="space-long"></div>
+                <h3>Radio button</h3>
+                <p>A radio button is used for two or more mutually exclusive options.</p>
+                <div class="space-medium"></div>
+                <h4>Examples</h4>
+                <br>
+                <input type="radio" id="10"><label for="10">Checkbox unselected</label><br>
+                <input type="radio" id="20" checked=""><label for="20">Checkbox selected</label><br>
+
+                <div class="space-long"></div>
+                <h2>buttons &amp; links</h2>
+                <p>Use primary buttons, set to either the user’s accent color or the app brand color, to indicate the
+                    default
+                    action when the user presses “Enter” when a dialog or window is open. Use secondary buttons for all
+                    other
+                    main actions. Use tertiary buttons for lesser actions.</p>
+                <div class="space-medium"></div>
+                <h4>Examples</h4>
+                <br>
+                <a class="btn btn-primary">Button text</a>
+                <a class="btn">Button text</a>
+                <a class="btn btn-lesser">Button text</a>
+
+                <div class="space-medium"></div>
+
+                <h4>Examples with icon</h4>
+                <br>
+                <a class="btn btn-primary"><i class="fa fa-phone"></i> Button text</a>
+                <a class="btn"><i class="fa fa-archive"></i> Button text</a>
+                <a class="btn btn-lesser"><i class="fa fa-file"></i> Button text</a>
+                <div class="space-medium"></div>
+
+                <h4>Examples with action buttons</h4>
+                <br>
+                <div class="btn-action">
+                    <a class="btn"><i class="fa fa-phone"></i> Button text</a>
+                    <a class="btn"><i class="fa fa-archive"></i> Button text</a>
+                    <a class="btn btn-primary"><i class="fa fa-file"></i> Button text</a>
+                </div>
+
+                <div class="space-medium"></div>
+                <p>Buttons may have 16x16 icons next to the text—remember that the group containing the icon and text
+                    should be
+                    centered.</p>
+
+                <div class="space-long"></div>
+                <h3>Action links</h3>
+                <p>An action link may be used in place of a button where the action the user is performing takes place
+                    in
+                    another app or experience. Action links typically have a right pointing arrow on the left, followed
+                    by
+                    text—though that arrow icon may be replaced where appropriate. Action links are set to the user’s
+                    accent
+                    color or the app brand color.</p>
+                <div class="space-medium"></div>
+                <h4>Examples</h4>
+                <br>
+                <a href="#" class="btn btn-link"><i class="fa fa-angle-right"></i> Link that continues in another
+                    app</a>
+
+                <div class="space-long"></div>
+                <h3>Hyperlink</h3>
+                <p>Hyperlinks can be used in the traditional sense—i.e. to link to a web experience, or to link to
+                    another page
+                    in an app. Hyperlinks may or may not be underlined, but must always be set to the user’s accent
+                    color or the
+                    app brand color. Hyperlinks may use a semibold font.</p>
+                <div class="space-medium"></div>
+                <a href="#">Hyperlinks may use a semibold font.</a>
+                <div class="space-long"></div>
             </div>
         </div>
-
-        <div class="space-medium"></div>
-        <h3>Blockquote</h3>
-        <h4>Example</h4>
-        <br>
-        <div class="row">
-            <div class="col-md-6">
-                <blockquote>
-                    Here you can view a simple text.
-                    <footer>If you use <i>footer</i> inside the blockquote you have a nice text like this</footer>
-                </blockquote>
-            </div>
-        </div>
-
-        <div class="space-long"></div>
-        <h2>classes</h2>
-
-        <h3>Util classes</h3>
-        <p>You can use classes like <i>space-long</i>, <i>space-medium</i> and <i>space-low</i> to add a white space
-            with the height of 48px, 30px and 15px, successively.</p>
-        <p>You can as well use the class <i>tag</i> to create a more relevant content like <span class="tag">this
-                one</span>.</p><br>
-        <p>In this framework, you can use the classes <i>left</i>, <i>right</i>, <i>center</i> to help you positionate
-            you content, after using those, you will need to use the <i>clear</i> the clear both. You can use the
-            <i>show</i> and the <i>hide</i> class to make your element visible or hidden.</p>
-
-        <div class="space-long"></div>
-        <h2>inputs</h2>
-        <h3>Simple text box</h3>
-        <p>Simple text boxes should be used for 1-line entries—if additional space is needed, use the rich text box.
-            These fields may be used for password entry, see the example below. When the text box is inactive, the
-            border is black at 20% opacity and the fill is white at 40% opacity. When active, the border is the
-            accent/brand color at 100% opacity, and the fill is white at 100% opacity.</p>
-
-        <div class="space-medium"></div>
-        <h4>Examples</h4>
-        <input type="text" placeholder="Simple text box">
-        <br>
-        <input type="text" disabled="" placeholder="Disabled text box">
-        <div class="space-medium"></div>
-        <p>Labels may be placed either above or to the left side of the input field. When placed on the left side,
-            ensure all the input fields line up along the left edge.</p>
-
-        <div class="space-medium"></div>
-        <h3>Auto-suggest box</h3>
-        <p>Use an AutoSuggestBox to provide a list of suggestions for a user to select from as they type. You can use <a
-                href="https://jqueryui.com/autocomplete/">jQuery-ui Autocomplete</a> to do so.</p>
-        <div class="space-medium"></div>
-        <h4>Examples</h4>
-        <script>
-            $(function () {
-                var availableTags = ["ActionScript", "AppleScript", "Asp", "BASIC", "C", "C++", "Clojure", "COBOL", "ColdFusion", "Erlang", "Fortran", "Groovy", "Haskell", "Java", "JavaScript", "Lisp", "Perl", "PHP", "Python", "Ruby", "Scala", "Scheme"];
-                $("#tags").autocomplete({
-                    source: availableTags
-                });
-            });
-        </script>
-        <input id="tags" class="ui-autocomplete-input" autocomplete="off">
-        <p>The Autocomplete widgets provides suggestions while you type into the field. Here the suggestions are tags
-            for programming languages, give "ja" (for Java or JavaScript) a try.</p>
-
-        <div class="space-long"></div>
-        <h3>Checkbox</h3>
-        <p>A checkbox is used to select or deselect action items. It can be used for a single item or for a list of
-            multiple items that a user can choose from. The control has three selection states: unselected and selected.
-        </p>
-        <div class="space-medium"></div>
-        <h4>Examples</h4>
-        <br>
-
-        <input type="checkbox" id="1"><label for="1">Checkbox unselected</label><br>
-        <input type="checkbox" id="2" checked=""><label for="2">Checkbox selected</label><br>
-        <input type="checkbox" id="3" disabled=""><label for="3">Checkbox disabled</label><br>
-
-        <div class="space-long"></div>
-        <h3>Radio button</h3>
-        <p>A radio button is used for two or more mutually exclusive options.</p>
-        <div class="space-medium"></div>
-        <h4>Examples</h4>
-        <br>
-        <input type="radio" id="10"><label for="10">Checkbox unselected</label><br>
-        <input type="radio" id="20" checked=""><label for="20">Checkbox selected</label><br>
-
-        <div class="space-long"></div>
-        <h2>buttons &amp; links</h2>
-        <p>Use primary buttons, set to either the user’s accent color or the app brand color, to indicate the default
-            action when the user presses “Enter” when a dialog or window is open. Use secondary buttons for all other
-            main actions. Use tertiary buttons for lesser actions.</p>
-        <div class="space-medium"></div>
-        <h4>Examples</h4>
-        <br>
-        <a class="btn btn-primary">Button text</a>
-        <a class="btn">Button text</a>
-        <a class="btn btn-lesser">Button text</a>
-
-        <div class="space-medium"></div>
-
-        <h4>Examples with icon</h4>
-        <br>
-        <a class="btn btn-primary"><i class="fa fa-phone"></i> Button text</a>
-        <a class="btn"><i class="fa fa-archive"></i> Button text</a>
-        <a class="btn btn-lesser"><i class="fa fa-file"></i> Button text</a>
-        <div class="space-medium"></div>
-
-        <h4>Examples with action buttons</h4>
-        <br>
-        <div class="btn-action">
-            <a class="btn"><i class="fa fa-phone"></i> Button text</a>
-            <a class="btn"><i class="fa fa-archive"></i> Button text</a>
-            <a class="btn btn-primary"><i class="fa fa-file"></i> Button text</a>
-        </div>
-
-        <div class="space-medium"></div>
-        <p>Buttons may have 16x16 icons next to the text—remember that the group containing the icon and text should be
-            centered.</p>
-
-        <div class="space-long"></div>
-        <h3>Action links</h3>
-        <p>An action link may be used in place of a button where the action the user is performing takes place in
-            another app or experience. Action links typically have a right pointing arrow on the left, followed by
-            text—though that arrow icon may be replaced where appropriate. Action links are set to the user’s accent
-            color or the app brand color.</p>
-        <div class="space-medium"></div>
-        <h4>Examples</h4>
-        <br>
-        <a href="#" class="btn btn-link"><i class="fa fa-angle-right"></i> Link that continues in another app</a>
-
-        <div class="space-long"></div>
-        <h3>Hyperlink</h3>
-        <p>Hyperlinks can be used in the traditional sense—i.e. to link to a web experience, or to link to another page
-            in an app. Hyperlinks may or may not be underlined, but must always be set to the user’s accent color or the
-            app brand color. Hyperlinks may use a semibold font.</p>
-        <div class="space-medium"></div>
-        <a href="#">Hyperlinks may use a semibold font.</a>
-
-    </content>
+    </div>
 </body>
 
 </html>

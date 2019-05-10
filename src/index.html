@@ -1,24 +1,31 @@
 ﻿<!DOCTYPE html>
-<html> 
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<html>
 
-        <title>heartthrob: basics</title>
-        <link rel="stylesheet" href="lib/@fortawesome/css/all.css" />
-        <link rel="stylesheet" href="lib/heartthrob/css/heartthrob.css" />
-        <link rel="stylesheet" href="lib/heartthrob/css/kendo.heartthrob.css" />
-        
-        <script src="https://code.jquery.com/jquery-1.12.1.js"></script>
-        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-        <script src="lib/kendo-ui/js/kendo.all.min.js"></script>
-        <script src="lib/heartthrob/js/heartthrob.js"></script>
-    
-        <link href="css/style.css" rel="stylesheet" />
-        
-    </head>
-    <body>
-        <header class="acrylic">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>heartthrob: basics</title>
+    <link rel="stylesheet" href="lib/@fortawesome/css/all.css" />
+    <link rel="stylesheet" href="lib/heartthrob/css/heartthrob.css" />
+    <link rel="stylesheet" href="lib/heartthrob/css/kendo.heartthrob.css" />
+
+    <script src="https://code.jquery.com/jquery-1.12.1.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="lib/kendo-ui/js/kendo.all.min.js"></script>
+    <script src="lib/heartthrob/js/heartthrob.js"></script>
+
+    <link href="css/style.css" rel="stylesheet" />
+
+    <!-- Prism -->
+    <link href="lib/prism/prism.css" rel="stylesheet" />
+    <script src="lib/prism/prism.js"></script>
+    <!-- End Prism -->
+</head>
+
+<body>
+    <header class="acrylic">
+        <div class="container">
             <div class="logo">
                 <h2>heatthrob</h2>
             </div>
@@ -26,75 +33,207 @@
             <nav>
                 <ul>
                     <li><a href="index.html" class="active"><i class="fa fa-home"></i> basics</a></li>
+                    <li><a href="grids.html"><i class="fas fa-grip-horizontal"></i> grids</a></li>
                     <li><a href="onlycss.html"><i class="fab fa-css3-alt"></i> css</a></li>
                     <li><a href="layout.html"><i class="fa fa-drafting-compass"></i> layout</a></li>
                     <li><a href="kendo.html"><i class="fas fa-user-ninja"></i> kendo</a></li>
                     <li><a href="js.html"><i class="fa fa-file-code"></i> scripts</a></li>
                 </ul>
             </nav>
-        </header>
-        <!-- TODO: content passar para heatthrob essa gambiarra aqui para não ser gambiarra -->
-        <content style="width: calc(90% - 30px); float: left">
-            <h1>heartthrob: the basics</h1>
-            <p>The heartthrob framework (heartthrob.css) can add more elegancy to your project, here you will find the basic stuff from this ultimate framework.</p>
+        </div>
+    </header>
+    <!-- TODO: content passar para heatthrob essa gambiarra aqui para não ser gambiarra -->
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-9 col-md-7">
+                <h1><i class="far fa-star"></i> heartthrob: overview</h1>
+                <p>The heartthrob framework can add more elegancy to your project, to looks like the
+                    Microsoft Fluent Design design, it was also inspired by <a href="https://www.michaelwe.st/fluent-kit/">Michael West</a> - an incredible designer who will
+                    dominate the world with his ideas. </p>
+                <p>Built, since 2016, from scrath with bare CSS - and JavaScript, it uses the grid system for responsive websites
+                    based in Bootstrap 3, the idea is to have a start for when you need to develop a solution for your company or
+                    for yourself, it's clean, simple, easy and still small.</p>
+                <p>The ideia behind this project is to make it as simple as possible for new developers, and agencys that creates several websites a month, by making it simple to study, contribute and modify. 
+                    It also does a lot of automatic functions without you needing to spend too much time in it. 
+                </p>
 
-            <div class="space-medium"></div>
+                <div class="space-medium"></div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <h3><i class="fas fa-cogs"></i> perfect for dashboards</h3>
+                        <p>I built and use heartthrob in several dashboards and CMSs in several startups and corporate
+                            systems.</p>
+                        <p>More to share about this soon.</p>
+                    </div>
+                    <div class="col-md-4">
+                        <h3><i class="fab fa-bootstrap"></i> bootstrap grid system</h3>
+                        <p>One of the key points of heartthrob is using the same bootstrap grid, with a tool that you
+                            have more control.</p>
+                        <p>It also has a lot of compatibility with any website using bootstrap since we used a lot of
+                            similiar classes names.</p>
+                    </div>
+                    <div class="col-md-4">
+                        <h3><i class="fas fa-user-ninja"></i> kendo ui compatibility</h3>
+                        <p>Inside heartthrob you will find a kendo.heartthrob css file, that can add all the work made
+                            in this framework to the kendo interface. This looks pretty good for grids, dropdowns,
+                            scheduler and other inputs.</p>
+                    </div>
+                </div>
 
-            <h2>overview + contribute</h2>
-            <p>Heartthrob is a framework made to looks like the Windows design, that I'm building for at least 2 years, following the Microsoft Fluent Design, it was also inspired by <a href="https://www.michaelwe.st/fluent-kit/">Michael West</a> - an incredible designer who will dominate the world with his ideas. </p>
-            <p>Build from scrath with bare CSS - and JavaScript, it uses the grid system for responsive websites based in Bootstrap 3, the idea is to have a start for when you need to develop a solution for your company or for yourself, it's clean, simple, easy and still small. One of the biggest features in heartthrob is the compatibility with Kendo UI.</p>
-            <br />
-			<p>I'm [<a href="https://vtnorton.com">the author</a>] using it in the solutions I build everyday, over the next months the idea is to get it out of a '#conceptual project' to go all real! So expect nice fixes and small additions as it will be more and more compatible with Kendo and other browsers. I will also work to make this documentation better and adding a bunch of stuff here.</p>
+                <div class="space-medium"></div>
+                <h2><i class="fas fa-cloud-download-alt"></i> how to download it</h2>
+                <p>Ok, enough talk about the project, how do you use it? First download it to your project using one of this options: </p>
 
-            <div class="space-medium"></div>
-            <h3>let's build it together</h3>
-            <p>I'm more than open to have contributions to this project, so go to the GitHub page to help me make it even better!</p>
-            <br />
-            <a href="https://github.com/vtnorton/Heartthrob" class="btn btn-link" style="display:inline"><i class="fa fa-angle-right"></i> heartthrob</a><br />
-            <a href="https://github.com/vtnorton/Heartthrob-docs" class="btn btn-link"><i class="fa fa-angle-right"></i> heartthrob-docs</a>
+                <a href="https://www.npmjs.com/package/heartthrob" target="_blank" class="btn btn-link"><i class="fa fa-angle-right"></i> Download with npm</a><br />
+                <a href="https://github.com/vtnorton/Heartthrob/releases" target="_blank" class="btn btn-link"><i class="fa fa-angle-right"></i> Download in GitHub Releases</a><br />
+
+                <p>We use continous delivery to make the latest version available to all of the options above, this is one of the reasons for not having direct download links here, since we build almost one version a week. I'm working on bringing other options for you to use it.</p>
+                
+                <div class="space-low"></div>
+                <h2><i class="fas fa-box-open"></i> how to install it</h2>
+                
+                <p>To install the basics you will need to import the css file and the JavaScript file. Some - a lot - functions need jQuery to work, but if you are interested only on the css you should be fine without importing it too.</p>
+                <pre><code class="highlight language-html">
+&lt;link rel=&quot;stylesheet&quot; href=&quot;./heartthrob/css/heartthrob.css&quot; /&gt;
+
+&lt;script src=&quot;https://code.jquery.com/jquery-1.12.1.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;https://code.jquery.com/ui/1.12.1/jquery-ui.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;./heartthrob/js/heartthrob.js&quot;&gt;&lt;/script&gt;                           
+                </code></pre>
+
+                <br />
+                <p>If you don't want to use the minified version, than use this: </p>
+                <pre><code class="highlight language-html">
+&lt;link rel=&quot;stylesheet&quot; href=&quot;./heartthrob/css/heartthrob.min.css&quot; /&gt;
+
+&lt;script src=&quot;https://code.jquery.com/jquery-1.12.1.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;https://code.jquery.com/ui/1.12.1/jquery-ui.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;./heartthrob/js/heartthrob.min.js&quot;&gt;&lt;/script&gt;                           
+                </code></pre>
+
+                <br />
+                <p>If you want to use the kendo compatibility function, and make your kendo ui incredible beautiful then you will need to import this other file:</p>
+                <pre><code class="highlight language-html">
+&lt;link rel=&quot;stylesheet&quot; href=&quot;./heartthrob/css/kendo.heartthrob.css&quot; /&gt;                        
+                </code></pre>
+                
+                <br />
+                <p>If you don't want to use the minified version, than use this: </p>
+                <pre><code class="highlight language-html">
+&lt;link rel=&quot;stylesheet&quot; href=&quot;./heartthrob/css/kendo.heartthrob.min.css&quot; /&gt;                         
+                </code></pre>
+
+                <br />
+                <p>Another part of the heartthrob is what we call uap (stands for user account program, it sucks I know, legacy code here, but its pretty useful), if you want to import this, just add it after the heartthrob css script.</p>
+                <pre><code class="highlight language-html">
+&lt;link rel=&quot;stylesheet&quot; href=&quot;./heartthrob/css/uap.heartthrob.css&quot; /&gt;                      
+                </code></pre>
+
+                <br />
+                <p>If you don't want to use the minified version, than use this: </p>
+                <pre><code class="highlight language-html">
+&lt;link rel=&quot;stylesheet&quot; href=&quot;./heartthrob/css/uap.heartthrob.min.css&quot; /&gt;                        
+                </code></pre>
+
+                <div class="space-medium"></div>
+                <h2><i class="fab fa-github"></i> contribute: let's build it together</h2>
+                <p>I [<a href="https://vtnorton.com">the author</a>] and my team are using it in the solutions we build every single day, so expect nice fixes 
+                    and small additions as it will be more and more compatible with Kendo and other browsers. </p>
+                
+                <p>I'm more than open to have contributions to this project, so go to the GitHub page to help me make it even better!</p>
+                <br />
+                <a href="https://github.com/vtnorton/Heartthrob" class="btn btn-link" style="display:inline"><i class="fab fa-github"></i> heartthrob</a><br />
+                <a href="https://github.com/vtnorton/Heartthrob-docs" class="btn btn-link"><i class="fab fa-github"></i> heartthrob-docs</a>
+                <br />
+                <p>We use continous deployment/delivery to share the latest bits to you, so we ship fixes and new features as PATCH versions 1.1.XX, if we change anything that will require you to update your code than we will update the MINOR version with a blog post on what it had changed.</p>
+
+                <div class="space-medium"></div>
+                <h3><i class="fas fa-code-branch"></i> how to contribute</h3>
+                <p>Here is a quicky guide in how to contribute to the framework:</p>
+                <ol>
+                    <li>
+                        Clone <a href="https://github.com/vtnorton/Heartthrob">the project from GitHub</a>. <br /><br />
+                        <code>git clone https://github.com/vtnorton/Heartthrob.git</code><br /><br />
+                    </li>
+                    <li>Use <code>npm install</code> to install all dependencies</li>
+                    <li>Use any editor you want to make any changes inside <code>/src</code></li>
+                    <li>Once is finished and you want to build what you created, just run the command: <code>gulp build</code>, and a folder <code>/build</code> will apper, use that folder to implement across your system.</li>
+                </ol>
+
+                <br />
+                <p>And now here is a quicky guide in how to contribute to the <strong>documentation</strong>:</p>
+                <ol>
+                    <li>
+                        Clone <a href="https://github.com/vtnorton/Heartthrob-docs">the project from GitHub</a>. <br /><br />
+                        <code>git clone https://github.com/vtnorton/Heartthrob-docs</code><br /><br />
+                    </li>
+                    <li>Use <code>npm install</code> to install all dependencies</li>
+                    <li>Use <code>gulp restore</code> to restore dependencies such as font-awesome and heartthrob itself to the folder <code>/lib</code></li>
+                    <li>Use any editor you want to make any changes inside <code>/src</code></li>
+                </ol>
 
 
-            <div class="space-medium"></div>
-            <h3>how to contribute</h3>
-            <p>Here is a quicky guide in how to contribute to the framework:</p>
-            <ol>
-                <li>Clone <a href="https://github.com/vtnorton/Heartthrob">the project from GitHub</a>.</li>
-                <li>Use npm install to install all dependencies</li>
-                <li>Use any editor you want to make any changes inside /src</li>
-                <li>Once is finished and you want to build what you created, just run the command: "gulp build", and a folder /build will apper, use that folder to implement across your system.</li>
-            </ol>
+                <div class="space-medium"></div>
+                <h3><i class="far fa-comments"></i> don't code? Still want to contribute!?</h3>
+                <p>Here is a few things you can do - almost in every open source project - that would help it be even better:</p>
+                <ul>
+                    <li>Found something cool on the internet that you want to be added here? <a href="https://github.com/vtnorton/Heartthrob/issues">Tell me!</a></li>
+                    <li>Found a bug, please <a href="https://github.com/vtnorton/Heartthrob/issues">report</a>! Will fix it ASAP - <i>this is actually the code my team uses every single day.</i></li>
+                    <li>This documentation can be improved somehow? <a href="https://github.com/vtnorton/Heartthrob/issues">Just say it to me</a> and will do my best! </li>
+                    <li>Something is missing, in the documentation, the repository, or in your life? <a href="https://github.com/vtnorton/Heartthrob/issues">You will be heard!</a></li>
+                    <li>Follow me on <a href="https://twitter.com/vt_norton">@vt_norton</a> and in my <a href="https://vtnorton.com/blog">blog</a> to have info about updates!</li>
+                </ul>
 
-            <br />
-            <p>And now here is a quicky guide in how to contribute to the <strong>documentation</strong> (we are not attached to this code, so feel free to change whatever you want in the documentation, and I agree with you, it's a mess the code!):</p>
-            <ol>
-                <li>Clone <a href="https://github.com/vtnorton/Heartthrob-docs">the project from GitHub</a>.</li>
-                <li>Use Visual Studio 2017 or 2019, with AspNet Core, to change and build it.</li>
-            </ol>
+                <div class="space-medium"></div>
+                <h3><i class="fas fa-layer-group"></i> project roadmap</h3>
+                <p>I'm sharing with some some of my plans to move foward with heartthrob as I'm focused on: </p>
+                <ul>
+                    <li><strong>Accessibility:</strong> I want to make it more accessible for every person in the world and make it easy for developers to create accessible websites.</li>
+                    <li><strong>Kendo UI compatibility:</strong> A lot of work to make a full compatibility with kendo is needed - including for different browsers. Also I'm focused on simplifing the kendo.heartthrob.css file.</li>
+                </ul>
+                <p>I welcome contributions of all kinds from the community, but especially those that support the efforts above.</p>
 
+                <!-- script para colocar tag alt nas imagens sem tag alt -->
+                <!-- script para colocar legenda nas imagens via computer vision -->
+                <div class="space-long"></div>
+            </div>
+            <div class="col-lg-3 col-md-5">
+                <h3><i class="fas fa-th-large"></i> projects using hearrthrob</h3>
+                <hr />
 
-            <div class="space-medium"></div>
-            <h3>don't code? Still want to contribute!?</h3>
-            <p>Here is a few things you can do - almost in every open source project - that would help it be even better:</p>
-            <ul>
-                <li>Found something cool on the internet that you want to be added here? <a href="https://github.com/vtnorton/Heartthrob/issues">Tell me!</a></li>
-                <li>Found a bug, please <a href="https://github.com/vtnorton/Heartthrob/issues">report</a>! Will fix it ASAP - <i>this is actually the code my team uses every single day.</i></li>
-                <li>This documentation can be improved somehow? <a href="https://github.com/vtnorton/Heartthrob/issues">Just say it to me</a> and will do my best!</li>
-                <li>Something is missing, in the documentation, the repository, or in your life? <a href="https://github.com/vtnorton/Heartthrob/issues">You will be heard!</a></li>
-                <li>Follow me on <a href="https://twitter.com/vt_norton">@vt_norton</a> and in my <a href="https://vtnorton.com/blog">blog</a> to have info about updates!</li>
-            </ul>
+                <img src="./img/projects/vtnorton.png" alt="Screenshot of the vtnorton.com website" />
+                <figcaption><strong>Website</strong>: <a href="https://vtnorton.com">vtnorton.com</a></figcaption>
 
-            <div class="space-medium"></div>
-            <p><strong>NOTE:</strong> This documentation isn't complete yet with all functions that importing heartthrob to your project will get. Working on it!</p>
+                <div class="space-medium"></div>
+                <h3><i class="far fa-bell"></i> project status + more</h3>
+                <hr />
+                <div class="row">
+                    <div class="col-md-6">
+                        <p>heartthrob status</p>
+                        <img src="https://dev.azure.com/vtnorton/Heartthrob/_apis/build/status/heartthrob?branchName=master" />
+                    </div>
+                    <div class="col-md-6">
+                        <p>heartthrob-docs status</p>
+                        <img src="https://dev.azure.com/vtnorton/Heartthrob/_apis/build/status/heartthrob-docs%20-%20master?branchName=master" />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <p>npm-version</p>
+                        <a href="https://badge.fury.io/js/heartthrob" rel="nofollow"><img src="https://camo.githubusercontent.com/00406ee652843a388d266188aa769216eb6ce39f/68747470733a2f2f62616467652e667572792e696f2f6a732f68656172747468726f622e737667" alt="npm version" data-canonical-src="https://badge.fury.io/js/heartthrob.svg" style="max-width:120px;"></a>
+                    </div>
+                </div>
+                <ul style="padding-left: 18px;">
+                    <li><a href="https://vtnorton.com">Author website</a></li>
+                    <li><a href="https://github.com/vtnorton/Heartthrob">GitHub project (heartthrob)</a></li>
+                    <li><a href="https://github.com/vtnorton/Heartthrob-docs">GitHub project (heartthrob-docs)</a></li>
+                </ul>
 
-            <div class="space-medium"></div>
-            <h2>how to install</h2>
-            <p>Ok, enough talk about the project, how do you use it?  Simple, you can get it with <a href="https://www.npmjs.com/package/heartthrob">npm</a>. Simple as that.</p>
-            <br />
-            <a href="https://www.npmjs.com/package/heartthrob" class="btn btn-link" style="display:inline"><i class="fa fa-angle-right"></i> Download with npm</a><br />
-            <br />
-            <p><strong>NOTE:</strong> For now npm is the only method available in case you don't want to clone the repository and copy the files from there. Will make it available in more areas as I'm investing in some continous integration for this thing, will let you know later in a <a href="https://vtnorton.com/blog">blog</a> post.</p>
-        </content>
-    </body>
+            </div>
+        </div>
+    </div>
+</body>
+
 </html>
 
 <!-- compativel com font-awesome -->
