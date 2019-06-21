@@ -1,28 +1,33 @@
 {
-  "_from": "@fortawesome/fontawesome-free@^5.7.1",
+  "_args": [
+    [
+      "@fortawesome/fontawesome-free@5.8.1",
+      "C:\\projects\\heartthrob-docs\\src"
+    ]
+  ],
+  "_from": "@fortawesome/fontawesome-free@5.8.1",
   "_id": "@fortawesome/fontawesome-free@5.8.1",
   "_inBundle": false,
   "_integrity": "sha512-GJtx6e55qLEOy2gPOsok2lohjpdWNGrYGtQx0FFT/++K4SYx+Z8LlPHdQBaFzKEwH5IbBB4fNgb//uyZjgYXoA==",
   "_location": "/@fortawesome/fontawesome-free",
   "_phantomChildren": {},
   "_requested": {
-    "type": "range",
+    "type": "version",
     "registry": true,
-    "raw": "@fortawesome/fontawesome-free@^5.7.1",
+    "raw": "@fortawesome/fontawesome-free@5.8.1",
     "name": "@fortawesome/fontawesome-free",
     "escapedName": "@fortawesome%2ffontawesome-free",
     "scope": "@fortawesome",
-    "rawSpec": "^5.7.1",
+    "rawSpec": "5.8.1",
     "saveSpec": null,
-    "fetchSpec": "^5.7.1"
+    "fetchSpec": "5.8.1"
   },
   "_requiredBy": [
     "/"
   ],
   "_resolved": "https://registry.npmjs.org/@fortawesome/fontawesome-free/-/fontawesome-free-5.8.1.tgz",
-  "_shasum": "cbafbfe8894c4e3e3c3a9da6774e249ac1f2da8b",
-  "_spec": "@fortawesome/fontawesome-free@^5.7.1",
-  "_where": "E:\\Heartthrob-docs\\src",
+  "_spec": "5.8.1",
+  "_where": "C:\\projects\\heartthrob-docs\\src",
   "author": {
     "name": "Dave Gandy",
     "email": "dave@fontawesome.com",
@@ -31,7 +36,6 @@
   "bugs": {
     "url": "http://github.com/FortAwesome/Font-Awesome/issues"
   },
-  "bundleDependencies": false,
   "contributors": [
     {
       "name": "Brian Talbot",
@@ -55,7 +59,6 @@
     }
   ],
   "dependencies": {},
-  "deprecated": false,
   "description": "The iconic font, CSS, and SVG framework",
   "engines": {
     "node": ">=6"

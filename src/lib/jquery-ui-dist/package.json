@@ -2,7 +2,7 @@
   "_args": [
     [
       "jquery-ui-dist@1.12.1",
-      "E:\\Heartthrob-docs\\src"
+      "C:\\projects\\heartthrob-docs\\src"
     ]
   ],
   "_from": "jquery-ui-dist@1.12.1",
@@ -26,7 +26,7 @@
   ],
   "_resolved": "https://registry.npmjs.org/jquery-ui-dist/-/jquery-ui-dist-1.12.1.tgz",
   "_spec": "1.12.1",
-  "_where": "E:\\Heartthrob-docs\\src",
+  "_where": "C:\\projects\\heartthrob-docs\\src",
   "author": {
     "name": "jQuery Foundation and other contributors",
     "url": "https://github.com/jquery/jquery-ui/blob/1.12.1/AUTHORS.txt"
