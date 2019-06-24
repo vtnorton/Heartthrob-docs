@@ -65,32 +65,33 @@
 				<p>After loading your page, the heartthrob-vision will send the url of every photo on your page to the Microsoft Azure Cognitive Services to create a description of what is showing on the image.</p>
 				<p>Because it is an async function, it will take a little bit before every image to have a caption. See the examples bellow.</p>
 
+				<p><strong>NOTE:</strong> We recommend to create manually all alt text for every image on your website. It will improve way more the accessibility of your website than using heartthrob-vision.</p>
+
 				<div class="space-medium"></div>
 				<h4><i class="far fa-eye"></i> example</h4>
 				<p>Pass the mouse hover the image to see the <code>alt</code> or inspect the element.</p>
 				<div class="row">
 					<div class="col-md-4">
-						<img src="img/vision/animal-animal-photography-avian-2474014.jpg">
+						<img src="img/vision/animal-animal-photography-avian-2474014.jpg" alt="a brown and white owl with yellow eyes">
 					</div>
 					<div class="col-md-4">
-						<img src="img/vision/baby-child-family-2456327.jpg">
+						<img src="img/vision/architecture-beautiful-exterior-106399.jpg" alt="a house with trees in the background">
 					</div>
 					<div class="col-md-4">
-						<img src="img/vision/beautiful-bouquet-bridal-2423407.jpg">
+						<img src="img/vision/book-pages-bookcase-browse-415071.jpg" alt="a book sitting on top of a wooden table">
 					</div>
 				</div>
 				<div class="row">
 					<div class="col-md-4">
-						<img src="img/vision/cars-city-downtown-2372739.jpg">
+						<img src="img/vision/cars-city-downtown-2372739.jpg" alt="a busy city street at night">
 					</div>
 					<div class="col-md-4">
 						<img src="img/vision/bowed-stringed-instrument-brown-chord-1407322.jpg">
 					</div>
 					<div class="col-md-4">
-						<img src="img/vision/animal-grass-predator-46251.jpg">
+						<img src="img/vision/animal-grass-predator-46251.jpg" alt="a tiger walking in the grass">
 					</div>
 				</div>
-
 				<div class="space-medium"></div>
                 <h2><i class="fas fa-cloud-download-alt"></i> how to download it</h2>
                 <p>Maybe you want to use only the heartthrob-vison instead of the full heartthrob framework, and that's ok. But if you already use heartthrob, the <code>vision.heartthrob.js</code> is already included (after version 1.1.26). </p>
@@ -215,11 +216,8 @@
 	</div>
 	<script>
         hVision({
-            subscriptionKey: '94e8fd9a573d4027bdf4e525be6b1a28',
+            subscriptionKey: ' TE PEGUEI HÁ!!! BOA AÍ SUA SUBSCRIPTION KEY ',
             localProjectWarning: false,
-        	// Free trial subscription keys are generated in the "westus" region.
-	        // If you use a free trial subscription key, you shouldn't need to change
-	        // this region.
             uriBase: 'https://eastus.api.cognitive.microsoft.com/vision/v2.0/analyze',
         })
     </script>
