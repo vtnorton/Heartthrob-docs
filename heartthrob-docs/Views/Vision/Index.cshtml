@@ -1,0 +1,120 @@
+﻿
+@{
+    ViewData["Title"] = "vision";
+    Layout = "~/Views/Shared/_SidebarLayout.cshtml";
+}
+
+<h1><i class="fa fa-eye"></i> heartthrob-vision</h1>
+<p>With a simple configuration you can make your website more accessible by adding description to your images automatically via Azure Cognitive Services.</p>
+
+<p>After loading your page, the heartthrob-vision will send the url of every photo on your page to the Microsoft Azure Cognitive Services to create a description of what is showing on the image.</p>
+<p>Because it is an async function, it will take a little bit before every image to have a caption. See the examples bellow.</p>
+
+<p><strong>NOTE:</strong> We recommend to create manually all alt text for every image on your website. It will improve way more the accessibility of your website than using heartthrob-vision.</p>
+
+<div class="space-medium"></div>
+<h4><i class="far fa-eye"></i> example</h4>
+<p>Pass the mouse hover the image to see the <code>alt</code> or inspect the element.</p>
+<div class="row">
+    <div class="col-md-4">
+        <img src="/img/vision/animal-animal-photography-avian-2474014.jpg" alt="a brown and white owl with yellow eyes">
+    </div>
+    <div class="col-md-4">
+        <img src="/img/vision/architecture-beautiful-exterior-106399.jpg" alt="a house with trees in the background">
+    </div>
+    <div class="col-md-4">
+        <img src="/img/vision/book-pages-bookcase-browse-415071.jpg" alt="a book sitting on top of a wooden table">
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-4">
+        <img src="/img/vision/cars-city-downtown-2372739.jpg" alt="a busy city street at night">
+    </div>
+    <div class="col-md-4">
+        <img src="/img/vision/book-pages-bookcase-browse-415071.jpg" alt="a book opened">
+    </div>
+    <div class="col-md-4">
+        <img src="/img/vision/animal-grass-predator-46251.jpg" alt="a tiger walking in the grass">
+    </div>
+</div>
+<div class="space-medium"></div>
+<h2><i class="fas fa-cloud-download-alt"></i> how to download it</h2>
+<p>Maybe you want to use only the heartthrob-vison instead of the full heartthrob framework, and that's ok. But if you already use heartthrob, the <code>vision.heartthrob.js</code> is already included (after version 1.1.26). </p>
+
+<a href="https://www.npmjs.com/package/heartthrob-vision" target="_blank" class="btn btn-link"><i class="fa fa-angle-right"></i> Download with npm</a><br />
+<a href="https://github.com/vtnorton/heartthrob-vision/releases" target="_blank" class="btn btn-link"><i class="fa fa-angle-right"></i> Download in GitHub Releases</a><br />
+
+<p>We use continous delivery to make the latest version available to all of the options above, this is one of the reasons for not having direct download links here, since we build almost one version a week. I'm working on bringing other options for you to use it.</p>
+
+<div class="space-low"></div>
+<h2><i class="fas fa-box-open"></i> how to install it</h2>
+
+<p>To install you will need to import the JavaScript file. You don't need jQuery to use heartthrob-vision.</p>
+<pre><code class="highlight language-html">
+&lt;script src=&quot;./heartthrob-vision/js/vision.heartthrob.js&quot;&gt;&lt;/script&gt;
+                </code></pre>
+
+<br />
+<p>If you don't want to use the minified version, than use this: </p>
+<pre><code class="highlight language-html">
+&lt;script src=&quot;./heartthrob-vision/js/vision.heartthrob.min.js&quot;&gt;&lt;/script&gt;
+				</code></pre>
+
+<div class="space-low"></div>
+<h2><i class="fas fa-hammer"></i> how to use it</h2>
+
+<p>After importing the js file, you need to add this script on the bottom of your page. You can personalize your settings with the options bellow.</p>
+<pre><code class="highlight language-html">
+&lt;script&gt;
+	hVision({
+		subscriptionKey: ' YOUR SUBSCRIPTION KEY HERE ',
+		uriBase: 'https://eastus.api.cognitive.microsoft.com/vision/v2.0/analyze'
+	})
+&lt;/script&gt;
+				</code></pre>
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <td>option</td>
+            <td>parameters</td>
+            <td>default</td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><code>subscriptionKey</code></td>
+            <td>Your Azure Cognitive Service Subscription key.</td>
+            <td><code></code></td>
+        </tr>
+        <tr>
+            <td><code>uriBase</code></td>
+            <td>Uri base of you Azure Cognitive Service.</td>
+            <td><code></code></td>
+        </tr>
+        <tr>
+            <td><code>language</code></td>
+            <td>Language of your website.</td>
+            <td><code>en</code></td>
+        </tr>
+        <tr>
+            <td><code>imageWithEmptyAlt</code></td>
+            <td>Set this as true if you want to generate caption for images that you have already put a alt that is empty.</td>
+            <td><code>false</code></td>
+        </tr>
+        <tr>
+            <td><code>localProjectWarning</code></td>
+            <td>Captions is available only if your images could be found online, if that is the case, than you can put a false value here.</td>
+            <td><code>true</code></td>
+        </tr>
+    </tbody>
+</table>
+
+<p>To use it you will need to add a Subscription Key of a Microsoft Cognitive Services, <a href="https://docs.microsoft.com/en-us/azure/cognitive-services/cognitive-services-apis-create-account" target="_blank">learn how to get one here!</a></p>
+
+<div class="space-medium"></div>
+<h3><i class="fas fa-layer-group"></i> project roadmap</h3>
+<p>I'm sharing with some some of my plans to move foward with heartthrob-vision as I'm focused on:</p>
+<ul>
+    <li><strong>Availability:</strong> This is a great tool that can be more efficient by being available for more developers to use it, for more regions and even costumers.</li>
+    <li><strong>Safety:</strong> I also want to improve how we handle the subscription key to be not available in the front end.</li>
+</ul>

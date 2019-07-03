@@ -1,0 +1,37 @@
+{
+  "_from": "@progress/kendo-ui@2018.3.1219",
+  "_id": "@progress/kendo-ui@2018.3.1219",
+  "_inBundle": false,
+  "_integrity": "sha512-nLEpBGYrqb3XiXAnW4rW/4ZtnjlKK+I7QFW3EyviwtcGVrDEqzA2poJrCnMifS47QsCx839lOWkcHXjEQMDXnA==",
+  "_location": "/@progress/kendo-ui",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "version",
+    "registry": true,
+    "raw": "@progress/kendo-ui@2018.3.1219",
+    "name": "@progress/kendo-ui",
+    "escapedName": "@progress%2fkendo-ui",
+    "scope": "@progress",
+    "rawSpec": "2018.3.1219",
+    "saveSpec": null,
+    "fetchSpec": "2018.3.1219"
+  },
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/@progress/kendo-ui/-/kendo-ui-2018.3.1219.tgz",
+  "_shasum": "c18a6194609d5ec7ebd1965614add79b60f31568",
+  "_spec": "@progress/kendo-ui@2018.3.1219",
+  "_where": "C:\\projects\\heartthrob-docs\\heartthrob-docs",
+  "bundleDependencies": false,
+  "dependencies": {
+    "jquery": "<=3"
+  },
+  "deprecated": false,
+  "description": "This package is part of the [Kendo UI for jQuery](http://www.telerik.com/kendo-ui) suite.",
+  "license": "LicenseRef-LICENSE",
+  "main": "js/kendo.all.js",
+  "name": "@progress/kendo-ui",
+  "typings": "index.d.ts",
+  "version": "2018.3.1219"
+}

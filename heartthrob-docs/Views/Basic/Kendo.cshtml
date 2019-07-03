@@ -1,0 +1,51 @@
+﻿
+@{
+    ViewData["Title"] = "kendo";
+    Layout = "~/Views/Shared/_SidebarLayout.cshtml";
+}
+
+<!-- TODO: adicionar dialogs -->
+<h1>kendo elementes (<strong>beta</strong>)</h1>
+<p>The kendo compatibility is <strong>under development</strong>, as of this page. I will update it as soon as we have a great content to show you.</p>
+<h2>grid</h2>
+<br />
+<h4>Example</h4>
+<div class="space-medium"></div>
+<div id="grid"></div>
+
+<div class="space-medium"></div>
+<h2>grid inside a card</h2>
+<br />
+<h4>Example</h4>
+<div class="space-medium"></div>
+<div class="card">
+    <h3>Some table</h3>
+    <hr>
+    <div id="grid2"></div>
+</div>
+
+<script type="text/x-kendo-template" id="template">
+    <div class="tabstrip">
+        <ul>
+            <li class="k-state-active">
+                Orders
+            </li>
+            <li>
+                Contact Information
+            </li>
+        </ul>
+        <div>
+            <div class="orders"></div>
+        </div>
+        <div>
+            <div class='employee-details'>
+                <ul>
+                    <li><label>Country:</label>#= Country #</li>
+                    <li><label>City:</label>#= City #</li>
+                    <li><label>Address:</label>#= Address #</li>
+                    <li><label>Home Phone:</label>#= HomePhone #</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</script>
