@@ -1,4 +1,10 @@
 {
+  "_args": [
+    [
+      "prismjs@1.16.0",
+      "E:\\Heartthrob-docs\\heartthrob-docs"
+    ]
+  ],
   "_from": "prismjs@1.16.0",
   "_id": "prismjs@1.16.0",
   "_inBundle": false,
@@ -19,20 +25,17 @@
     "/"
   ],
   "_resolved": "https://registry.npmjs.org/prismjs/-/prismjs-1.16.0.tgz",
-  "_shasum": "406eb2c8aacb0f5f0f1167930cb83835d10a4308",
-  "_spec": "prismjs@1.16.0",
-  "_where": "C:\\projects\\heartthrob-docs\\heartthrob-docs",
+  "_spec": "1.16.0",
+  "_where": "E:\\Heartthrob-docs\\heartthrob-docs",
   "author": {
     "name": "Lea Verou"
   },
   "bugs": {
     "url": "https://github.com/LeaVerou/prism/issues"
   },
-  "bundleDependencies": false,
   "dependencies": {
     "clipboard": "^2.0.0"
   },
-  "deprecated": false,
   "description": "Lightweight, robust, elegant syntax highlighting. A spin-off project from Dabblet.",
   "devDependencies": {
     "chai": "^4.2.0",
