@@ -29,7 +29,7 @@
   "_spec": "2018.3.1219",
   "_where": "E:\\Heartthrob-docs\\heartthrob-docs",
   "dependencies": {
-    "jquery": "<=3"
+    "jquery": "<=4"
   },
   "description": "This package is part of the [Kendo UI for jQuery](http://www.telerik.com/kendo-ui) suite.",
   "license": "LicenseRef-LICENSE",
