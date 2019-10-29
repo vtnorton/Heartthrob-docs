@@ -15,7 +15,7 @@
 	<script src="/lib/heartthrob/js/heartthrob.js"></script>
 
 	<link href="/css/style.css" rel="stylesheet" />
-	<link href="/css/main.css" rel="stylesheet" />
+	<link href="~/css/heartthrob.css" rel="stylesheet" />
 
 	<!-- Prism -->
 	<link href="/lib/prismjs/themes/prism-tomorrow.css" rel="stylesheet" />
@@ -33,55 +33,57 @@
 	<meta name="theme-color" content="#ffffff">
 </head>
 <body>
-    @*<partial name="_CookieConsentPartial" />*@
-    <header class="header acrylic">
-        <div class="container">
-            <div class="logo">
-                <a href="/">
-                    <h2>heatthrob</h2>
-                </a>
-            </div>
-            <div class="line"></div>
-            <nav>
-                <ul>
-                    <li><a href="/basic/" class="child"><i class="fa fa-home"></i> basics</a>
-                        <ul>
-                            <li><a href="/basic/grids/"><i class="fas fa-grip-horizontal"></i> grids</a></li>
-                            <li><a href="/basic/css/"><i class="fab fa-css3-alt"></i> css</a></li>
-                            <li><a href="/basic/layout/"><i class="fa fa-drafting-compass"></i> layout</a></li>
-                            @*<li><a href="/basic/kendo/"><i class="fas fa-user-ninja"></i> kendo</a></li>*@
-                        </ul>
-                    </li>
-                    <li><a href="/script/"><i class="fa fa-file-code"></i> scripts</a></li>
-                    <li><a href="/vision/"><i class="fa fa-eye"></i> vision</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-    <div class="container">
-        @RenderBody()
-    </div>
-    <div class="space-long"></div>
+	@*<partial name="_CookieConsentPartial" />*@
+	<header class="header acrylic">
+		<div class="container">
+			<div class="logo">
+				<a href="/">
+					<h2>heatthrob</h2>
+				</a>
+			</div>
+			<div class="line"></div>
+			<nav>
+				<ul>
+					<li>
+						<a href="/basic/" class="child"><i class="fa fa-home"></i> basics</a>
+						<ul>
+							<li><a href="/basic/grids/"><i class="fas fa-grip-horizontal"></i> grids</a></li>
+							<li><a href="/basic/css/"><i class="fab fa-css3-alt"></i> css</a></li>
+							<li><a href="/basic/layout/"><i class="fa fa-drafting-compass"></i> layout</a></li>
+							@*<li><a href="/basic/kendo/"><i class="fas fa-user-ninja"></i> kendo</a></li>*@
+						</ul>
+					</li>
+					<li><a href="/script/"><i class="fa fa-file-code"></i> scripts</a></li>
+					<li><a href="/vision/"><i class="fa fa-eye"></i> vision</a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+	<div class="container">
+		@RenderBody()
+	</div>
+	<div class="space-long"></div>
 
-    <environment exclude="Development">
-        <!-- Global site tag (gtag.js) - Google Analytics -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-141025433-1"></script>
-        <script>
-            window.dataLayer = window.dataLayer || [];
-            function gtag() { dataLayer.push(arguments); }
-            gtag('js', new Date());
+	<script src="~/lib/jquery.maskedinput/src/jquery.maskedinput.js"></script>
+	<environment exclude="Development">
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-141025433-1"></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag() { dataLayer.push(arguments); }
+			gtag('js', new Date());
 
-            gtag('config', 'UA-141025433-1');
-        </script>
-        <script>
-            hVision({
-                subscriptionKey: ' TE PEGUEI HÁ!!! BOA AÍ SUA SUBSCRIPTION KEY ',
-                localProjectWarning: false,
-                uriBase: 'https://eastus.api.cognitive.microsoft.com/vision/v2.0/analyze',
-            })
-        </script>
-    </environment>
+			gtag('config', 'UA-141025433-1');
+		</script>
+		<script>
+			hVision({
+				subscriptionKey: ' TE PEGUEI HÁ!!! BOA AÍ SUA SUBSCRIPTION KEY ',
+				localProjectWarning: false,
+				uriBase: 'https://eastus.api.cognitive.microsoft.com/vision/v2.0/analyze',
+			})
+		</script>
+	</environment>
 
-    @RenderSection("Scripts", required: false)
+	@RenderSection("Scripts", required: false)
 </body>
 </html>

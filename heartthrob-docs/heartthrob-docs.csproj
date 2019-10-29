@@ -14,11 +14,6 @@
   </ItemGroup>
 
 
-  <ItemGroup>
-    <Folder Include="wwwroot\lib\" />
-  </ItemGroup>
-
-
   <Target Name="PreBuild" BeforeTargets="PreBuildEvent">
     <Exec Command="npm install&#xD;&#xA;gulp restore" />
   </Target>

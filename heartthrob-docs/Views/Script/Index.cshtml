@@ -1,8 +1,44 @@
 ﻿
 @{
-    ViewData["Title"] = "scripts js";
-    Layout = "~/Views/Shared/_SidebarLayout.cshtml";
+	ViewData["Title"] = "scripts js";
+	Layout = "~/Views/Shared/_SidebarLayout.cshtml";
 }
 
-<h1>under construction</h1>
-<p>There is a lot scripts inside heartthrob, fuctions to include or exclude cookies for example. I will update this page over the next weeks. </p>
+<h2><i class="fas fa-flag"></i> Brazil-specific</h2>
+<h3><i class="fas fa-sort-numeric-up"></i> address completion</h3>
+<div class="row">
+	<div class="col-md-6">
+		<div class="card">
+			<div class="row">
+				<div class="col-md-4">
+					<label>
+						CEP
+						<input type="text" placeholder="29304-090" class="cep" />
+					</label>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-9">
+					<label>
+						Rua
+						<input type="text" placeholder="Av. Angelica" id="rua" />
+					</label>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-6">
+					<label>
+						Cidade
+						<input type="text" placeholder="São Paulo" id="cidade" />
+					</label>
+				</div>
+				<div class="col-md-6">
+					<label>
+						Bairro
+						<input type="text" placeholder="Centro" id="bairro" />
+					</label>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
