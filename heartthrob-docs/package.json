@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.8.0",
-    "heartthrob": "^1.1.32",
+    "heartthrob": "^2.0.1",
     "prismjs": "1.16.0",
     "jquery": "3.4.0",
     "jquery-ui-dist": "1.12.1",
