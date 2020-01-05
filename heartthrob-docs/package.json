@@ -5,16 +5,24 @@
   "private": true,
   "devDependencies": {
     "gulp": "^4.0.0",
-    "jest": "^24.8.0",
+    "jest": "^24.9.0",
     "merge-stream": "^1.0.1"
   },
   "dependencies": {
-    "@fortawesome/fontawesome-free": "^5.8.0",
-    "heartthrob": "^2.0.1",
-    "prismjs": "1.16.0",
-    "jquery": "3.4.0",
-    "jquery-ui-dist": "1.12.1",
-    "@progress/kendo-ui": "2018.3.1219"
+    "@fortawesome/fontawesome-free": "^5.12.0",
+    "heartthrob": "^2.0.4",
+    "jquery": "^3.4.1",
+    "jquery-ui-dist": "^1.12.1",
+    "prismjs": "^1.18.0"
   },
-  "license": "MIT"
+  "scripts": {
+    "build": "npx gulp restore",
+    "postinstall": "npm update | npm run build"
+  },
+  "author": "vtnorton",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/vtnorton/Heartthrob-docs/issues"
+  },
+  "homepage": "https://heartthrob.vtnorton.com"
 }

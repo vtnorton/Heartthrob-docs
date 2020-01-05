@@ -1,31 +1,27 @@
 {
-  "_args": [
-    [
-      "prismjs@1.16.0",
-      "E:\\Heartthrob-docs\\heartthrob-docs"
-    ]
-  ],
-  "_from": "prismjs@1.16.0",
-  "_id": "prismjs@1.16.0",
+  "_from": "prismjs@1.18.0",
+  "_id": "prismjs@1.18.0",
   "_inBundle": false,
-  "_integrity": "sha512-OA4MKxjFZHSvZcisLGe14THYsug/nF6O1f0pAJc0KN0wTyAcLqmsbE+lTGKSpyh+9pEW57+k6pg2AfYR+coyHA==",
+  "_integrity": "sha512-N0r3i/Cto516V8+GKKamhsPVZSFcO0TMUBtIDW6uq6BVqoC3FNtZVZ+cmH16N2XtGQlgRN+sFUTjOdCsEP51qw==",
   "_location": "/prismjs",
   "_phantomChildren": {},
   "_requested": {
     "type": "version",
     "registry": true,
-    "raw": "prismjs@1.16.0",
+    "raw": "prismjs@1.18.0",
     "name": "prismjs",
     "escapedName": "prismjs",
-    "rawSpec": "1.16.0",
+    "rawSpec": "1.18.0",
     "saveSpec": null,
-    "fetchSpec": "1.16.0"
+    "fetchSpec": "1.18.0"
   },
   "_requiredBy": [
+    "#USER",
     "/"
   ],
-  "_resolved": "https://registry.npmjs.org/prismjs/-/prismjs-1.16.0.tgz",
-  "_spec": "1.16.0",
+  "_resolved": "https://registry.npmjs.org/prismjs/-/prismjs-1.18.0.tgz",
+  "_shasum": "8f04dd47fa232cbd27d1ca969107580ff43f06e4",
+  "_spec": "prismjs@1.18.0",
   "_where": "E:\\Heartthrob-docs\\heartthrob-docs",
   "author": {
     "name": "Lea Verou"
@@ -33,9 +29,11 @@
   "bugs": {
     "url": "https://github.com/LeaVerou/prism/issues"
   },
+  "bundleDependencies": false,
   "dependencies": {
     "clipboard": "^2.0.0"
   },
+  "deprecated": false,
   "description": "Lightweight, robust, elegant syntax highlighting. A spin-off project from Dabblet.",
   "devDependencies": {
     "chai": "^4.2.0",
@@ -46,9 +44,9 @@
     "gulp-replace": "^1.0.0",
     "gulp-uglify": "^3.0.1",
     "jsdom": "^13.0.0",
-    "mocha": "^6.0.0",
+    "mocha": "^6.2.0",
     "pump": "^3.0.0",
-    "shelljs": "^0.8.3",
+    "regexpp": "^2.0.1",
     "simple-git": "^1.107.0",
     "yargs": "^13.2.2"
   },
@@ -80,12 +78,15 @@
     "url": "git+https://github.com/LeaVerou/prism.git"
   },
   "scripts": {
-    "test": "npm run test:runner && npm run test:languages && npm run test:plugins && npm run test:aliases",
+    "test": "npm run test:runner && npm run test:core && npm run test:dependencies && npm run test:languages && npm run test:plugins && npm run test:aliases && npm run test:patterns",
     "test:aliases": "mocha tests/aliases-test.js",
+    "test:core": "mocha tests/core/**/*.js",
+    "test:dependencies": "mocha tests/dependencies-test.js",
     "test:languages": "mocha tests/run.js",
+    "test:patterns": "mocha tests/pattern-tests.js",
     "test:plugins": "mocha tests/plugins/**/*.js",
     "test:runner": "mocha tests/testrunner-tests.js"
   },
   "style": "themes/prism.css",
-  "version": "1.16.0"
+  "version": "1.18.0"
 }

@@ -16,9 +16,6 @@ var deps = {
     },
     "@fortawesome": {
         "fontawesome-free/**": ""
-    },
-    "@progress": {
-        "kendo-ui/**": ""
     }
 };
 
